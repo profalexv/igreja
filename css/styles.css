@@ -221,10 +221,10 @@ h1 {
     text-align: center;
     min-height: 120px;
     padding: 20px;
+    font-family: AdventSans-Logo, Helvetica, Arial, sans-serif;
 }
 
 .banner h1 {
-    font-family: AdventSans-Logo, Helvetica, Arial, sans-serif;
     font-size: 3em;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
