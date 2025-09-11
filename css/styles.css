@@ -1,7 +1,11 @@
 /* --- Estilos Gerais da Página --- */
 @font-face {
-    font-family: AdventSans-Logo;
-    src: url('fonts/AdventSans-Logo') format('otf');
+    font-family: 'AdventSans-Logo';
+    src: url('fonts/AdventSans-Logo.woff2') format('woff2'),
+        url('fonts/AdventSans-Logo.woff') format('woff'),
+        url('fonts/AdventSans-Logo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
