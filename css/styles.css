@@ -1,9 +1,9 @@
 /* --- Estilos Gerais da Página --- */
 @font-face {
     font-family: 'AdventSans-Logo';
-    src: url('fonts/AdventSans-Logo.woff2') format('woff2'),
-        url('fonts/AdventSans-Logo.woff') format('woff'),
-        url('fonts/AdventSans-Logo.otf') format('opentype');
+    src: url('../fonts/AdventSans-Logo.woff2') format('woff2'),
+        url('../fonts/AdventSans-Logo.woff') format('woff'),
+        url('../fonts/AdventSans-Logo.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -221,10 +221,10 @@ h1 {
     text-align: center;
     min-height: 120px;
     padding: 20px;
-    font-family: AdventSans-Logo, Helvetica, sans-serif;
 }
 
 .banner h1 {
+    font-family: AdventSans-Logo, Helvetica, Arial, sans-serif;
     font-size: 3em;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
