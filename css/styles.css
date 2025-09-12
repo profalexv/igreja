@@ -57,6 +57,7 @@ header img {
     }
 
     header h1 {
+        font-family: AdventSans-Logo, Helvetica, Arial, sans-serif;
         font-size: 1.2em;
         /* título um pouco menor também */
     }
@@ -106,7 +107,7 @@ h1 {
     #superior {
         display: none;
         flex-direction: column;
-        background: #333;
+        /*background: orange;*/
         position: absolute;
         top: 60px;
         /* abaixo do header */
@@ -122,8 +123,7 @@ h1 {
     }
 
     #superior a {
-        color: white;
-        text-decoration: none;
+        color: #2b2b2b text-decoration: none;
     }
 
     /* Classe para abrir o menu */
@@ -133,10 +133,11 @@ h1 {
 }
 
 #superior {
-    background-color: #2b2b2b;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    background-color: #d7d7d7;
+    box-shadow: 0 2px 5px #0000001a;
     position: relative;
-    z-index: 1000;
+    /*z-index: 1000;*/
     /* garante que o menu fique acima do iframe */
 }
 
@@ -154,7 +155,7 @@ h1 {
 }
 
 #superior a {
-    color: #ffffff;
+    color: #2b2b2b;
     text-decoration: none;
     display: block;
     padding: 15px 20px;
@@ -173,9 +174,9 @@ h1 {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #2b2b2b;
+    background-color: #c3c3c3;
     min-width: 250px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px #0000004d;
     z-index: 1000;
     list-style: none;
     margin: 0;
@@ -183,7 +184,7 @@ h1 {
 }
 
 .dropdown-menu a {
-    color: #ffffff;
+    color: #c3c3c3;
     padding: 12px 25px;
     text-align: left;
     white-space: nowrap;
@@ -209,7 +210,7 @@ h1 {
 
 /* --- Estilos para o Banner com Texto --- */
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/fachada.jpg');
+    background: linear-gradient(#00000080, rgba(0, 0, 0, 0.5)), url('../img/fachada.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -217,7 +218,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #c3c3c3;
     text-align: center;
     min-height: 120px;
     padding: 20px;
