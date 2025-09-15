@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'AdventSans-Logo';
+    src: url('../fonts/AdventSans-Logo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.aviso-construcao {
+    background: #ffcc00;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    z-index: 2000;
+    position: relative;
+}
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 1000;
+}
+
+header img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+    font-family: AdventSans-Logo, Helvetica, Arial, sans-serif;
+}
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/fachada.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    min-height: 120px;
+    padding: 20px;
+    font-family: AdventSans-Logo, Helvetica, Arial, sans-serif;
+    z-index: 0;
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.banner p {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin-top: 0;
+}
+#superior {
+    margin-left: auto;
+    background-color: #d7d7d7;
+    box-shadow: 0 2px 5px #0000001a;
+    position: relative;
+}
+#superior > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#superior > ul > li {
+    position: relative;
+}
+#superior a {
+    display: block;
+    padding: 15px 20px 25px 20px;
+    color: #2b2b2b;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+#superior a:hover, #superior a:focus {
+    background-color: #404040;
+    color: #fff;
+}
+.dropdown:hover > .dropdown-menu, .dropdown:focus-within > .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #c3c3c3;
+    border: 1px solid #999;
+    border-radius: 4px;
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: #222;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+}
+.dropdown-menu li a:hover {
+    background: #404040;
+    color: #fff;
+}
+.dropdown-menu::after {
+    content: "▼";
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+    color: #333;
+    pointer-events: none;
+}
+.dropdown-menu .dropdown {
+    position: relative;
+}
+.dropdown-menu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 1px;
+    border-radius: 4px;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    header img {
+        max-width: 60px;
+    }
+    header h1 {
+        font-size: 1.2em;
+    }
+    #superior ul {
+        flex-direction: column;
+        display: none;
+        background: #d7d7d7;
+        width: 100%;
+    }
+    #superior.active ul {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    #superior li {
+        width: 100%;
+    }
+    .dropdown-menu {
+        position: static;
+        border: none;
+        max-height: none;
+        overflow: visible;
+    }
+    .dropdown-menu::after {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    header img {
+        max-width: 50px;
+    }
+    header h1 {
+        font-size: 1em;
+    }
+}
