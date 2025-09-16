@@ -160,6 +160,11 @@ h1 {
     font-size: 24px;
     cursor: pointer;
 }
+abbr {
+    text-decoration: none; 
+    border-bottom: none;
+    cursor: help;
+}
 @media (max-width: 768px) {
     header img {
         max-width: 60px;
