@@ -1,51 +1,197 @@
+/*font Advent Sans Logo*/
 @font-face {
     font-family: 'AdventSans-Logo';
     src: url('../fonts/AdventSans-Logo.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-}
+/* --- Estilos Gerais da Página --- */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
     background-color: #f0f2f5;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
+/* --- Faixa de Aviso --- */
 .aviso-construcao {
-    background: #ffcc00;
-    color: #000;
+    background-color: #ffcc00;  /* cor de fundo amarela de alerta */
+    color: #000;               /* texto em preto */
     text-align: center;
-    padding: 10px;
     font-weight: bold;
-    z-index: 2000;
+    padding: 10px;
+    font-size: 1em;
     position: relative;
+    z-index: 2000;             /* fica acima de tudo */
 }
+
 header {
     background-color: #ffffff;
     padding: 10px 20px;
     display: flex;
-    align-items: center;
+    align-items: center; /* garante alinhamento vertical central */
     gap: 15px;
-    position: relative;
-    z-index: 1000;
 }
 
 header img {
-    width: 90px;
-    height: auto;
+    width: 90px;   /* aumenta o logo */
+    height: auto;  /* mantém proporção */
     display: block;
+}
+
+@media (max-width: 768px) {
+    header img {
+        max-width: 60px; /* menor em tablets/celulares */
+    }
+
+    header h1 {
+        font-size: 1.2em; /* título um pouco menor também */
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        max-width: 50px; /* ainda menor em celulares pequenos */
+    }
+
+    header h1 {
+        font-size: 1em; /* título se adapta bem na tela */
+    }
 }
 
 h1 {
     margin: 0;
     font-size: 1.5em;
     color: #333;
-    font-family: AdventSans-Logo, Helvetica, Arial, sans-serif;
 }
+
+/* --- Estilos do Menu Principal (#superior) --- */
+
+/* Botão hambúrguer */
+.menu-toggle {
+    display: none; /* escondido em telas grandes */
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* joga para direita */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Botão aparece */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Menu escondido inicialmente */
+    #superior {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px; /* abaixo do header */
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    #superior ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #superior a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Classe para abrir o menu */
+    #superior.active {
+        display: flex;
+    }
+}
+
+#superior {
+    background-color: #2b2b2b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000; /* garante que o menu fique acima do iframe */
+}
+
+#superior > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* apenas o menu principal em linha */
+    justify-content: flex-start;
+}
+
+#superior > ul > li {
+    position: relative;
+}
+
+#superior a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#superior a:hover {
+    background-color: #404040;
+}
+
+/* --- Estilos do Menu Suspenso (Dropdown) --- */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2b2b2b;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu a {
+    color: #ffffff;
+    padding: 12px 25px;
+    text-align: left;
+    white-space: nowrap;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.dropdown-menu a:hover {
+    background-color: #404040;
+}
+
+/* Efeito para mostrar o menu suspenso */
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Posicionamento do sub-menu aninhado */
+.dropdown-menu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 5px;
+}
+
+/* --- Estilos para o Banner com Texto --- */
 .banner {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/fachada.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/fachada.jpg');
+    background-image: url(../img/fachada.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,155 +199,42 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: white;
     text-align: center;
     min-height: 120px;
     padding: 20px;
-    font-family: AdventSans-Logo, Helvetica, Arial, sans-serif;
-    z-index: 0;
 }
 
 .banner h1 {
+    font-family: Advent, Helvetica, sans-serif;
     font-size: 3em;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
 }
 
 .banner p {
     font-size: 1.5em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin-top: 0;
 }
-#superior {
-    margin-left: auto;
-    background-color: #d7d7d7;
-    box-shadow: 0 2px 5px #0000001a;
-    position: relative;
+
+/* --- Estilos para o Iframe --- */
+.fjanela {
+    flex-grow: 1;
 }
-#superior > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-#superior > ul > li {
-    position: relative;
-}
-#superior a {
-    display: block;
-    padding: 15px 20px 25px 20px;
-    color: #2b2b2b;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-#superior a:hover, #superior a:focus {
-    background-color: #404040;
-    color: #fff;
-}
-.dropdown:hover > .dropdown-menu, .dropdown:focus-within > .dropdown-menu {
-    display: block;
-}
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 220px;
-    background: #c3c3c3;
-    border: 1px solid #999;
-    border-radius: 4px;
-    z-index: 1000;
-    max-height: 300px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-}
-.dropdown-menu li a {
-    padding: 10px 15px;
-    color: #222;
-    font-size: 14px;
-    font-weight: normal;
-    text-transform: none;
-}
-.dropdown-menu li a:hover {
-    background: #404040;
-    color: #fff;
-}
-.dropdown-menu::after {
-    content: "▼";
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 25px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
-    text-align: center;
-    line-height: 25px;
-    font-size: 12px;
-    color: #333;
-    pointer-events: none;
-}
-.dropdown-menu .dropdown {
-    position: relative;
-}
-.dropdown-menu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-left: 1px;
-    border-radius: 4px;
-}
-.menu-toggle {
-    display: none;
-    background: none;
+
+.fjanela iframe {
     border: none;
-    color: #333;
-    font-size: 24px;
-    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; /* fica abaixo do menu */
 }
+
 abbr {
-    text-decoration: none; 
-    border-bottom: none;
-    cursor:pointer;
+    text-decoration: none; /* remove os pontinhos */
+    border-bottom: none;   /* garante que não apareça linha */
+    cursor: pointer;          /* mantém o cursor de ajuda ao passar o mouse */
 }
-@media (max-width: 768px) {
-    header img {
-        max-width: 60px;
-    }
-    header h1 {
-        font-size: 1.2em;
-    }
-    #superior ul {
-        flex-direction: column;
-        display: none;
-        background: #d7d7d7;
-        width: 100%;
-    }
-    #superior.active ul {
-        display: flex;
-    }
-    .menu-toggle {
-        display: block;
-    }
-    #superior li {
-        width: 100%;
-    }
-    .dropdown-menu {
-        position: static;
-        border: none;
-        max-height: none;
-        overflow: visible;
-    }
-    .dropdown-menu::after {
-        display: none;
-    }
-}
-@media (max-width: 480px) {
-    header img {
-        max-width: 50px;
-    }
-    header h1 {
-        font-size: 1em;
-    }
-}
+
