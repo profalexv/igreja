@@ -5,6 +5,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/* Agrupa logo e título lado a lado */
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
 /* --- Estilos Gerais da Página --- */
 body {
     font-family: Arial, sans-serif;
@@ -15,86 +24,115 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 .aviso-construcao {
-    background-color: #ffcc00;  /* cor de fundo amarela de alerta */
-    color: #000;               /* texto em preto */
+    background-color: #ffcc00;
+    /* cor de fundo amarela de alerta */
+    color: #000;
+    /* texto em preto */
     text-align: center;
     font-weight: bold;
     padding: 10px;
     font-size: 1em;
     position: relative;
-    z-index: 2000;             /* fica acima de tudo */
+    z-index: 2000;
+    /* fica acima de tudo */
 }
+
 header {
     background-color: #ffffff;
-    padding: 10px 20px;
+    padding: 10px;
     display: flex;
-    align-items: center; /* garante alinhamento vertical central */
+    align-items: center;
+    /* garante alinhamento vertical central */
+    justify-content: space-between;
+    /* separa logo/título do menu à direita */
     gap: 15px;
 }
+
 header img {
-    width: 90px;   /* aumenta o logo */
-    height: auto;  /* mantém proporção */
+    width: 90px;
+    /* aumenta o logo */
+    height: auto;
+    /* mantém proporção */
     display: block;
 }
+
 @media (max-width: 768px) {
     header img {
-        max-width: 60px; /* menor em tablets/celulares */
+        max-width: 60px;
+        /* menor em tablets/celulares */
     }
 
     header h1 {
-        font-size: 1.2em; /* título um pouco menor também */
+        font-size: 1.1em;
+        white-space: nowrap;
+        /* título menor e sem quebra de linha */
     }
 }
+
 @media (max-width: 480px) {
     header img {
-        max-width: 50px; /* ainda menor em celulares pequenos */
+        max-width: 50px;
+        /* ainda menor em celulares pequenos */
     }
 
     header h1 {
-        font-size: 1em; /* título se adapta bem na tela */
+        font-size: 0.95em;
+        white-space: nowrap;
+        /* título menor e sem quebra de linha */
     }
 }
+
 h1 {
     margin: 0;
     font-family: AdventSans-Logo, Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     color: #333;
 }
+
 #superior {
     position: relative;
-    z-index: 1000; /* garante que o menu fique acima do iframe */
+    z-index: 1000;
+    /* garante que o menu fique acima do iframe */
 }
-#superior > ul {
+
+#superior>ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* apenas o menu principal em linha */
+    display: flex;
+    justify-content: flex-end;
 }
-#superior > ul > li {
+
+#superior>ul>li {
     position: relative;
 }
+
 #superior a {
     color: gray;
     text-decoration: none;
     display: block;
     padding: 10px;
 }
+
 #superior a:hover {
     color: white;
     background-color: gray;
 }
+
 #superior abbr {
     text-decoration: none;
     border-bottom: none;
     cursor: pointer;
 }
+
 .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     min-width: 250px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 1000;
@@ -102,6 +140,7 @@ h1 {
     margin: 0;
     padding: 0;
 }
+
 .dropdown-menu a {
     color: #ffffff;
     padding: 10px;
@@ -110,14 +149,17 @@ h1 {
     text-transform: none;
     font-weight: normal;
 }
-.dropdown:hover > .dropdown-menu {
+
+.dropdown:hover>.dropdown-menu {
     display: block;
 }
+
 .dropdown-menu .dropdown-menu {
     top: 0;
     left: 100%;
     margin-left: 5px;
 }
+
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/fachada.jpg');
     background-image: url(../img/fachada.jpg);
@@ -135,7 +177,7 @@ h1 {
 }
 
 .banner h1 {
-    font-family: AdventSans-Logo,Arial, Helvetica, sans-serif;
+    font-family: AdventSans-Logo, Arial, Helvetica, sans-serif;
     font-size: 3em;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -148,9 +190,11 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin-top: 0;
 }
+
 .fjanela {
     flex-grow: 1;
 }
+
 .fjanela iframe {
     border: none;
     width: 100%;
