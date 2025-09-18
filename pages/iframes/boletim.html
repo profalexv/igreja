@@ -12,61 +12,19 @@
 </head>
 
 <body>
-    <style>
-        .carrossel {
-            position: relative;
-            max-width: 400px;
-            margin: 30px auto;
-            text-align: center;
-        }
-
-        .carrossel-img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            display: none;
-        }
-
-        .carrossel-img.ativa {
-            display: block;
-        }
-
-        .carrossel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
-            font-size: 2em;
-            padding: 0 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            z-index: 2;
-        }
-
-        .carrossel-btn.esq {
-            left: 10px;
-        }
-
-        .carrossel-btn.dir {
-            right: 10px;
-        }
-    </style>
-
-    <div class="carrossel">
-        <img src="../../img/carrossel/Foto de profalexv.jpg" class="carrossel-img ativa" alt="Foto de profalexv">
-        <img src="../../img/carrossel/Organize sua semana.png" class="carrossel-img" alt="Organize sua semana">
-        <img src="../../img/carrossel/santa ceia .png" class="carrossel-img" alt="Santa Ceia">
-        <button class="carrossel-btn esq" onclick="mudarImagem(-1)">&#10094;</button>
-        <button class="carrossel-btn dir" onclick="mudarImagem(1)">&#10095;</button>
-    </div>
-
-
-    <div class="carrossel">
-        <button class="carrossel-btn esq" onclick="mudarImagem(-1)">&#10094;</button>
-        <button class="carrossel-btn dir" onclick="mudarImagem(1)">&#10095;</button>
+    <div class="container">
+        <div class="carrossel">
+            <img src="../../img/carrossel/Foto de profalexv.jpg" class="carrossel-img ativa" alt="Foto de profalexv">
+            <img src="../../img/carrossel/Organize sua semana.png" class="carrossel-img" alt="Organize sua semana">
+            <img src="../../img/carrossel/santa ceia .png" class="carrossel-img" alt="Santa Ceia">
+            <button class="carrossel-btn esq" onclick="mudarImagem(-1)">&#10094;</button>
+            <button class="carrossel-btn dir" onclick="mudarImagem(1)">&#10095;</button>
+        </div>
+        <div class="side-div">
+            <iframe
+                src="https://calendar.google.com/calendar/embed?src=4ea8baa4e97c24d08e3241f625e89fb00303f774b4920751e69f11e6f25eb84b%40group.calendar.google.com&ctz=America%2FSao_Paulo&mode=AGENDA"
+                frameborder="0" scrolling="no"></iframe>
+        </div>
     </div>
 
     <script>
@@ -79,6 +37,11 @@
         function mudarImagem(delta) {
             mostrarImagem(atual + delta);
         }
+
+        // Temporizador para troca automática de imagem a cada 5 segundos
+        setInterval(() => {
+            mudarImagem(1);
+        }, 4000);
     </script>
 </body>
 
