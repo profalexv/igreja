@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <!-- Botões flutuantes de navegação -->
+    <button class="agenda-btn" onclick="scrollToAgenda()">Agenda</button>
+    <button class="topo-btn" onclick="scrollToTopo()">Topo</button>
     <!-- Popup para imagem ampliada -->
     <div id="imagePopup" class="popup">
         <div class="popup-wrapper">
@@ -63,7 +66,7 @@
             <button class="carrossel-btn esq" onclick="mudarImagem(-1)">&#10094;</button>
             <button class="carrossel-btn dir" onclick="mudarImagem(1)">&#10095;</button>
         </div>
-        <div class="side-div">
+        <div class="agenda-container">
             <iframe
                 src="https://calendar.google.com/calendar/embed?src=4ea8baa4e97c24d08e3241f625e89fb00303f774b4920751e69f11e6f25eb84b%40group.calendar.google.com&ctz=America%2FSao_Paulo&mode=AGENDA"
                 frameborder="0" scrolling="no"></iframe>
