@@ -486,7 +486,7 @@ h1 {
     overflow: hidden;
     z-index: 1;
     background: #000;
-    margin-top: calc(var(--header-height) + var(--aviso-height));
+    margin-top: 0;
 }
 
 .banner img {
