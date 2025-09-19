@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt_BR" dir="ltr">
+<html lang="pt-BR" dir="ltr">
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Alexandre Vieira" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="content-language" content="pt-br" />
@@ -25,6 +27,10 @@
     <meta name="twitter:image" content="https://adventistasdemafra.com.br/img/logo.png" />
     <meta name="copyright" content="© 2025 ProfAlexV" />
     <title>Adventistas de Mafra</title>
+    <link rel="preload" href="img/logos/logo.png" as="image">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="js/menu.js" as="script">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
@@ -34,10 +40,6 @@
     <div class="aviso-construcao">
         ⚠️ Este site ainda encontra-se em construção
     </div>
-    <section class="banner">
-        <h1>Igreja Adventista do Sétimo Dia</h1>
-        <p>Mafra - Santa Catarina</p>
-    </section>
     <header class="header-overlay">
         <div class="header-content">
             <div class="logo-titulo">
@@ -49,7 +51,7 @@
                 <span></span>
                 <span></span>
             </button>
-            <nav id="superior" class="nav-desktop">
+            <nav id="superior">
                 <ul>
                     <li class="dropdown">
                         <a href="pages/iframes/boletim.html" target="janela">Boletim Informativo</a>
@@ -242,23 +244,33 @@
                             <li><a href="pages/iframes/diaconato" target="janela">Diaconato</a></li>
                         </ul>
                     </li>
+                    <li class="more-menu-item">
+                        <button class="more-menu-btn">
+                            >
+                            <div class="more-menu-dropdown">
+                                <div id="hidden-menu-items"></div>
+                            </div>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
-        </div>
     </header>
+    <section class="banner">
+        <img src="img/index/fachada.jpg" alt="Igreja Adventista do Sétimo Dia - Mafra">
+    </section>
     <section class="fjanela">
-        <iframe name="janela" width="100%" height="100%" src="pages/iframes/boletim.html">Janela</iframe>
+        <iframe name="janela" src="pages/iframes/boletim.html" title="Conteúdo principal" loading="lazy">
+        </iframe>
     </section>
 
     <!-- Menu lateral para mobile -->
     <div id="menu-overlay" class="menu-overlay"></div>
-    <nav id="menu-mobile" class="menu-mobile">
+    <nav id="menu-mobile" class="menu-mobile" aria-label="Menu mobile">
         <div class="menu-mobile-header">
             <h2>Menu</h2>
             <button id="close-menu" class="close-menu" aria-label="Fechar Menu">×</button>
         </div>
-        <!-- O conteúdo do menu será clonado aqui via JavaScript -->
     </nav>
 </body>
 

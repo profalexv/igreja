@@ -6,23 +6,36 @@
     font-style: normal;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Aviso de construção */
+
 /* Agrupa logo e título lado a lado */
 .logo-titulo {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex: 1;
+}
+
+.logo-titulo img {
+    height: 50px;
+    width: auto;
 }
 
 /* --- Estilos Gerais da Página --- */
-body {
-    font-family: Arial, sans-serif;
+.logo-titulo h1 {
     margin: 0;
-    background-color: #f0f2f5;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    color: #2c3e50;
+    font-size: 1.8em;
 }
 
 .aviso-construcao {
@@ -34,233 +47,44 @@ body {
     font-weight: bold;
     padding: 10px;
     font-size: 1em;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 2000;
     /* fica acima de tudo */
 }
 
 .header-overlay {
-    background-color: rgba(255, 255, 255, 0.2);
-    position: absolute;
-    top: 35px;
-    left: 0;
-    right: 0;
-    z-index: 1500;
-    /* Aumentado para garantir que fique acima de tudo exceto o aviso */
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease,
-        box-shadow 0.3s ease,
-        backdrop-filter 0.3s ease;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: var(--aviso-height);
+    left: 0;
+    right: 0;
+    z-index: 2500;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: visible;
 }
 
-/* Novo container interno para o conteúdo do header */
+/* Container interno para o conteúdo do header */
 .header-content {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
-    width: 100%;
-    max-width: 1380px;
-    padding: 0 20px;
-    box-sizing: border-box;
+    gap: 20px;
     position: relative;
-    /* Para context stacking */
-    z-index: 2;
-    /* Garante que o conteúdo fique acima do backdrop */
+    overflow: visible;
 }
 
-/* Efeito hover suave */
+/* Efeito hover mais sutil */
 .header-overlay:hover {
-    background-color: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
-    /* Aumenta levemente o blur no hover */
-    -webkit-backdrop-filter: blur(8px);
-}
-
-header img {
-    width: 90px;
-    /* aumenta o logo */
-    height: auto;
-    /* mantém proporção */
-    display: block;
-}
-
-@media (max-width: 768px) {
-    header img {
-        max-width: 60px;
-        /* menor em tablets/celulares */
-    }
-
-    header h1 {
-        font-size: 1.1em;
-        white-space: nowrap;
-        /* título menor e sem quebra de linha */
-    }
-}
-
-@media (max-width: 480px) {
-    header img {
-        max-width: 50px;
-        /* ainda menor em celulares pequenos */
-    }
-
-    header h1 {
-        font-size: 0.95em;
-        white-space: nowrap;
-        /* título menor e sem quebra de linha */
-    }
-}
-
-h1 {
-    margin: 0;
-    font-family: AdventSans-Logo, Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    color: #333;
-}
-
-#superior {
-    position: relative;
-    z-index: 2;
-    /* Menu fica no mesmo contexto do header-content */
-}
-
-#superior>ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 5px;
-    /* Espaçamento consistente entre itens do menu */
-}
-
-#superior>ul>li {
-    position: relative;
-}
-
-#superior a {
-    color: #000;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-    font-weight: 500;
-    /* Um pouco mais bold para melhor legibilidade */
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-    /* Sutil contorno branco */
-}
-
-#superior a:hover {
-    color: #000;
     background-color: rgba(255, 255, 255, 0.7);
-    text-shadow: none;
-}
-
-#superior abbr {
-    text-decoration: none;
-    border-bottom: none;
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    min-width: 250px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    list-style: none;
-    margin: 0;
-    padding: 5px;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-.dropdown-menu a {
-    color: #333;
-    padding: 10px 15px;
-    text-align: left;
-    white-space: nowrap;
-    text-transform: none;
-    font-weight: normal;
-    border-radius: 4px;
-}
-
-.dropdown-menu a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.dropdown:hover>.dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-left: 5px;
-}
-
-.banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('../img/index/fachada.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    min-height: 300px;
-    /* Aumentei a altura para acomodar o header */
-    padding: 20px;
-    position: relative;
-    margin-top: -35px;
-    /* Para compensar o aviso de construção */
-}
-
-.banner h1 {
-    font-family: AdventSans-Logo, Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    color: white;
-}
-
-.banner p {
-    font-family: AdventSans-Logo, Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-top: 0;
-}
-
-.fjanela {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    /* Remove scroll interno */
-    min-height: 0;
-    /* Importante para o flex funcionar corretamente */
-}
-
-.fjanela iframe {
-    border: none;
-    width: 100%;
-    flex-grow: 1;
-    position: relative;
-    z-index: 1;
-    min-height: 0;
 }
 
 /* Menu Toggle Button (Hambúrguer) */
@@ -284,6 +108,439 @@ h1 {
     border-radius: 3px;
 }
 
+/* Mantém o texto do título sem quebra */
+header h1 {
+    white-space: nowrap;
+}
+
+/* Apenas ajusta quando realmente necessário para o layout */
+@media (max-width: 600px) {
+
+    /* Calcula o espaço disponível e ajusta se necessário */
+    .logo-titulo {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    header img {
+        width: auto;
+        height: 50px;
+        min-width: 0;
+    }
+
+    /* Remove o ajuste automático de fonte - só ajusta se não couber */
+    header h1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+/* Só reduz a fonte em telas muito pequenas onde realmente não cabe */
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-family: AdventSans-Logo, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: #333;
+}
+
+:root {
+    --header-height: 65px;
+    --aviso-height: 35px;
+    --banner-height: 40vh;
+    --primary-color: #000;
+    --secondary-color: rgba(0, 0, 0, 0.7);
+    --transition-speed: 0.3s;
+}
+
+#superior {
+    display: block;
+    position: relative;
+    overflow: visible;
+    z-index: 10000;
+}
+
+#superior>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    overflow: visible;
+    z-index: 10000;
+}
+
+/* Item da lista que contém o botão de mais opções */
+.more-menu-item {
+    display: none;
+    position: relative;
+    margin-left: 10px;
+}
+
+/* Botão de mais opções para itens ocultos */
+.more-menu-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    display: block;
+}
+
+/* Esconde o texto original no hover e mostra o novo ícone */
+.more-menu-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    color: transparent;
+    /* Esconde o texto original */
+}
+
+.more-menu-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    color: #000;
+    /* Garante que o novo ícone tenha cor */
+}
+
+.more-menu-btn:hover::before {
+    content: "∨";
+    opacity: 1;
+}
+
+/* Menu dropdown para itens ocultos */
+.more-menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1600;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: visible;
+}
+
+.more-menu-btn:hover .more-menu-dropdown {
+    display: block;
+}
+
+/* Estilo dos dropdowns dentro do botão >> - layout vertical com hover */
+.more-menu-dropdown .dropdown {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.more-menu-dropdown .dropdown>a {
+    font-weight: 600;
+    padding: 8px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.more-menu-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    transform: translateX(-90%) !important;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 5px;
+    margin: 0;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    min-width: 200px;
+    z-index: 1700;
+}
+
+/* Submenus abrem com hover */
+.more-menu-dropdown .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.more-menu-dropdown .dropdown-menu li a {
+    padding: 10px 15px;
+    font-weight: 400;
+    color: #666;
+    display: block;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+
+.more-menu-dropdown .dropdown-menu li {
+    position: relative;
+}
+
+.more-menu-dropdown .dropdown-menu .dropdown-menu {
+    transform: translateX(-90%) !important;
+    top: 0;
+}
+
+.more-menu-dropdown li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Título do menu no dropdown - simples e no padrão dos outros */
+.more-menu-dropdown .menu-title {
+    color: #333;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+.more-menu-dropdown li a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px !important;
+    font-family: Arial, sans-serif;
+}
+
+.more-menu-dropdown li a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#superior>ul>li {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+
+#superior a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    font-weight: 500;
+    white-space: nowrap;
+    position: relative;
+    transition: all 0.3s ease;
+    border-top: 3px solid transparent;
+}
+
+/* Efeito de linha no topo ao passar o mouse */
+#superior a:hover {
+    border-top: 3px solid #007bff;
+    background-color: rgba(0, 123, 255, 0.08);
+}
+
+/* Efeito bem mais leve quando o dropdown está aberto */
+#superior .dropdown:hover>a {
+    border-top: 3px solid #007bff;
+    background-color: rgba(0, 123, 255, 0.01);
+}
+
+#superior abbr {
+    text-decoration: none;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+/* DROPDOWN FUNCIONANDO */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.92);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 15000;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Ajuste para dropdowns que ficam próximos à margem direita */
+.dropdown:last-child .dropdown-menu,
+.dropdown:nth-last-child(1) .dropdown-menu,
+.dropdown:nth-last-child(2) .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+/* Media query para telas menores - garante que dropdowns não saiam da tela */
+@media (max-width: 1180px) and (min-width: 770px) {
+
+    /* Quando o botão > ou >> está ativo, dropdowns próximos ao final abrem à direita */
+    .dropdown:last-child .dropdown-menu,
+    .dropdown:nth-last-child(1) .dropdown-menu,
+    .dropdown:nth-last-child(2) .dropdown-menu,
+    .dropdown:nth-last-child(3) .dropdown-menu,
+    .dropdown:nth-last-child(4) .dropdown-menu {
+        left: auto;
+        right: 0;
+    }
+
+    /* Especificamente para o dropdown de Ministérios */
+    .dropdown:has(a[href*="mipes"]) .dropdown-menu {
+        left: auto !important;
+        right: 0 !important;
+    }
+}
+
+/* Faixa específica onde tanto Ministérios quanto Pastoral ficam ocultos */
+@media (max-width: 920px) and (min-width: 770px) {
+    #superior>ul>li:nth-child(n+3):not(.more-menu-item) {
+        display: none;
+    }
+
+    .more-menu-item {
+        display: inline-block !important;
+    }
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown abre com hover */
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-menu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 5px;
+}
+
+/* Submenus só aparecem com hover direto no item pai */
+.dropdown-menu .dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+/* Garante que submenus não apareçam apenas com hover no dropdown principal */
+.dropdown-menu .dropdown-menu {
+    display: none !important;
+}
+
+.dropdown-menu .dropdown:hover>.dropdown-menu {
+    display: block !important;
+}
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: var(--banner-height);
+    overflow: hidden;
+    z-index: 1;
+    background: #000;
+    margin-top: calc(var(--header-height) + var(--aviso-height));
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.banner h1 {
+    font-family: AdventSans-Logo, Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.banner p {
+    font-family: AdventSans-Logo, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.banner.scrolled h1,
+.banner.scrolled p {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fjanela {
+    width: 100%;
+    background: #fff;
+    min-height: 100vh;
+    height: auto;
+    margin-top: 0;
+    overflow: visible;
+}
+
+.fjanela iframe {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    border: none;
+    display: block;
+}
+
 /* Menu Lateral Mobile */
 .menu-mobile {
     position: fixed;
@@ -292,7 +549,7 @@ h1 {
     width: 280px;
     height: 100vh;
     background-color: #fff;
-    z-index: 2000;
+    z-index: 3000;
     transition: right 0.3s ease;
     overflow-y: auto;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -309,7 +566,7 @@ h1 {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1999;
+    z-index: 2999;
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -347,17 +604,33 @@ h1 {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: block;
+}
+
+.menu-mobile ul li {
+    display: block !important;
+    width: 100%;
 }
 
 .menu-mobile li {
     border-bottom: 1px solid #eee;
+    display: block !important;
+    width: 100%;
 }
 
 .menu-mobile a {
-    display: block;
+    display: block !important;
     padding: 15px 20px;
     color: #333;
     text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-mobile abbr {
+    text-decoration: none;
+    border-bottom: none;
+    cursor: pointer;
 }
 
 .menu-mobile .dropdown-menu {
@@ -372,14 +645,58 @@ h1 {
     display: block;
 }
 
-/* Media Query para Mobile */
-@media (max-width: 900px) {
-    .nav-desktop {
+/* Força apenas os itens principais do menu mobile a ficarem em block */
+.menu-mobile > ul > li {
+    display: block !important;
+}
+
+.menu-mobile .dropdown {
+    display: block !important;
+}
+
+.menu-mobile .dropdown > a {
+    display: block !important;
+}
+
+/* Mantém os submenus escondidos quando não ativos */
+.menu-mobile .dropdown-menu {
+    display: none !important;
+}
+
+.menu-mobile .dropdown.active > .dropdown-menu {
+    display: block !important;
+}
+
+/* Media query para telas médias - mostra botão de mais opções */
+@media (max-width: 1200px) and (min-width: 901px) {
+    #superior>ul>li:nth-child(n+4):not(.more-menu-item) {
         display: none;
     }
 
+    .more-menu-item {
+        display: inline-block;
+    }
+}
+
+/* Media queries para responsividade */
+@media (max-width: 769px) {
+    .logo-titulo {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    #superior {
+        display: none !important;
+        /* Força esconder em mobile */
+    }
+
     .menu-toggle {
-        display: block;
+        display: block !important;
+        margin-left: auto;
     }
 
     /* Animação do botão hambúrguer quando ativo */
@@ -393,5 +710,16 @@ h1 {
 
     .menu-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+@media (min-width: 901px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    #superior {
+        display: block !important;
+        /* Força mostrar em desktop */
     }
 }
