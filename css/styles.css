@@ -45,7 +45,7 @@ body {
     /* texto em preto */
     text-align: center;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px;
     font-size: 1em;
     position: fixed;
     top: 0;
@@ -53,19 +53,23 @@ body {
     right: 0;
     z-index: 2000;
     /* fica acima de tudo */
+    height: 20px;
+    line-height: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-overlay {
     background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     width: 100%;
     position: fixed;
     top: var(--aviso-height);
     left: 0;
     right: 0;
     z-index: 2500;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: visible;
 }
 
@@ -152,7 +156,7 @@ h1 {
 
 :root {
     --header-height: 65px;
-    --aviso-height: 35px;
+    --aviso-height: 20px;
     --banner-height: 40vh;
     --primary-color: #000;
     --secondary-color: rgba(0, 0, 0, 0.7);
@@ -721,5 +725,74 @@ h1 {
     #superior {
         display: block !important;
         /* Força mostrar em desktop */
+    }
+}
+
+/* Media query para telas muito pequenas - 480px */
+@media (max-width: 480px) {
+    .aviso-construcao {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+    
+    .logo-titulo {
+        gap: 8px;
+    }
+    
+    .logo-titulo img {
+        height: 30px;
+    }
+    
+    .logo-titulo h1 {
+        font-size: 1.1em;
+    }
+    
+    .menu-toggle {
+        padding: 8px;
+    }
+    
+    .menu-toggle span {
+        width: 20px;
+        height: 2px;
+    }
+}
+
+/* Media query para telas extra pequenas - 330px */
+@media (max-width: 330px) {
+    .aviso-construcao {
+        font-size: 0.7em;
+        padding: 4px;
+    }
+    
+    .logo-titulo {
+        gap: 5px;
+    }
+    
+    .logo-titulo img {
+        height: 25px;
+    }
+    
+    .logo-titulo h1 {
+        font-size: 0.9em;
+    }
+    
+    .menu-toggle {
+        padding: 6px;
+    }
+    
+    .menu-toggle span {
+        width: 18px;
+        height: 2px;
+    }
+}
+
+/* Media query para telas ultra pequenas - 280px */
+@media (max-width: 280px) {
+    .logo-titulo h1 {
+        display: none;
+    }
+    
+    .logo-titulo {
+        gap: 0;
     }
 }
