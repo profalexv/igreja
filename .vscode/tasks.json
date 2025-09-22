@@ -1,0 +1,159 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Sass: Compilar",
+            "type": "shell",
+            "command": "sass",
+            "args": [
+                "styles/sass/main.scss",
+                "styles/css/main.css",
+                "--style=expanded",
+                "--source-map"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "detail": "Compila o arquivo SCSS principal para CSS"
+        },
+        {
+            "label": "Sass: Watch",
+            "type": "shell",
+            "command": "sass",
+            "args": [
+                "--watch",
+                "styles/sass:styles/css",
+                "--style=expanded",
+                "--source-map"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "fileLocation": "relative",
+                "pattern": {
+                    "regexp": "^Error: (.+)\\s+on line (\\d+) of (.+)$",
+                    "file": 3,
+                    "line": 2,
+                    "message": 1
+                }
+            },
+            "detail": "Monitora alterações nos arquivos SCSS e compila automaticamente"
+        },
+        {
+            "label": "Sass: Compilar Produção",
+            "type": "shell",
+            "command": "sass",
+            "args": [
+                "styles/sass/main.scss",
+                "styles/css/main.min.css",
+                "--style=compressed",
+                "--no-source-map"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "detail": "Compila SCSS para CSS minificado (produção)"
+        },
+        {
+            "label": "Abrir Site Localmente",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "-m",
+                "http.server",
+                "8000"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "detail": "Inicia servidor local em http://localhost:8000"
+        },
+        {
+            "label": "Desenvolvimento Completo",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "Sass: Watch",
+                "Abrir Site Localmente"
+            ],
+            "group": "build",
+            "detail": "Inicia watch do Sass e servidor local simultaneamente"
+        },
+        {
+            "label": "Validar HTML",
+            "type": "shell",
+            "command": "echo",
+            "args": [
+                "Verificando estrutura HTML..."
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "detail": "Valida a estrutura dos arquivos HTML"
+        },
+        {
+            "label": "Git Status",
+            "type": "shell",
+            "command": "git",
+            "args": [
+                "status"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "detail": "Mostra o status atual do repositório Git"
+        },
+        {
+            "label": "Commit e Push",
+            "type": "shell",
+            "command": "git",
+            "args": [
+                "add",
+                ".",
+                "&&",
+                "git",
+                "commit",
+                "-m",
+                "Atualização automática",
+                "&&",
+                "git",
+                "push"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "detail": "Adiciona, faz commit e push das alterações"
+        }
+    ]
+}

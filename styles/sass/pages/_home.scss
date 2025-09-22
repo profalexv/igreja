@@ -1,0 +1,327 @@
+// ===================================
+// HOME PAGE
+// Estilos específicos da página inicial
+// ===================================
+
+@use 'sass:color';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+// Banner principal
+.banner {
+  width: 100%;
+  margin-top: 110px; // Espaço para header fixo + aviso
+  position: relative;
+  overflow: hidden;
+  
+  @include mobile {
+    margin-top: 85px;
+  }
+  
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    
+    @include mobile {
+      height: 250px;
+    }
+    
+    @include mobile-small {
+      height: 200px;
+    }
+  }
+  
+  // Overlay opcional
+  &.banner-overlay {
+    @include overlay(0.3);
+    
+    .banner-content {
+      @include absolute-center;
+      text-align: center;
+      color: white;
+      z-index: 3;
+      
+      h2 {
+        font-size: $font-size-3xl;
+        margin-bottom: $spacing-lg;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        
+        @include mobile {
+          font-size: $font-size-2xl;
+        }
+      }
+      
+      p {
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-2xl;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        
+        @include mobile {
+          font-size: $font-size-base;
+        }
+      }
+      
+      .banner-cta {
+        @include button-primary;
+        font-size: $font-size-lg;
+        padding: $spacing-lg $spacing-2xl;
+      }
+    }
+  }
+}
+
+// Frame principal
+.fjanela {
+  width: 100%;
+  background: $bg-white;
+  box-shadow: $shadow-md;
+  border-radius: $border-radius-lg $border-radius-lg 0 0;
+  overflow: hidden;
+  margin-top: -20px; // Sobrepõe ligeiramente o banner
+  position: relative;
+  z-index: 2;
+  
+  iframe {
+    width: 100%;
+    min-height: 600px;
+    border: none;
+    display: block;
+    
+    @include mobile {
+      min-height: 400px;
+    }
+  }
+}
+
+// Seções especiais da home
+.home-intro {
+  padding: $spacing-3xl 0;
+  background: linear-gradient(135deg, rgba($primary-color, 0.02), rgba($primary-color, 0.05));
+  text-align: center;
+  
+  .container {
+    max-width: 800px;
+  }
+  
+  h2 {
+    color: $primary-color;
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-xl;
+    
+    @include mobile {
+      font-size: $font-size-2xl;
+    }
+  }
+  
+  p {
+    font-size: $font-size-lg;
+    color: $text-secondary;
+    line-height: $line-height-relaxed;
+    margin-bottom: $spacing-2xl;
+    
+    @include mobile {
+      font-size: $font-size-base;
+    }
+  }
+  
+  .intro-cta {
+    @include flex-center;
+    gap: $spacing-lg;
+    flex-wrap: wrap;
+    
+    .btn {
+      @include button-primary;
+      
+      &.btn-secondary {
+        @include button-secondary;
+      }
+    }
+  }
+}
+
+// Seção de estatísticas
+.home-stats {
+  padding: $spacing-3xl 0;
+  background: $bg-white;
+  
+  .stats-grid {
+    @include grid-4-cols;
+    
+    @include mobile {
+      @include grid-2-cols;
+    }
+  }
+}
+
+// Seção de ministérios em destaque
+.home-ministerios {
+  padding: $spacing-3xl 0;
+  background: $bg-main;
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+    
+    h2 {
+      color: $primary-color;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-lg;
+      
+      @include mobile {
+        font-size: $font-size-2xl;
+      }
+    }
+    
+    p {
+      font-size: $font-size-lg;
+      color: $text-secondary;
+      max-width: 600px;
+      margin: 0 auto;
+      
+      @include mobile {
+        font-size: $font-size-base;
+      }
+    }
+  }
+  
+  .ministerios-destaque {
+    @include grid-3-cols;
+    
+    .card {
+      @include hover-lift;
+      border-top: 4px solid $accent-color;
+      
+      &:nth-child(2) {
+        border-top-color: $primary-color;
+      }
+      
+      &:nth-child(3) {
+        border-top-color: $success-color;
+      }
+    }
+  }
+  
+  .ver-todos {
+    text-align: center;
+    margin-top: $spacing-3xl;
+    
+    .btn {
+      @include button-secondary;
+      font-size: $font-size-lg;
+      padding: $spacing-lg $spacing-2xl;
+    }
+  }
+}
+
+// Seção de contato/localização
+.home-contato {
+  padding: $spacing-3xl 0;
+  background: linear-gradient(135deg, $primary-color, color.adjust($primary-color, $lightness: 10%));
+  color: white;
+  
+  .contato-grid {
+    @include grid-2-cols;
+    align-items: center;
+    gap: $spacing-3xl;
+  }
+  
+  .contato-info {
+    h2 {
+      color: white;
+      font-size: $font-size-2xl;
+      margin-bottom: $spacing-xl;
+    }
+    
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: $font-size-lg;
+      line-height: $line-height-relaxed;
+      margin-bottom: $spacing-xl;
+    }
+    
+    .contato-items {
+      .contato-item {
+        @include flex-center;
+        justify-content: flex-start;
+        gap: $spacing-lg;
+        margin-bottom: $spacing-lg;
+        
+        .icon {
+          @include flex-center;
+          width: 50px;
+          height: 50px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: $border-radius;
+          color: white;
+          font-size: $font-size-xl;
+        }
+        
+        .info {
+          flex: 1;
+          
+          h4 {
+            color: white;
+            font-size: $font-size-base;
+            margin-bottom: $spacing-xs;
+          }
+          
+          p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: $font-size-sm;
+            margin: 0;
+          }
+        }
+      }
+    }
+    
+    .contato-cta {
+      .btn {
+        background: white;
+        color: $primary-color;
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.9);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+  
+  .contato-mapa {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: $border-radius-lg;
+    padding: $spacing-xl;
+    text-align: center;
+    
+    // Placeholder para mapa
+    .mapa-placeholder {
+      width: 100%;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: $border-radius;
+      @include flex-center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+// Animações para a home
+.home-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.4s; }
+  &:nth-child(4) { animation-delay: 0.6s; }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

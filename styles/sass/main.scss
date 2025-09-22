@@ -1,0 +1,22 @@
+// ===================================
+// MAIN SCSS - IGREJA ADVENTISTA DE MAFRA
+// Sistema de estilos modularizado
+// ===================================
+
+// Utilitários (devem vir primeiro)
+@use 'utils/variables' as *;
+@use 'utils/mixins' as *;
+
+// Base
+@use 'base/reset';
+
+// Layout
+@use 'layout/header';
+
+// Componentes
+@use 'components/cards';
+
+// Páginas
+@use 'pages/home';
+@use 'pages/boletim';
+@use 'pages/iframe-pages';

@@ -1,7 +1,7 @@
 /*font Advent Sans Logo*/
 @font-face {
     font-family: 'AdventSans-Logo';
-    src: url('../fonts/AdventSans-Logo.otf') format('opentype');
+    src: url('../../fonts/AdventSans-Logo.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }

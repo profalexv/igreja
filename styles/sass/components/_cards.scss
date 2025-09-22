@@ -1,0 +1,247 @@
+// ===================================
+// CARDS - IGREJA ADVENTISTA
+// ===================================
+
+@use 'sass:color';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+// Card base
+.card {
+  @include card-base;
+  
+  h3 {
+    color: $primary-color;
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+    font-weight: 600;
+  }
+  
+  p {
+    color: $text-secondary;
+    line-height: $line-height-relaxed;
+    margin-bottom: $spacing-lg;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // Card vazio (em construção)
+  &.empty {
+    @include card-empty;
+    
+    h3 {
+      color: $text-light;
+      font-style: italic;
+    }
+    
+    p {
+      color: color.adjust($text-light, $lightness: 10%);
+      font-size: $font-size-sm;
+    }
+  }
+  
+  // Card com link
+  &.card-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+      transform: translateY(-4px);
+      box-shadow: $shadow-xl;
+      
+      h3 {
+        color: color.adjust($primary-color, $lightness: -10%);
+      }
+    }
+  }
+  
+  // Card com imagem
+  &.card-image {
+    padding: 0;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform $transition-slow;
+    }
+    
+    .card-content {
+      padding: $spacing-xl;
+    }
+    
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+  
+  // Card destacado
+  &.card-featured {
+    background: linear-gradient(135deg, $primary-color, color.adjust($primary-color, $lightness: 10%));
+    color: white;
+    
+    h3 {
+      color: white;
+    }
+    
+    p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    &:hover {
+      transform: translateY(-4px) scale(1.02);
+    }
+  }
+  
+  // Card pequeno
+  &.card-small {
+    padding: $spacing-lg;
+    
+    h3 {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-sm;
+    }
+    
+    p {
+      font-size: $font-size-sm;
+      margin-bottom: $spacing-md;
+    }
+  }
+  
+  // Card com ícone
+  &.card-icon {
+    text-align: center;
+    
+    .card-icon-wrapper {
+      @include flex-center;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto $spacing-lg;
+      background: linear-gradient(135deg, $primary-color, color.adjust($primary-color, $lightness: 15%));
+      border-radius: $border-radius-full;
+      color: white;
+      font-size: $font-size-2xl;
+    }
+    
+    i {
+      font-size: inherit;
+    }
+  }
+}
+
+// Grid de cards
+.section-grid {
+  @include grid-3-cols;
+  margin: $spacing-3xl 0;
+  
+  &.grid-2 {
+    @include grid-2-cols;
+  }
+  
+  &.grid-4 {
+    @include grid-4-cols;
+  }
+  
+  // Grid responsivo personalizado
+  &.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+}
+
+// Cards especiais para ministérios
+.ministerio-cards {
+  @include grid-3-cols;
+  margin: $spacing-2xl 0;
+  
+  .card {
+    border-left: 4px solid $primary-color;
+    
+    &:nth-child(3n+1) {
+      border-left-color: $primary-color;
+    }
+    
+    &:nth-child(3n+2) {
+      border-left-color: $accent-color;
+    }
+    
+    &:nth-child(3n+3) {
+      border-left-color: $success-color;
+    }
+    
+    .ministerio-icon {
+      @include flex-center;
+      width: 50px;
+      height: 50px;
+      background: rgba($primary-color, 0.1);
+      border-radius: $border-radius;
+      margin-bottom: $spacing-lg;
+      color: $primary-color;
+      font-size: $font-size-xl;
+    }
+    
+    .ministerio-title {
+      color: $primary-color;
+      font-size: $font-size-lg;
+      font-weight: 600;
+      margin-bottom: $spacing-md;
+    }
+    
+    .ministerio-description {
+      color: $text-secondary;
+      font-size: $font-size-sm;
+      line-height: $line-height-relaxed;
+    }
+    
+    .ministerio-link {
+      @include button-secondary;
+      margin-top: $spacing-lg;
+      font-size: $font-size-sm;
+      padding: $spacing-sm $spacing-lg;
+    }
+  }
+}
+
+// Card de estatísticas
+.stats-card {
+  @include card-base;
+  text-align: center;
+  background: linear-gradient(135deg, white, rgba($primary-color, 0.02));
+  
+  .stats-number {
+    font-size: $font-size-3xl;
+    font-weight: 700;
+    color: $primary-color;
+    margin-bottom: $spacing-sm;
+    display: block;
+  }
+  
+  .stats-label {
+    color: $text-secondary;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+}
+
+// Hover effects para cards
+.cards-hover-lift .card {
+  @include hover-lift;
+}
+
+.cards-hover-scale .card {
+  @include hover-scale;
+}

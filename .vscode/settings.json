@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "*.css": "css",
+        "*.js": "javascript"
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "html.format.enable": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.wrapLineLength": 120,
+    "css.validate": true,
+    "css.lint.duplicateProperties": "warning",
+    "javascript.validate.enable": true,
+    "javascript.format.enable": true,
+    "emmet.includeLanguages": {
+        "javascript": "html"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.port": 5500
+}
