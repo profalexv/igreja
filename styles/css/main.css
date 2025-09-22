@@ -46,7 +46,12 @@ body {
   position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 1rem 0;
   font-weight: 600;
   line-height: 1.25;
@@ -97,7 +102,8 @@ a:focus {
   outline-offset: 2px;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0 0 1rem 0;
   padding-left: 2rem;
 }
