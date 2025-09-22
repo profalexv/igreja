@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Função para gerenciar itens ocultos do menu
     function handleOverflowMenu() {
         if (window.innerWidth > 769 && window.innerWidth <= 920) {
-            // Faixa 770-920px: Ministérios, Ministério Pessoal, Departamentos e Pastoral no mesmo nível
+            // Faixa 770-920px: Ministérios, Ministério Pessoal, Departamentos, Clubes, Espaço Novo Tempo e Pastoral no mesmo nível
             hiddenMenuItems.innerHTML = '';
             hiddenMenuItems.innerHTML = `
                 <li class="dropdown">
@@ -58,6 +58,28 @@ document.addEventListener('DOMContentLoaded', function () {
                     </ul>
                 </li>
                 <li class="dropdown">
+                    <a>Clubes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/iframes/dbv.html" target="janela">Desbravadores</a></li>
+                        <li><a href="pages/iframes/avt.html" target="janela">Aventureiros</a></li>
+                        <li><a href="pages/iframes/universitarios.html" target="janela">Universitários</a></li>
+                        <li><a href="pages/iframes/scb.html" target="janela">Grupo Criacionista</a></li>
+                        <li><a href="pages/iframes/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
+                        <li><a href="pages/iframes/belavistadosul.html" target="janela">Bela Vista do Sul</a></li>
+                        <li><a href="pages/iframes/pequenavideira.html" target="janela">Pequena Videira</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="pages/iframes/nt.html" target="janela">Espaço Novo Tempo</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/iframes/nt.html" target="janela">Espaço Novo Tempo</a></li>
+                        <li><a href="pages/iframes/white.html" target="janela">Espirito de Profecia</a></li>
+                        <li><a href="pages/iframes/scb.html" target="janela">Grupo Criacionista</a></li>
+                        <li><a href="pages/iframes/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
+                        <li><a href="pages/iframes/livro.html" target="janela">Clube do Livro</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
                     <a>Pastoral</a>
                     <ul class="dropdown-menu">
                         <li><a href="pages/iframes/pr.html" target="janela">Pastor</a></li>
@@ -75,14 +97,40 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             document.querySelector('.more-menu-item').style.display = 'inline-block';
-        } else if (window.innerWidth > 920 && window.innerWidth <= 1180) {
-            // Faixa 921-1180px: Apenas Pastoral no botão >
+        } else if (window.innerWidth > 920 && window.innerWidth <= 1200) {
+            // Faixa 921-1200px: Clubes, Espaço Novo Tempo e Pastoral no botão >
             hiddenMenuItems.innerHTML = '';
             hiddenMenuItems.innerHTML = `
-                <li class="menu-title">Pastoral</li>
-                <li><a href="pages/iframes/pr.html" target="janela">Pastor</a></li>
-                <li><a href="pages/iframes/anciaos.html" target="janela">Anciãos</a></li>
-                <li><a href="pages/iframes/diaconato" target="janela">Diaconato</a></li>
+                <li class="dropdown">
+                    <a>Clubes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/iframes/dbv.html" target="janela">Desbravadores</a></li>
+                        <li><a href="pages/iframes/avt.html" target="janela">Aventureiros</a></li>
+                        <li><a href="pages/iframes/universitarios.html" target="janela">Universitários</a></li>
+                        <li><a href="pages/iframes/scb.html" target="janela">Grupo Criacionista</a></li>
+                        <li><a href="pages/iframes/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
+                        <li><a href="pages/iframes/belavistadosul.html" target="janela">Bela Vista do Sul</a></li>
+                        <li><a href="pages/iframes/pequenavideira.html" target="janela">Pequena Videira</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="pages/iframes/nt.html" target="janela">Espaço Novo Tempo</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/iframes/nt.html" target="janela">Espaço Novo Tempo</a></li>
+                        <li><a href="pages/iframes/white.html" target="janela">Espirito de Profecia</a></li>
+                        <li><a href="pages/iframes/scb.html" target="janela">Grupo Criacionista</a></li>
+                        <li><a href="pages/iframes/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
+                        <li><a href="pages/iframes/livro.html" target="janela">Clube do Livro</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a>Pastoral</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/iframes/pr.html" target="janela">Pastor</a></li>
+                        <li><a href="pages/iframes/anciaos.html" target="janela">Anciãos</a></li>
+                        <li><a href="pages/iframes/diaconato" target="janela">Diaconato</a></li>
+                    </ul>
+                </li>
             `;
 
             // Muda o texto do botão para > e adiciona classe
@@ -101,13 +149,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Clona o menu desktop para o mobile
     function initializeMobileMenu() {
         const menuContent = menuDesktop.querySelector('ul').cloneNode(true);
-        
+
         // Remove o item do botão ">" ou ">>" do menu mobile
         const moreMenuItem = menuContent.querySelector('.more-menu-item');
         if (moreMenuItem) {
             moreMenuItem.remove();
         }
-        
+
         menuMobile.appendChild(menuContent);
 
         // Adiciona listeners para dropdowns no menu mobile
