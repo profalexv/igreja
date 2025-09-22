@@ -15,77 +15,77 @@ document.addEventListener('DOMContentLoaded', function () {
             hiddenMenuItems.innerHTML = '';
             hiddenMenuItems.innerHTML = `
                 <li class="dropdown">
-                    <a href="pages/iframes/mipes.html" target="janela">Ministérios</a>
+                    <a href="frames/mipes.html" target="janela">Ministérios</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/iframes/asa.html" target="janela">Assistência Social</a></li>
-                        <li><a href="pages/iframes/familia.html" target="janela">Família</a></li>
-                        <li><a href="pages/iframes/saude.html" target="janela">Saúde</a></li>
-                        <li><a href="pages/iframes/mm.html" target="janela">Mulher</a></li>
-                        <li><a href="pages/iframes/teen.html" target="janela">Adolescentes</a></li>
-                        <li><a href="pages/iframes/soul.html" target="janela">Pré-Adolescentes</a></li>
-                        <li><a href="pages/iframes/mc.html" target="janela">Crianças</a></li>
-                        <li><a href="pages/iframes/ja.html" target="janela">Jovens Adventistas</a></li>
-                        <li><a href="pages/iframes/white.html" target="janela">Espirito de Profecia</a></li>
-                        <li><a href="pages/iframes/sels.html" target="janela">Literatura</a></li>
-                        <li><a href="pages/iframes/mipes.html" target="janela">Evangelismo</a></li>
-                        <li><a href="pages/iframes/dbv.html" target="janela">Desbravadores</a></li>
-                        <li><a href="pages/iframes/avt.html" target="janela">Aventureiros</a></li>
-                        <li><a href="pages/iframes/universitarios.html" target="janela">Universitários</a></li>
-                        <li><a href="pages/iframes/musica.html" target="janela">Música</a></li>
-                        <li><a href="pages/iframes/mordomia.html" target="janela">Mordomia Cristã</a></li>
+                        <li><a href="frames/asa.html" target="janela">Assistência Social</a></li>
+                        <li><a href="frames/familia.html" target="janela">Família</a></li>
+                        <li><a href="frames/saude.html" target="janela">Saúde</a></li>
+                        <li><a href="frames/mm.html" target="janela">Mulher</a></li>
+                        <li><a href="frames/teen.html" target="janela">Adolescentes</a></li>
+                        <li><a href="frames/soul.html" target="janela">Pré-Adolescentes</a></li>
+                        <li><a href="frames/mc.html" target="janela">Crianças</a></li>
+                        <li><a href="frames/ja.html" target="janela">Jovens Adventistas</a></li>
+                        <li><a href="frames/white.html" target="janela">Espirito de Profecia</a></li>
+                        <li><a href="frames/sels.html" target="janela">Literatura</a></li>
+                        <li><a href="frames/mipes.html" target="janela">Evangelismo</a></li>
+                        <li><a href="frames/dbv.html" target="janela">Desbravadores</a></li>
+                        <li><a href="frames/avt.html" target="janela">Aventureiros</a></li>
+                        <li><a href="frames/universitarios.html" target="janela">Universitários</a></li>
+                        <li><a href="frames/musica.html" target="janela">Música</a></li>
+                        <li><a href="frames/mordomia.html" target="janela">Mordomia Cristã</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="pages/iframes/mipes.html" target="janela">Ministério Pessoal</a>
+                    <a href="frames/mipes.html" target="janela">Ministério Pessoal</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/iframes/mipes.html#pg" target="janela">Pequenos Grupos</a></li>
-                        <li><a href="pages/iframes/mipes.html#duplas" target="janela">Missionários</a></li>
-                        <li><a href="pages/iframes/mipes.html#classe" target="janela">Classes Bíblicas</a></li>
-                        <li><a href="pages/iframes/mipes.html" target="janela">Evangelismo</a></li>
-                        <li><a href="pages/iframes/asa.html" target="janela">Assistência Social</a></li>
+                        <li><a href="frames/mipes.html#pg" target="janela">Pequenos Grupos</a></li>
+                        <li><a href="frames/mipes.html#duplas" target="janela">Missionários</a></li>
+                        <li><a href="frames/mipes.html#classe" target="janela">Classes Bíblicas</a></li>
+                        <li><a href="frames/mipes.html" target="janela">Evangelismo</a></li>
+                        <li><a href="frames/asa.html" target="janela">Assistência Social</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a>Departamentos</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/iframes/musica.html" target="janela">Música</a></li>
-                        <li><a href="pages/iframes/comunica.html" target="janela">Comunicação</a></li>
-                        <li><a href="pages/iframes/asa.html" target="janela">Assistência Social</a></li>
-                        <li><a href="pages/iframes/secr.html" target="janela">Secretaria</a></li>
-                        <li><a href="pages/iframes/tesouro.html" target="janela">Tesouraria</a></li>
-                        <li><a href="pages/iframes/audiovisual.html" target="janela">Audiovisual</a></li>
-                        <li><a href="pages/iframes/tesouro.html" target="janela">Patrimônio</a></li>
-                        <li><a href="pages/iframes/mipes.html" target="janela">Evangelismo</a></li>
+                        <li><a href="frames/musica.html" target="janela">Música</a></li>
+                        <li><a href="frames/comunica.html" target="janela">Comunicação</a></li>
+                        <li><a href="frames/asa.html" target="janela">Assistência Social</a></li>
+                        <li><a href="frames/secr.html" target="janela">Secretaria</a></li>
+                        <li><a href="frames/tesouro.html" target="janela">Tesouraria</a></li>
+                        <li><a href="frames/audiovisual.html" target="janela">Audiovisual</a></li>
+                        <li><a href="frames/tesouro.html" target="janela">Patrimônio</a></li>
+                        <li><a href="frames/mipes.html" target="janela">Evangelismo</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a>Clubes</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/iframes/dbv.html" target="janela">Desbravadores</a></li>
-                        <li><a href="pages/iframes/avt.html" target="janela">Aventureiros</a></li>
-                        <li><a href="pages/iframes/universitarios.html" target="janela">Universitários</a></li>
-                        <li><a href="pages/iframes/scb.html" target="janela">Grupo Criacionista</a></li>
-                        <li><a href="pages/iframes/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
-                        <li><a href="pages/iframes/belavistadosul.html" target="janela">Bela Vista do Sul</a></li>
-                        <li><a href="pages/iframes/pequenavideira.html" target="janela">Pequena Videira</a></li>
+                        <li><a href="frames/dbv.html" target="janela">Desbravadores</a></li>
+                        <li><a href="frames/avt.html" target="janela">Aventureiros</a></li>
+                        <li><a href="frames/universitarios.html" target="janela">Universitários</a></li>
+                        <li><a href="frames/scb.html" target="janela">Grupo Criacionista</a></li>
+                        <li><a href="frames/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
+                        <li><a href="frames/belavistadosul.html" target="janela">Bela Vista do Sul</a></li>
+                        <li><a href="frames/pequenavideira.html" target="janela">Pequena Videira</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="pages/iframes/nt.html" target="janela">Espaço Novo Tempo</a>
+                    <a href="frames/nt.html" target="janela">Espaço Novo Tempo</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/iframes/nt.html" target="janela">Espaço Novo Tempo</a></li>
-                        <li><a href="pages/iframes/white.html" target="janela">Espirito de Profecia</a></li>
-                        <li><a href="pages/iframes/scb.html" target="janela">Grupo Criacionista</a></li>
-                        <li><a href="pages/iframes/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
-                        <li><a href="pages/iframes/livro.html" target="janela">Clube do Livro</a></li>
+                        <li><a href="frames/nt.html" target="janela">Espaço Novo Tempo</a></li>
+                        <li><a href="frames/white.html" target="janela">Espirito de Profecia</a></li>
+                        <li><a href="frames/scb.html" target="janela">Grupo Criacionista</a></li>
+                        <li><a href="frames/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
+                        <li><a href="frames/livro.html" target="janela">Clube do Livro</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a>Pastoral</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/iframes/pr.html#pastor" target="janela">Pastor</a></li>
-                        <li><a href="pages/iframes/pr.html#anciaos" target="janela">Anciãos</a></li>
-                        <li><a href="pages/iframes/pr.html#diaconato" target="janela">Diaconato</a></li>
+                        <li><a href="frames/pr.html#pastor" target="janela">Pastor</a></li>
+                        <li><a href="frames/pr.html#anciaos" target="janela">Anciãos</a></li>
+                        <li><a href="frames/pr.html#diaconato" target="janela">Diaconato</a></li>
                     </ul>
                 </li>
             `;
@@ -105,31 +105,31 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li class="dropdown">
                     <a>Clubes</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/iframes/dbv.html" target="janela">Desbravadores</a></li>
-                        <li><a href="pages/iframes/avt.html" target="janela">Aventureiros</a></li>
-                        <li><a href="pages/iframes/universitarios.html" target="janela">Universitários</a></li>
-                        <li><a href="pages/iframes/scb.html" target="janela">Grupo Criacionista</a></li>
-                        <li><a href="pages/iframes/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
-                        <li><a href="pages/iframes/belavistadosul.html" target="janela">Bela Vista do Sul</a></li>
-                        <li><a href="pages/iframes/pequenavideira.html" target="janela">Pequena Videira</a></li>
+                        <li><a href="frames/dbv.html" target="janela">Desbravadores</a></li>
+                        <li><a href="frames/avt.html" target="janela">Aventureiros</a></li>
+                        <li><a href="frames/universitarios.html" target="janela">Universitários</a></li>
+                        <li><a href="frames/scb.html" target="janela">Grupo Criacionista</a></li>
+                        <li><a href="frames/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
+                        <li><a href="frames/belavistadosul.html" target="janela">Bela Vista do Sul</a></li>
+                        <li><a href="frames/pequenavideira.html" target="janela">Pequena Videira</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="pages/iframes/nt.html" target="janela">Espaço Novo Tempo</a>
+                    <a href="frames/nt.html" target="janela">Espaço Novo Tempo</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/iframes/nt.html" target="janela">Espaço Novo Tempo</a></li>
-                        <li><a href="pages/iframes/white.html" target="janela">Espirito de Profecia</a></li>
-                        <li><a href="pages/iframes/scb.html" target="janela">Grupo Criacionista</a></li>
-                        <li><a href="pages/iframes/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
-                        <li><a href="pages/iframes/livro.html" target="janela">Clube do Livro</a></li>
+                        <li><a href="frames/nt.html" target="janela">Espaço Novo Tempo</a></li>
+                        <li><a href="frames/white.html" target="janela">Espirito de Profecia</a></li>
+                        <li><a href="frames/scb.html" target="janela">Grupo Criacionista</a></li>
+                        <li><a href="frames/daskalosalexandros.html" target="janela">Estudos Avançados</a></li>
+                        <li><a href="frames/livro.html" target="janela">Clube do Livro</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a>Pastoral</a>
                     <ul class="dropdown-menu">
-                        <li><a href="pages/iframes/pr.html#pastor" target="janela">Pastor</a></li>
-                        <li><a href="pages/iframes/pr.html#anciaos" target="janela">Anciãos</a></li>
-                        <li><a href="pages/iframes/pr.html#diaconato" target="janela">Diaconato</a></li>
+                        <li><a href="frames/pr.html#pastor" target="janela">Pastor</a></li>
+                        <li><a href="frames/pr.html#anciaos" target="janela">Anciãos</a></li>
+                        <li><a href="frames/pr.html#diaconato" target="janela">Diaconato</a></li>
                     </ul>
                 </li>
             `;
