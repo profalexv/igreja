@@ -719,7 +719,7 @@ h1 {
 
 @media (min-width: 901px) {
     .menu-toggle {
-        display: none;
+        display: none !important;
     }
 
     #superior {
@@ -794,5 +794,12 @@ h1 {
 
     .logo-titulo {
         gap: 0;
+    }
+}
+
+/* Media query para telas extremamente pequenas - 140px */
+@media (max-width: 140px) {
+    .menu-toggle {
+        display: none !important;
     }
 }
