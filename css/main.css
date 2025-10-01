@@ -457,6 +457,10 @@ button {
   color: #666;
   font-size: 0.875rem;
   white-space: nowrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+#superior .dropdown .dropdown-menu li:last-child a {
+  border-bottom: none;
 }
 #superior .dropdown .dropdown-menu li a:hover {
   background-color: rgba(44, 62, 80, 0.05);
@@ -881,7 +885,7 @@ button {
 }
 
 #menu-mobile .dropdown-menu {
-  display: none;
+  display: none !important;
   background: #f8f9fa;
   list-style: none !important;
   margin: 0;
@@ -889,7 +893,16 @@ button {
   border-left: 3px solid #2c3e50;
 }
 
-#menu-mobile .dropdown.active .dropdown-menu {
+#menu-mobile .dropdown.active > .dropdown-menu {
+  display: block !important;
+}
+
+/* Força todos os submenus aninhados a ficarem fechados por padrão */
+#menu-mobile .dropdown-menu .dropdown-menu {
+  display: none !important;
+}
+
+#menu-mobile .dropdown-menu .dropdown.active > .dropdown-menu {
   display: block !important;
 }
 
@@ -1110,6 +1123,12 @@ button {
 .more-menu-super-extended-dropdown > ul > li > a:hover {
   background: rgba(0, 123, 255, 0.08);
   color: #007bff;
+}
+
+.more-menu-dropdown > ul > li:last-child > a,
+.more-menu-extended-dropdown > ul > li:last-child > a,
+.more-menu-super-extended-dropdown > ul > li:last-child > a {
+  border-bottom: none;
 }
 
 .more-menu-dropdown .dropdown-menu,

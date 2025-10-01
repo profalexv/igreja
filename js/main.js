@@ -20,44 +20,74 @@ document.addEventListener('DOMContentLoaded', function () {
         const moreMenuElements = menuContent.querySelectorAll('.more-menu-item, .more-menu-extended-item, .more-menu-super-extended-item');
         moreMenuElements.forEach(element => element.remove());
 
-        // Garante que todos os dropdowns iniciem recolhidos
-        const dropdowns = menuContent.querySelectorAll('.dropdown');
-        dropdowns.forEach(dropdown => {
+        // Força TODOS os dropdowns (incluindo aninhados) a iniciar fechados
+        const allDropdowns = menuContent.querySelectorAll('.dropdown');
+        allDropdowns.forEach(dropdown => {
             dropdown.classList.remove('active');
-            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-            if (dropdownMenu) {
-                dropdownMenu.style.display = 'none';
-            }
+        });
+
+        // Força todos os dropdown-menus a ficar com display none
+        const allDropdownMenus = menuContent.querySelectorAll('.dropdown-menu');
+        allDropdownMenus.forEach(menu => {
+            menu.style.display = 'none';
         });
 
         menuMobile.appendChild(menuContent);
 
-        // Adiciona listeners para dropdowns no menu mobile
-        const dropdownLinks = menuMobile.querySelectorAll('.dropdown > a');
-        dropdownLinks.forEach(dropdownLink => {
-            dropdownLink.addEventListener('click', function (e) {
+        // Adiciona listeners para TODOS os links de dropdown (incluindo aninhados)
+        const allDropdownLinks = menuMobile.querySelectorAll('.dropdown > a');
+        allDropdownLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 
-                const parent = this.parentElement;
-                const dropdownMenu = parent.querySelector('.dropdown-menu');
+                const parentDropdown = this.parentElement;
+                const dropdownMenu = parentDropdown.querySelector(':scope > .dropdown-menu');
+                const isCurrentlyActive = parentDropdown.classList.contains('active');
                 
-                // Fecha outros dropdowns abertos no mesmo nível
-                const siblings = parent.parentElement.querySelectorAll('.dropdown');
+                // Fecha todos os irmãos (mesmo nível)
+                const parent = parentDropdown.parentElement;
+                const siblings = parent.querySelectorAll(':scope > .dropdown');
                 siblings.forEach(sibling => {
-                    if (sibling !== parent && sibling.classList.contains('active')) {
+                    if (sibling !== parentDropdown) {
                         sibling.classList.remove('active');
-                        const siblingMenu = sibling.querySelector('.dropdown-menu');
+                        const siblingMenu = sibling.querySelector(':scope > .dropdown-menu');
                         if (siblingMenu) {
                             siblingMenu.style.display = 'none';
+                            // Fecha todos os submenus do irmão
+                            const nestedDropdowns = siblingMenu.querySelectorAll('.dropdown');
+                            nestedDropdowns.forEach(nested => {
+                                nested.classList.remove('active');
+                                const nestedMenu = nested.querySelector('.dropdown-menu');
+                                if (nestedMenu) {
+                                    nestedMenu.style.display = 'none';
+                                }
+                            });
                         }
                     }
                 });
                 
-                // Toggle do dropdown atual
-                parent.classList.toggle('active');
-                if (dropdownMenu) {
-                    dropdownMenu.style.display = parent.classList.contains('active') ? 'block' : 'none';
+                // Toggle do item atual
+                if (isCurrentlyActive) {
+                    // Fecha este dropdown e todos os seus filhos
+                    parentDropdown.classList.remove('active');
+                    if (dropdownMenu) {
+                        dropdownMenu.style.display = 'none';
+                        const childDropdowns = dropdownMenu.querySelectorAll('.dropdown');
+                        childDropdowns.forEach(child => {
+                            child.classList.remove('active');
+                            const childMenu = child.querySelector('.dropdown-menu');
+                            if (childMenu) {
+                                childMenu.style.display = 'none';
+                            }
+                        });
+                    }
+                } else {
+                    // Abre apenas este dropdown (filhos permanecem fechados)
+                    parentDropdown.classList.add('active');
+                    if (dropdownMenu) {
+                        dropdownMenu.style.display = 'block';
+                    }
                 }
             });
         });
@@ -78,13 +108,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Função para fechar todos os dropdowns do menu mobile
     function closeAllDropdowns() {
-        const dropdowns = menuMobile.querySelectorAll('.dropdown.active');
-        dropdowns.forEach(dropdown => {
+        const allDropdowns = menuMobile.querySelectorAll('.dropdown.active');
+        allDropdowns.forEach(dropdown => {
             dropdown.classList.remove('active');
-            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-            if (dropdownMenu) {
-                dropdownMenu.style.display = 'none';
-            }
+            const dropdownMenus = dropdown.querySelectorAll('.dropdown-menu');
+            dropdownMenus.forEach(menu => {
+                menu.style.display = 'none';
+            });
         });
     }
 
