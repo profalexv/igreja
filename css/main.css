@@ -806,8 +806,9 @@ button {
   padding: 1rem;
   border-bottom: 1px solid #eee;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  min-height: 60px;
 }
 
 #close-menu {
@@ -827,6 +828,92 @@ button {
   text-decoration: none !important;
   border-bottom: none !important;
   cursor: pointer !important; /* Cursor de link para abbr dentro de a */
+}
+
+/* Estilos para o conteúdo do menu mobile */
+#menu-mobile ul {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+#menu-mobile li {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#menu-mobile li:last-child {
+  border-bottom: none;
+}
+
+#menu-mobile > ul > li > a {
+  display: block;
+  padding: 1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+#menu-mobile > ul > li > a:hover {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+}
+
+/* Estilos para dropdowns no menu mobile */
+#menu-mobile .dropdown {
+  position: relative;
+}
+
+#menu-mobile .dropdown > a::after {
+  content: '▼';
+  float: right;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+#menu-mobile .dropdown.active > a::after {
+  transform: rotate(180deg);
+}
+
+#menu-mobile .dropdown-menu {
+  display: none;
+  background: #f8f9fa;
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  border-left: 3px solid #2c3e50;
+}
+
+#menu-mobile .dropdown.active .dropdown-menu {
+  display: block !important;
+}
+
+#menu-mobile .dropdown-menu li {
+  border-bottom: 1px solid #e9ecef;
+  list-style: none !important;
+}
+
+#menu-mobile .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+#menu-mobile .dropdown-menu li a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+#menu-mobile .dropdown-menu li a:hover {
+  background-color: #e9ecef;
+  color: #2c3e50;
 }
 #superior .menu-overlay.active {
   display: block;
