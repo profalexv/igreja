@@ -100,6 +100,20 @@ a:focus {
   outline-offset: 2px;
 }
 
+/* Remove sublinhado dos elementos abbr em todos os contextos */
+abbr {
+  text-decoration: none;
+  border-bottom: none;
+  cursor: help;
+}
+
+/* Garante que abbr dentro de links também não tenha sublinhado */
+a abbr {
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer; /* Mantém cursor de link quando abbr está dentro de a */
+}
+
 ul,
 ol {
   margin: 0 0 1rem 0;
@@ -373,6 +387,23 @@ button {
   background-color: rgba(44, 62, 80, 0.1);
   color: #2c3e50;
 }
+
+/* Regras específicas para elementos abbr nos menus */
+#superior abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+#superior a abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  cursor: pointer !important; /* Cursor de link para abbr dentro de a */
+}
+
+#superior .dropdown-menu abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
 #superior .dropdown:hover > .dropdown-menu {
   opacity: 0.9;
   visibility: visible;
@@ -398,16 +429,6 @@ button {
   transform: translateY(-10px);
   transition: all 0.3s ease-in-out;
   z-index: 1000;
-}
-@media (max-width: 1280px) {
-  #superior .dropdown .dropdown-menu {
-    min-width: 190px;
-  }
-}
-@media (max-width: 1120px) {
-  #superior .dropdown .dropdown-menu {
-    min-width: 150px;
-  }
 }
 @media (max-width: 599px) {
   #superior .dropdown .dropdown-menu {
@@ -436,21 +457,6 @@ button {
   color: #666;
   font-size: 0.875rem;
   white-space: nowrap;
-}
-@media (max-width: 1280px) {
-  #superior .dropdown .dropdown-menu li a {
-    padding: 0.5rem 0.75rem;
-  }
-}
-@media (max-width: 1180px) {
-  #superior .dropdown .dropdown-menu li a {
-    padding: 0.25rem 0.5rem;
-  }
-}
-@media (max-width: 1120px) {
-  #superior .dropdown .dropdown-menu li a {
-    padding: 0.25rem 0.25rem;
-  }
 }
 #superior .dropdown .dropdown-menu li a:hover {
   background-color: rgba(44, 62, 80, 0.05);
@@ -778,6 +784,18 @@ button {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* Regras específicas para elementos abbr no menu mobile */
+#menu-mobile abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+#menu-mobile a abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  cursor: pointer !important; /* Cursor de link para abbr dentro de a */
+}
 #superior .menu-overlay.active {
   display: block;
 }
@@ -928,11 +946,11 @@ button {
   right: 0;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  min-width: 280px;
+  min-width: 250px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 0.5rem 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -984,11 +1002,11 @@ button {
   top: 0;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
-  min-width: 220px;
+  min-width: 180px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   z-index: 1001;
-  padding: 8px 0;
+  padding: 0.5rem 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
   margin-left: 5px;
 }
@@ -1006,7 +1024,7 @@ button {
   padding: 10px 16px;
   color: #555;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   transition: all 0.3s ease;
   font-weight: 400;
 }
@@ -1017,6 +1035,29 @@ button {
   background: rgba(0, 123, 255, 0.08);
   color: #007bff;
   padding-left: 20px;
+}
+
+/* Regras específicas para elementos abbr nos botões more-menu */
+.more-menu-dropdown abbr,
+.more-menu-extended-dropdown abbr,
+.more-menu-super-extended-dropdown abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.more-menu-dropdown a abbr,
+.more-menu-extended-dropdown a abbr,
+.more-menu-super-extended-dropdown a abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  cursor: pointer !important; /* Cursor de link para abbr dentro de a */
+}
+
+.more-menu-dropdown .dropdown-menu abbr,
+.more-menu-extended-dropdown .dropdown-menu abbr,
+.more-menu-super-extended-dropdown .dropdown-menu abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 .card.empty {
   background: #ffffff;
