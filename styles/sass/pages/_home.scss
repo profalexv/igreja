@@ -10,26 +10,26 @@
 // Banner principal
 .banner {
     width: 100%;
-    margin-top: 110px; // Espaço para header fixo + aviso
+    margin-top: 30px; // Apenas espaço para aviso de construção
     position: relative;
     overflow: hidden;
 
     @include mobile {
-        margin-top: 85px;
+        margin-top: 25px;
     }
 
     img {
         width: 100%;
-        height: 400px;
+        height: 480px; // Aumentado de 400px para 480px (+80px)
         object-fit: cover;
         display: block;
 
         @include mobile {
-            height: 250px;
+            height: 330px; // Aumentado de 250px para 330px (+80px)
         }
 
         @include mobile-small {
-            height: 200px;
+            height: 280px; // Aumentado de 200px para 280px (+80px)
         }
     }
 
