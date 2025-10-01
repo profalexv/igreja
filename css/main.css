@@ -473,6 +473,38 @@ button {
     margin-left: 1rem;
   }
 }
+
+/* Reposicionamento do dropdown Pastoral para telas menores que 1660px */
+@media (max-width: 1659px) {
+  #superior > ul > li:nth-last-child(4) .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+/* Reposicionamento do dropdown Ministérios para telas menores que 1080px */
+@media (max-width: 1079px) {
+  #superior > ul > li:nth-last-child(7) .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+/* Reposicionamento do dropdown Escola Sabatina para telas menores que 820px */
+@media (max-width: 819px) {
+  #superior > ul > li:nth-last-child(8) .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+/* Reposicionamento do dropdown Boletim Informativo para telas menores que 720px */
+@media (max-width: 719px) {
+  #superior > ul > li:nth-last-child(9) .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
 #superior > ul > li.more-menu-item .more-menu-btn {
   display: inline-flex;
   align-items: center;
