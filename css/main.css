@@ -893,11 +893,15 @@ button {
   margin-bottom: 0;
 }
 
-/* CSS para o botão >>> (more-menu-super-extended) */
+/* CSS para botões more-menu - OTIMIZADO */
+.more-menu-item,
+.more-menu-extended-item,
 .more-menu-super-extended-item {
   position: relative;
 }
 
+.more-menu-btn,
+.more-menu-extended-btn,
 .more-menu-super-extended-btn {
   font-family: 'AdventSans-Logo', Arial, sans-serif;
   padding: 10px 20px;
@@ -909,10 +913,14 @@ button {
   color: inherit;
 }
 
+.more-menu-btn:hover,
+.more-menu-extended-btn:hover,
 .more-menu-super-extended-btn:hover {
   color: #007bff;
 }
 
+.more-menu-dropdown,
+.more-menu-extended-dropdown,
 .more-menu-super-extended-dropdown {
   display: none;
   position: absolute;
@@ -928,20 +936,28 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.more-menu-item:hover .more-menu-dropdown,
+.more-menu-extended-item:hover .more-menu-extended-dropdown,
 .more-menu-super-extended-item:hover .more-menu-super-extended-dropdown {
   display: block;
 }
 
+.more-menu-dropdown ul,
+.more-menu-extended-dropdown ul,
 .more-menu-super-extended-dropdown ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.more-menu-dropdown li,
+.more-menu-extended-dropdown li,
 .more-menu-super-extended-dropdown li {
   position: relative;
 }
 
+.more-menu-dropdown > ul > li > a,
+.more-menu-extended-dropdown > ul > li > a,
 .more-menu-super-extended-dropdown > ul > li > a {
   display: block;
   padding: 12px 20px;
@@ -952,11 +968,15 @@ button {
   font-weight: 500;
 }
 
+.more-menu-dropdown > ul > li > a:hover,
+.more-menu-extended-dropdown > ul > li > a:hover,
 .more-menu-super-extended-dropdown > ul > li > a:hover {
   background: rgba(0, 123, 255, 0.08);
   color: #007bff;
 }
 
+.more-menu-dropdown .dropdown-menu,
+.more-menu-extended-dropdown .dropdown-menu,
 .more-menu-super-extended-dropdown .dropdown-menu {
   display: none;
   position: absolute;
@@ -973,10 +993,14 @@ button {
   margin-left: 5px;
 }
 
+.more-menu-dropdown .dropdown:hover .dropdown-menu,
+.more-menu-extended-dropdown .dropdown:hover .dropdown-menu,
 .more-menu-super-extended-dropdown .dropdown:hover .dropdown-menu {
   display: block;
 }
 
+.more-menu-dropdown .dropdown-menu li a,
+.more-menu-extended-dropdown .dropdown-menu li a,
 .more-menu-super-extended-dropdown .dropdown-menu li a {
   display: block;
   padding: 10px 16px;
@@ -987,6 +1011,8 @@ button {
   font-weight: 400;
 }
 
+.more-menu-dropdown .dropdown-menu li a:hover,
+.more-menu-extended-dropdown .dropdown-menu li a:hover,
 .more-menu-super-extended-dropdown .dropdown-menu li a:hover {
   background: rgba(0, 123, 255, 0.08);
   color: #007bff;

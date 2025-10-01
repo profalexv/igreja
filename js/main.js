@@ -5,15 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuOverlay = document.getElementById('menu-overlay');
     const closeMenu = document.getElementById('close-menu');
     const menuDesktop = document.getElementById('superior');
-    // const moreMenuBtn = document.querySelector('.more-menu-btn'); // REMOVIDO
-    // const hiddenMenuItems = document.getElementById('hidden-menu-items'); // REMOVIDO
 
     // Clona o menu desktop para o mobile
     function initializeMobileMenu() {
         const menuContent = menuDesktop.querySelector('ul').cloneNode(true);
 
-        // Remove qualquer elemento relacionado ao more-menu que possa ter sido clonado
-        const moreMenuElements = menuContent.querySelectorAll('.more-menu-item, .more-menu-btn, .more-menu-dropdown, #hidden-menu-items');
+        // Remove elementos more-menu do menu mobile
+        const moreMenuElements = menuContent.querySelectorAll('.more-menu-item, .more-menu-extended-item, .more-menu-super-extended-item');
         moreMenuElements.forEach(element => element.remove());
 
         menuMobile.appendChild(menuContent);
@@ -57,9 +55,5 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.innerWidth > 769 && menuMobile.classList.contains('active')) {
             toggleMenu();
         }
-        // handleOverflowMenu(); // REMOVIDO
     });
-
-    // Chama a função inicialmente
-    // handleOverflowMenu(); // REMOVIDO
 });
