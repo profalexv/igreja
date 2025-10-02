@@ -30,6 +30,30 @@
     <link rel="preload" href="js/main.js" as="script">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
+    <script>
+        console.log('Sistema com scroll apenas no iframe ativado');
+        
+        // Função para toggle do banner
+        function toggleBanner() {
+            const body = document.body;
+            const toggleIcon = document.getElementById('toggle-icon');
+            
+            if (body.classList.contains('banner-minimized')) {
+                // Expandir - banner e iframe descem
+                body.classList.remove('banner-minimized');
+                toggleIcon.textContent = '▲';
+                console.log('Conteúdo expandido - banner totalmente visível');
+            } else {
+                // Minimizar - banner e iframe sobem por baixo do header
+                body.classList.add('banner-minimized');
+                toggleIcon.textContent = '▼';
+                console.log('Conteúdo minimizado - banner escondido atrás do header');
+            }
+        }
+        
+        // Torna a função global
+        window.toggleBanner = toggleBanner;
+    </script>
 </head>
 
 <body>
@@ -70,8 +94,8 @@
                             <li><a href="frames/chamada.html" target="janela">Chamada - QUIZ</a></li>
                             <li><a href="https://mais.cpb.com.br/licao-adultos/" target="janela">Lição Online</a>
                             </li>
-                            <li><a href="https://comtextobiblico.com.br/category/resumo-da-semana/"
-                                    target="janela">Lição de
+                            <li><a href="https://comtextobiblico.com.br/category/resumo-da-semana/" target="janela"
+                                   >Lição de
                                     Jovens</a></li>
                             <li><a href="frames/professores.html" target="janela">Classe dos Professores</a>
                             </li>
@@ -632,13 +656,20 @@
             </nav>
         </div>
     </header>
-    <section class="banner">
-        <img src="img/index/fachada.jpg" alt="Igreja Adventista do Sétimo Dia - Mafra">
-    </section>
-    <section class="fjanela">
-        <iframe name="janela" src="frames/boletim.html" title="Conteúdo principal" loading="lazy">
-        </iframe>
-    </section>
+    
+    <div class="content-wrapper">
+        <section class="banner" id="banner">
+            <img src="img/index/fachada.jpg" alt="Igreja Adventista do Sétimo Dia - Mafra">
+            <button class="banner-toggle" id="banner-toggle" onclick="toggleBanner()" title="Ocultar/Mostrar Banner">
+                <span id="toggle-icon">▲</span>
+            </button>
+        </section>
+        <section class="fjanela">
+            <iframe id="janela" name="janela" src="frames/boletim.html" 
+                    frameborder="0" border="0" scrolling="auto" class="content-iframe">
+            </iframe>
+        </section>
+    </div>
 
     <!-- Menu lateral para mobile -->
     <div id="menu-overlay" class="menu-overlay"></div>
