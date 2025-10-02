@@ -1061,5 +1061,35 @@ body.boletim-page {
 }
 
 /* ==========================================================================
+   CORREÇÕES PARA SCROLL EM IFRAME
+   ========================================================================== */
+
+/* Garantir scroll adequado quando o conteúdo está em iframe */
+body {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    height: auto !important;
+    min-height: 100vh !important; /* Altura mínima adequada */
+}
+
+/* Específico para containers que estavam com 100vh */
+.agenda-container {
+    height: auto !important;
+    min-height: 300px;
+    max-height: none !important;
+}
+
+.container.boletim {
+    min-height: 100vh !important; /* Altura adequada para conteúdo real */
+    height: auto !important;
+}
+
+/* Garantir que iframes dentro de frames funcionem */
+.agenda-container iframe {
+    height: 400px !important;
+    max-height: none !important;
+}
+
+/* ==========================================================================
    FIM DO ARQUIVO - STYLESFRAMES.CSS
    ========================================================================== */

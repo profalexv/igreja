@@ -1539,7 +1539,7 @@ header {
 
 /* Estado minimizado - banner e iframe sobem */
 body.banner-minimized .content-wrapper {
-  transform: translateY(-200px);
+  transform: translateY(-340px);
 }
 
 /* Botão de toggle do banner */
@@ -1589,7 +1589,7 @@ body.banner-minimized .banner-toggle i {
   }
   
   body.banner-minimized .content-wrapper {
-    transform: translateY(-150px); /* Menos movimento em mobile */
+    transform: translateY(-220px); /* Menos movimento em mobile */
   }
   
   .banner-toggle {
@@ -1614,6 +1614,10 @@ body.banner-minimized .banner-toggle i {
 @media (max-width: 479px) {
   .banner img {
     height: 280px;
+  }
+  
+  body.banner-minimized .content-wrapper {
+    transform: translateY(-180px); /* Ainda menos movimento para telas pequenas */
   }
 }
 .banner.banner-overlay {
@@ -1709,17 +1713,40 @@ body.banner-minimized .banner-toggle i {
   overflow: hidden;
   padding: 0;
   box-sizing: border-box;
+  /* Altura fixa: 100vh - header(~80px) - rodapé(20px) */
+  height: calc(100vh - 100px);
+}
+
+/* Ajustes para mobile */
+@media (max-width: 599px) {
+  .fjanela {
+    /* Mobile: 100vh - header(~70px) - rodapé(20px) */
+    height: calc(100vh - 90px);
+  }
+}
+
+/* Ajustes para mobile pequeno */
+@media (max-width: 479px) {
+  .fjanela {
+    /* Mobile pequeno: 100vh - header(~65px) - rodapé(20px) */
+    height: calc(100vh - 85px);
+  }
 }
 
 /* Container do iframe */
 .content-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  margin: 0;
-  padding: 0;
-  display: block;
-  border-radius: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  border-radius: 0 !important;
+  overflow: auto !important;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important; /* Para scroll suave no iOS */
+  scrollbar-width: auto !important;
+  -ms-overflow-style: auto !important;
 }
 
 .error h2 {
@@ -2989,4 +3016,22 @@ body.banner-minimized .banner-toggle i {
 .timeline .timeline-item .timeline-content .timeline-description {
   color: #666;
   line-height: 1.75;
+}
+
+/* ==========================================================================
+   FORÇAR SCROLL EM IFRAMES - SOLUÇÃO DEFINITIVA
+   ========================================================================== */
+
+/* Força o iframe a ter scroll funcionando */
+iframe[name="janela"] {
+  overflow: auto !important;
+  overflow-y: scroll !important;
+}
+
+/* Garante que o conteúdo dentro do iframe tenha altura adequada para scroll */
+iframe[name="janela"] html,
+iframe[name="janela"] body {
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100% !important;
 }

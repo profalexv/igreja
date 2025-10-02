@@ -51,6 +51,77 @@
             }
         }
         
+        // Função para minimizar banner automaticamente para links externos
+        function minimizeBannerForExternalLinks() {
+            const body = document.body;
+            const toggleIcon = document.getElementById('toggle-icon');
+            
+            if (!body.classList.contains('banner-minimized')) {
+                body.classList.add('banner-minimized');
+                toggleIcon.textContent = '▼';
+                console.log('Banner minimizado automaticamente para link externo');
+            }
+        }
+        
+        // Adiciona listeners para detectar cliques em links absolutos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Seleciona todos os links que apontam para o iframe
+            const iframeLinks = document.querySelectorAll('a[target="janela"]');
+            
+            iframeLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Verifica se é um link absoluto (http ou https)
+                    if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
+                        console.log('Link externo detectado:', href);
+                        // Minimiza o banner automaticamente para links externos
+                        minimizeBannerForExternalLinks();
+                    }
+                    // Para links internos (frames/*), mantém o estado atual do banner
+                });
+            });
+            
+            // Função para garantir scroll no iframe
+            function ensureIframeScroll() {
+                const iframe = document.getElementById('janela');
+                if (iframe) {
+                    // Força atributos de scroll
+                    iframe.setAttribute('scrolling', 'yes');
+                    iframe.style.overflow = 'auto';
+                    iframe.style.overflowY = 'scroll';
+                    
+                    // Quando o iframe carregar, configura o scroll do conteúdo interno
+                    iframe.addEventListener('load', function() {
+                        try {
+                            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                            if (iframeDoc) {
+                                const body = iframeDoc.body;
+                                const html = iframeDoc.documentElement;
+                                
+                                if (body) {
+                                    body.style.overflowY = 'auto';
+                                    body.style.height = 'auto';
+                                    body.style.minHeight = '100%';
+                                }
+                                if (html) {
+                                    html.style.overflowY = 'auto';
+                                    html.style.height = 'auto';
+                                }
+                                
+                                console.log('Scroll configurado para iframe:', iframe.src);
+                            }
+                        } catch (e) {
+                            console.log('Não foi possível acessar o conteúdo do iframe (pode ser cross-origin)');
+                        }
+                    });
+                }
+            }
+            
+            // Aplica configurações de scroll
+            ensureIframeScroll();
+        });
+        
         // Torna a função global
         window.toggleBanner = toggleBanner;
     </script>
@@ -666,7 +737,8 @@
         </section>
         <section class="fjanela">
             <iframe id="janela" name="janela" src="frames/boletim.html" 
-                    frameborder="0" border="0" scrolling="auto" class="content-iframe">
+                    frameborder="0" border="0" scrolling="yes" class="content-iframe"
+                    style="overflow: auto !important;">
             </iframe>
         </section>
     </div>
