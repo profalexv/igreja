@@ -1713,23 +1713,52 @@ body.banner-minimized .banner-toggle i {
   overflow: hidden;
   padding: 0;
   box-sizing: border-box;
-  /* Altura fixa: 100vh - header(~80px) - rodapé(20px) */
-  height: calc(100vh - 100px);
+  /* Altura banner expandido: 100vh - faixa construção(30px) - header(80px) - banner reservado(80px) - margem(20px) */
+  height: calc(100vh - 210px);
+  transition: height 0.4s ease;
+}
+
+/* Altura quando banner está minimizado - aparecer rodapé */
+body.banner-minimized .fjanela {
+  /* Banner minimizado: 100vh - faixa construção(30px) - header(80px) - rodapé(20px) - margem(30px) */
+  height: calc(100vh - 160px);
+}
+
+/* Rodapé só aparece quando banner minimizado */
+.footer-bar {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+body.banner-minimized .footer-bar {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Ajustes para mobile */
 @media (max-width: 599px) {
   .fjanela {
-    /* Mobile: 100vh - header(~70px) - rodapé(20px) */
-    height: calc(100vh - 90px);
+    /* Mobile banner expandido: 100vh - faixa construção(25px) - header(70px) - banner reservado(60px) - margem(20px) */
+    height: calc(100vh - 175px);
+  }
+  
+  body.banner-minimized .fjanela {
+    /* Mobile banner minimizado: 100vh - faixa construção(25px) - header(70px) - rodapé(20px) - margem(25px) */
+    height: calc(100vh - 140px);
   }
 }
 
 /* Ajustes para mobile pequeno */
 @media (max-width: 479px) {
   .fjanela {
-    /* Mobile pequeno: 100vh - header(~65px) - rodapé(20px) */
-    height: calc(100vh - 85px);
+    /* Mobile pequeno banner expandido: 100vh - faixa construção(25px) - header(65px) - banner reservado(50px) - margem(20px) */
+    height: calc(100vh - 160px);
+  }
+  
+  body.banner-minimized .fjanela {
+    /* Mobile pequeno banner minimizado: 100vh - faixa construção(25px) - header(65px) - rodapé(20px) - margem(25px) */
+    height: calc(100vh - 135px);
   }
 }
 
@@ -3034,4 +3063,120 @@ iframe[name="janela"] body {
   overflow-y: auto !important;
   height: auto !important;
   min-height: 100% !important;
+}
+
+/* ==========================================================================
+   RODAPÉ FIXO
+   ========================================================================== */
+
+.footer-bar {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 20px !important;
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.75rem !important;
+  z-index: 9999 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5) !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: height 0.4s ease !important;
+}
+
+/* Estado expandido do rodapé */
+.footer-bar.footer-expanded {
+  height: 135px !important;
+  align-items: flex-start !important; /* Muda o alinhamento para permitir posicionamento individual */
+}
+
+/* Texto do rodapé quando expandido - posiciona embaixo */
+.footer-bar.footer-expanded p {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+}
+
+/* Botão de toggle do rodapé */
+.footer-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  width: 20px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  z-index: 10000;
+}
+
+/* Botão quando rodapé expandido - posiciona no topo */
+.footer-bar.footer-expanded .footer-toggle {
+  top: 8px;
+  transform: translateY(0);
+}
+
+.footer-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Ajustar iframe quando rodapé expandido */
+body.banner-minimized.footer-expanded .fjanela {
+  height: calc(100vh - 275px) !important; /* 160px original + 115px extra do rodapé (135-20) */
+}
+
+/* Ajustes para mobile quando rodapé expandido */
+@media (max-width: 599px) {
+  body.banner-minimized.footer-expanded .fjanela {
+    height: calc(100vh - 255px) !important; /* 140px original + 115px extra do rodapé */
+  }
+}
+
+@media (max-width: 479px) {
+  body.banner-minimized.footer-expanded .fjanela {
+    height: calc(100vh - 250px) !important; /* 135px original + 115px extra do rodapé */
+  }
+}
+
+.footer-bar p {
+  margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.footer-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-bar a:hover {
+  color: #ecf0f1;
+  text-decoration: underline;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 599px) {
+  .footer-bar {
+    font-size: 0.65rem;
+  }
 }

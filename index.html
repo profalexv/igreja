@@ -63,6 +63,27 @@
             }
         }
         
+        // Função para toggle do rodapé
+        function toggleFooter() {
+            const footer = document.querySelector('.footer-bar');
+            const body = document.body;
+            const toggleIcon = document.getElementById('footer-toggle-icon');
+            
+            if (footer.classList.contains('footer-expanded')) {
+                // Minimizar rodapé
+                footer.classList.remove('footer-expanded');
+                body.classList.remove('footer-expanded');
+                toggleIcon.textContent = '^';
+                console.log('Rodapé minimizado');
+            } else {
+                // Expandir rodapé
+                footer.classList.add('footer-expanded');
+                body.classList.add('footer-expanded');
+                toggleIcon.textContent = 'v';
+                console.log('Rodapé expandido');
+            }
+        }
+        
         // Adiciona listeners para detectar cliques em links absolutos
         document.addEventListener('DOMContentLoaded', function() {
             // Seleciona todos os links que apontam para o iframe
@@ -122,8 +143,9 @@
             ensureIframeScroll();
         });
         
-        // Torna a função global
+        // Torna as funções globais
         window.toggleBanner = toggleBanner;
+        window.toggleFooter = toggleFooter;
     </script>
 </head>
 
@@ -750,6 +772,14 @@
             <button id="close-menu" class="close-menu" aria-label="Fechar Menu">×</button>
         </div>
     </nav>
+    
+    <!-- Rodapé fixo -->
+    <footer class="footer-bar">
+        <p>Copyleft 🄯 2025 - Profalexv - δάσκαλος Αλέξανδρος</p>
+        <button class="footer-toggle" id="footer-toggle" onclick="toggleFooter()" title="Expandir/Minimizar Rodapé">
+            <span id="footer-toggle-icon">^</span>
+        </button>
+    </footer>
 </body>
 
 </html>
