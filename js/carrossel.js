@@ -89,6 +89,18 @@ function openPopup(imgSrc) {
     const popupImg = document.getElementById('popupImg');
     const imagens = Array.from(document.querySelectorAll('.carrossel-img'));
 
+    // Comunicar com o parent frame para minimizar o banner se estiver visível
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({
+                action: 'minimizeBanner',
+                source: 'carrossel'
+            }, '*');
+        }
+    } catch (error) {
+        console.error('Erro na comunicação com parent frame:', error);
+    }
+
     // Encontrar o índice da imagem clicada usando o atual URL pathname
     const urlClicada = new URL(imgSrc).pathname;
     const index = imagens.findIndex(img => new URL(img.src).pathname === urlClicada);
@@ -101,13 +113,6 @@ function openPopup(imgSrc) {
         // Se não encontrou, usar o índice atual
         imagemAtualPopup = atual;
     }
-
-    console.log('Abrindo popup:', {
-        indiceEncontrado: index,
-        imagemAtualPopup,
-        atual,
-        totalImagens: imagens.length
-    });
 
     popupImg.src = imgSrc;
     popup.style.display = 'block';
@@ -147,13 +152,6 @@ function navegarPopup(direcao) {
     } else {
         novoIndex = novoIndex >= imagens.length - 1 ? 0 : novoIndex + 1;
     }
-
-    console.log('Navegação:', {
-        direcao,
-        indexAnterior: imagemAtualPopup,
-        novoIndex,
-        totalImagens: imagens.length
-    });
 
     // Atualizar imagem e índices
     if (imagens[novoIndex]) {

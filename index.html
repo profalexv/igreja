@@ -31,8 +31,6 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
     <script>
-        console.log('Sistema com scroll apenas no iframe ativado');
-        
         // Função para toggle do banner
         function toggleBanner() {
             const body = document.body;
@@ -42,12 +40,10 @@
                 // Expandir - banner e iframe descem
                 body.classList.remove('banner-minimized');
                 toggleIcon.textContent = '▲';
-                console.log('Conteúdo expandido - banner totalmente visível');
             } else {
                 // Minimizar - banner e iframe sobem por baixo do header
                 body.classList.add('banner-minimized');
                 toggleIcon.textContent = '▼';
-                console.log('Conteúdo minimizado - banner escondido atrás do header');
             }
         }
         
@@ -59,9 +55,21 @@
             if (!body.classList.contains('banner-minimized')) {
                 body.classList.add('banner-minimized');
                 toggleIcon.textContent = '▼';
-                console.log('Banner minimizado automaticamente para link externo');
             }
         }
+        
+        // Listener para mensagens dos iframes
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.action === 'minimizeBanner' && event.data.source === 'carrossel') {
+                const body = document.body;
+                const toggleIcon = document.getElementById('toggle-icon');
+                
+                if (!body.classList.contains('banner-minimized')) {
+                    body.classList.add('banner-minimized');
+                    toggleIcon.textContent = '▼';
+                }
+            }
+        });
         
         // Função para toggle do rodapé
         function toggleFooter() {
