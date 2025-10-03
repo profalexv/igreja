@@ -18,61 +18,19 @@
 </head>
 
 <body>
-    <!-- Botões flutuantes de navegação -->
-    <button class="agenda-btn" onclick="scrollToAgenda()">Agenda</button>
-    <button class="topo-btn" onclick="scrollToTopo()">Topo</button>
-    <!-- Popup para imagem ampliada -->
-    <div id="imagePopup" class="popup">
-        <div class="popup-wrapper">
-            <div class="popup-content">
-                <div class="popup-header">
-                    <button class="popup-btn share-toggle" onclick="toggleShareButtons()">
-                        <i class="fas fa-share-nodes"></i>
-                    </button>
-                    <span class="popup-close" onclick="closePopup()">&times;</span>
-                </div>
-                <div class="popup-nav">
-                    <button class="popup-nav-btn anterior" onclick="navegarPopup('anterior')">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="popup-nav-btn proximo" onclick="navegarPopup('proximo')">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-                <img id="popupImg">
-                <div class="share-buttons">
-                    <button class="popup-btn share" onclick="compartilharFacebook()">
-                        <i class="fab fa-facebook"></i>
-                    </button>
-                    <button class="popup-btn share" onclick="compartilharInstagram()">
-                        <i class="fab fa-instagram"></i>
-                    </button>
-                    <button class="popup-btn share" onclick="compartilharWhatsapp()">
-                        <i class="fab fa-whatsapp"></i>
-                    </button>
-                    <button class="popup-btn share" onclick="copiarLink()">
-                        <i class="fas fa-link"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
-        <div class="carrossel">
-            <img src="../../img/carrossel/Foto de profalexv.jpg" class="carrossel-img ativa" alt="Foto de profalexv"
-                onclick="openPopup(this.src)">
-            <img src="../../img/carrossel/Organize sua semana.png" class="carrossel-img" alt="Organize sua semana"
-                onclick="openPopup(this.src)">
-            <img src="../../img/carrossel/santa ceia .png" class="carrossel-img" alt="Santa Ceia"
-                onclick="openPopup(this.src)">
-            <button class="carrossel-btn esq" onclick="mudarImagem(-1)">&#10094;</button>
-            <button class="carrossel-btn dir" onclick="mudarImagem(1)">&#10095;</button>
+        <div class="agenda-container">
+            <iframe
+                src="carrossel.html"
+                frameborder="0" 
+                scrolling="no"></iframe>
         </div>
+        
         <div class="agenda-container">
             <iframe
                 src="https://calendar.google.com/calendar/embed?src=4ea8baa4e97c24d08e3241f625e89fb00303f774b4920751e69f11e6f25eb84b%40group.calendar.google.com&ctz=America%2FSao_Paulo&mode=AGENDA"
-                frameborder="0" scrolling="no"></iframe>
+                frameborder="0" 
+                scrolling="no"></iframe>
         </div>
     </div>
 </body>

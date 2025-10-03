@@ -489,36 +489,6 @@ body.boletim-page {
     object-fit: contain;
 }
 
-/* Botões flutuantes do boletim */
-.agenda-btn,
-.topo-btn {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    color: rgba(0, 0, 0, 0.6);
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    font-size: 14px;
-    transition: var(--transition);
-    z-index: 900;
-    box-shadow: var(--shadow-light);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: none;
-}
-
-.agenda-btn:hover,
-.topo-btn:hover {
-    background: rgba(255, 255, 255, 0.5);
-    color: rgba(0, 0, 0, 0.8);
-    box-shadow: var(--shadow-heavy);
-}
-
 /* ==========================================================================
    9. SISTEMA DE POPUP (BOLETIM)
    ========================================================================== */
@@ -841,17 +811,6 @@ body.boletim-page {
         display: block;
         height: 600px;
         min-height: 600px;
-    }
-
-    .agenda-btn,
-    .topo-btn {
-        display: block;
-    }
-
-    .agenda-btn.hidden,
-    .topo-btn.hidden {
-        opacity: 0;
-        pointer-events: none;
     }
 }
 

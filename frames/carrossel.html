@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre Vieira">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="content-language" content="pt-br">
+    <meta name="description" content="Carrossel de Imagens da Igreja Adventista de Mafra.">
+    <meta name="keywords" content="igreja, adventista, mafra, carrossel, imagens">
+    <meta name="copyright" content="© 2025 ProfAlexV">
+    <title>Carrossel de Imagens</title>
+    <link rel="stylesheet" href="../css/carrossel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/carrossel.js" defer></script>
+</head>
+<body>
+    <div class="carrossel">
+        <!-- Imagem anterior (esquerda) -->
+        <div class="carrossel-preview prev">
+            <img src="../img/carrossel/santa ceia .png" class="carrossel-img-preview" alt="Anterior">
+        </div>
+        
+        <!-- Imagem principal -->
+        <div class="carrossel-main">
+            <img src="../img/carrossel/Foto de profalexv.jpg" class="carrossel-img ativa" alt="Foto de profalexv"
+                onclick="openPopup(this.src)">
+            <img src="../img/carrossel/Organize sua semana.png" class="carrossel-img" alt="Organize sua semana"
+                onclick="openPopup(this.src)">
+            <img src="../img/carrossel/santa ceia .png" class="carrossel-img" alt="Santa Ceia"
+                onclick="openPopup(this.src)">
+        </div>
+        
+        <!-- Imagem seguinte (direita) -->
+        <div class="carrossel-preview next">
+            <img src="../img/carrossel/Organize sua semana.png" class="carrossel-img-preview" alt="Seguinte">
+        </div>
+        
+        <button class="carrossel-btn esq" onclick="mudarImagem(-1)">&#10094;</button>
+        <button class="carrossel-btn dir" onclick="mudarImagem(1)">&#10095;</button>
+    </div>
+
+    <!-- Popup para visualização das imagens -->
+    <div id="imagePopup" class="popup">
+        <div class="popup-wrapper">
+            <div class="popup-content">
+                <img id="popupImg" src="" alt="Imagem ampliada">
+                
+                <!-- Botões posicionados relativos à imagem -->
+                <div class="popup-header">
+                    <button class="popup-close" onclick="closePopup()">×</button>
+                    <button class="share-toggle" onclick="toggleShareButtons()">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+                
+                <div class="popup-nav">
+                    <button class="popup-nav-btn" onclick="navegarPopup('anterior')">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="popup-nav-btn" onclick="navegarPopup('proximo')">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="share-buttons">
+                    <button class="popup-btn share" onclick="compartilharWhatsapp()" title="Compartilhar no WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                    <button class="popup-btn share" onclick="compartilharInstagram()" title="Compartilhar no Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                    <button class="popup-btn share" onclick="copiarLink()" title="Copiar link">
+                        <i class="fas fa-link"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
