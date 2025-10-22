@@ -1,0 +1,282 @@
+/* Estilos específicos para a página ASA */
+
+/* Seções principais */
+.section {
+    margin-bottom: 3rem;
+}
+
+.section h2 {
+    color: #1e3a8a;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.content-block {
+    line-height: 1.7;
+}
+
+.content-block p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.content-block ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-block li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+/* Projetos detalhados */
+.project-detail {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-detail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-detail h3 {
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #3b82f6;
+    padding-left: 1rem;
+}
+
+.project-detail > p {
+    color: #4b5563;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-features ul {
+    margin-left: 1.5rem;
+}
+
+.project-features li {
+    margin-bottom: 0.8rem;
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.project-features strong {
+    color: #1e3a8a;
+}
+
+/* Caixa de destaque */
+.highlight-box {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.highlight-box h3 {
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Layout de duas colunas */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.two-columns h4 {
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.two-columns p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+/* Grid de projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Métodos de ajuda */
+.help-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.method {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #3b82f6;
+}
+
+.method h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.method ul {
+    margin-left: 1.5rem;
+}
+
+.method li {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+/* Informações de contato */
+.contact-info {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Call to action */
+.call-to-action {
+    text-align: center;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.call-to-action h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.verse {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.call-to-action p:last-child {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section h2 {
+        font-size: 1.7rem;
+    }
+    
+    .project-detail {
+        padding: 1.5rem;
+    }
+    
+    .project-detail h3 {
+        font-size: 1.3rem;
+    }
+    
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .help-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .call-to-action h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-detail {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-detail h3 {
+        font-size: 1.2rem;
+        padding-left: 0.8rem;
+    }
+    
+    .highlight-box,
+    .method,
+    .contact-info,
+    .call-to-action {
+        padding: 1.5rem;
+    }
+}
