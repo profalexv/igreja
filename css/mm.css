@@ -1,0 +1,250 @@
+/* Tema Feminino - Ministério da Mulher */
+:root {
+    --cor-primaria: #d946a6;
+    --cor-secundaria: #ec4899;
+    --cor-destaque: #f472b6;
+    --cor-clara: #fce7f3;
+    --cor-muito-clara: #fdf2f8;
+    --cor-texto: #831843;
+    --cor-texto-secundario: #9f1239;
+    --cor-borda: #fbcfe8;
+    --cor-sombra: rgba(219, 39, 119, 0.1);
+    --cor-hover: #be185d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--cor-muito-clara) 0%, var(--cor-clara) 100%);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px var(--cor-sombra);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+}
+
+header h1 i {
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+header .subtitle {
+    font-size: 1.3em;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px var(--cor-sombra);
+    border: 2px solid var(--cor-borda);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(219, 39, 119, 0.15);
+}
+
+section h2 {
+    color: var(--cor-primaria);
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--cor-destaque);
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--cor-secundaria);
+}
+
+section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: var(--cor-texto-secundario);
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list li {
+    background: linear-gradient(135deg, var(--cor-muito-clara) 0%, white 100%);
+    border-left: 5px solid var(--cor-primaria);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(219, 39, 119, 0.08);
+    transition: all 0.3s ease;
+}
+
+.project-list li:hover {
+    border-left-color: var(--cor-secundaria);
+    box-shadow: 0 5px 20px rgba(219, 39, 119, 0.15);
+    transform: translateX(5px);
+}
+
+.project-list h3 {
+    color: var(--cor-secundaria);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.project-list h3::before {
+    content: '✿';
+    margin-right: 12px;
+    font-size: 1.2em;
+    color: var(--cor-destaque);
+}
+
+.project-list p {
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+#historico {
+    background: linear-gradient(135deg, white 0%, var(--cor-muito-clara) 100%);
+}
+
+#projetos {
+    background: white;
+}
+
+#contato {
+    background: linear-gradient(135deg, var(--cor-clara) 0%, var(--cor-muito-clara) 100%);
+    text-align: center;
+    border: 2px solid var(--cor-destaque);
+}
+
+#contato h2 {
+    color: var(--cor-primaria);
+}
+
+#contato p {
+    font-size: 1.2em;
+    color: var(--cor-texto);
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 30px 15px;
+        border-radius: 15px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    header .subtitle {
+        font-size: 1.1em;
+    }
+    
+    section {
+        padding: 25px;
+        border-radius: 10px;
+    }
+    
+    section h2 {
+        font-size: 1.8em;
+    }
+    
+    .project-list li {
+        padding: 20px;
+    }
+    
+    .project-list h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+    
+    header .subtitle {
+        font-size: 1em;
+    }
+    
+    section {
+        padding: 20px;
+    }
+    
+    section h2 {
+        font-size: 1.5em;
+    }
+    
+    .project-list h3 {
+        font-size: 1.2em;
+    }
+}
