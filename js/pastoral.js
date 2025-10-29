@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Verifica se há hash na URL ao carregar a página
     const hash = window.location.hash.substring(1); // Remove o #
-    if (hash && ['pastor', 'anciaos', 'diaconato'].includes(hash)) {
+    if (hash && ['pastor', 'anciaos', 'diaconato', 'quemsomos'].includes(hash)) {
         switchTab(hash);
     } else {
         // Se não houver hash válido, ativa a primeira aba (pastor)
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listener para mudanças no hash (botão voltar/avançar do navegador)
     window.addEventListener('hashchange', function() {
         const hash = window.location.hash.substring(1);
-        if (hash && ['pastor', 'anciaos', 'diaconato'].includes(hash)) {
+        if (hash && ['pastor', 'anciaos', 'diaconato', 'quemsomos'].includes(hash)) {
             switchTab(hash);
         }
     });

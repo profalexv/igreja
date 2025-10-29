@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre Vieira">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="content-language" content="pt-br">
+    <meta name="description" content="Conheça a Igreja Adventista do Sétimo Dia - História, crenças e missão de pregar o advento de Cristo.">
+    <meta name="keywords" content="igreja, adventista, mafra, quem somos, história, crenças, reforma protestante, grande conflito">
+    <meta name="copyright" content="© 2025 ProfAlexV">
+    <title>Quem Somos - Igreja Adventista</title>
+    <link rel="stylesheet" href="../css/frames.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .qs-header {
+            background: linear-gradient(135deg, #c62828 0%, #8e0000 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 30px rgba(198, 40, 40, 0.4);
+        }
+        
+        .qs-header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .qs-header .subtitle {
+            font-size: 1.4em;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+        
+        .qs-header .verse {
+            font-size: 1.2em;
+            font-style: italic;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            background: white;
+            padding: 50px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #c62828;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 4px solid #c62828;
+            padding-bottom: 20px;
+        }
+        
+        .section h3 {
+            color: #8e0000;
+            font-size: 1.8em;
+            margin: 40px 0 25px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h4 {
+            color: #c62828;
+            font-size: 1.4em;
+            margin: 30px 0 15px 0;
+        }
+        
+        .section p {
+            font-size: 1.15em;
+            line-height: 2;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .intro-box {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            padding: 40px;
+            border-radius: 20px;
+            border: 3px solid #c62828;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(198, 40, 40, 0.2);
+        }
+        
+        .intro-box h3 {
+            color: #c62828;
+            margin-top: 0;
+            font-size: 2em;
+            text-align: center;
+        }
+        
+        .intro-box p {
+            font-size: 1.2em;
+            text-align: center;
+            color: #555;
+            line-height: 2;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 5px solid #f57f17;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .highlight-box h3 {
+            color: #f57f17;
+            margin-top: 0;
+        }
+        
+        .bible-verse {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 5px solid #2e7d32;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            font-style: italic;
+        }
+        
+        .bible-verse p {
+            color: #1b5e20;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .bible-verse cite {
+            display: block;
+            text-align: right;
+            font-weight: 600;
+            color: #2e7d32;
+            font-style: normal;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+        
+        .beliefs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .belief-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #c62828;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .belief-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(198, 40, 40, 0.3);
+        }
+        
+        .belief-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #c62828, #8e0000);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 15px;
+            box-shadow: 0 4px 10px rgba(198, 40, 40, 0.4);
+        }
+        
+        .belief-card h4 {
+            display: inline-block;
+            color: #c62828;
+            margin: 0 0 15px 0;
+            font-size: 1.3em;
+        }
+        
+        .belief-card p {
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 60px;
+            margin: 50px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #c62828, #8e0000);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -43px;
+            top: 35px;
+            width: 20px;
+            height: 20px;
+            background: #c62828;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #c62828;
+        }
+        
+        .timeline-date {
+            display: inline-block;
+            background: linear-gradient(135deg, #c62828, #8e0000);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-item h4 {
+            color: #c62828;
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+        
+        .timeline-item p {
+            color: #555;
+            line-height: 1.9;
+        }
+        
+        .reformers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .reformer-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #c62828;
+            text-align: center;
+        }
+        
+        .reformer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(198, 40, 40, 0.3);
+        }
+        
+        .reformer-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #c62828, #8e0000);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+            margin: 0 auto 25px;
+            box-shadow: 0 8px 20px rgba(198, 40, 40, 0.4);
+        }
+        
+        .reformer-card h4 {
+            color: #c62828;
+            font-size: 1.5em;
+            margin: 20px 0 10px;
+        }
+        
+        .reformer-card .dates {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .reformer-card p {
+            text-align: center;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .book-section {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 50px;
+            border-radius: 20px;
+            margin: 50px 0;
+            border: 4px solid #1976d2;
+            box-shadow: 0 10px 40px rgba(25, 118, 210, 0.3);
+        }
+        
+        .book-section h2 {
+            color: #1976d2;
+            border-color: #1976d2;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .book-icon {
+            font-size: 6em;
+            color: #1976d2;
+            text-align: center;
+            margin: 30px 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .links-section {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            padding: 50px;
+            border-radius: 20px;
+            margin: 50px 0;
+            border: 4px solid #6a1b9a;
+            box-shadow: 0 10px 40px rgba(106, 27, 154, 0.3);
+        }
+        
+        .links-section h2 {
+            color: #6a1b9a;
+            border-color: #6a1b9a;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .link-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top: 5px solid #6a1b9a;
+        }
+        
+        .link-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(106, 27, 154, 0.3);
+        }
+        
+        .link-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #6a1b9a, #4a148c);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5em;
+            margin: 0 auto 25px;
+            box-shadow: 0 8px 20px rgba(106, 27, 154, 0.4);
+        }
+        
+        .link-card h3 {
+            color: #6a1b9a;
+            font-size: 1.5em;
+            margin: 20px 0 15px;
+        }
+        
+        .link-card p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .link-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6a1b9a, #4a148c);
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.15em;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(106, 27, 154, 0.4);
+        }
+        
+        .link-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(106, 27, 154, 0.6);
+        }
+        
+        .link-button i {
+            margin-right: 8px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #c62828, #8e0000);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(198, 40, 40, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(198, 40, 40, 0.5);
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        @media (max-width: 768px) {
+            .qs-header h1 {
+                font-size: 2.2em;
+            }
+            
+            .qs-header .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 2em;
+            }
+            
+            .beliefs-grid,
+            .reformers-grid,
+            .links-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline {
+                padding-left: 40px;
+            }
+            
+            .timeline::before {
+                left: 15px;
+            }
+            
+            .timeline-item::before {
+                left: -33px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="qs-header">
+        <h1><i class="fas fa-church"></i> Quem Somos</h1>
+        <p class="subtitle">Igreja Adventista do Sétimo Dia - Uma comunidade mundial unida pela esperança do retorno de Jesus</p>
+        <p class="verse">"E este evangelho do reino será pregado em todo o mundo, em testemunho a todas as nações, e então virá o fim." - Mateus 24:14</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- SEÇÃO: INTRODUÇÃO -->
+        <section class="intro-box">
+            <h3><i class="fas fa-globe-americas"></i> Uma Igreja Mundial</h3>
+            <p>A <strong>Igreja Adventista do Sétimo Dia</strong> é uma comunidade cristã mundial com mais de <strong>21 milhões de membros</strong> em mais de <strong>200 países</strong>. Nossa missão é proclamar a mensagem do <strong>advento</strong> - a segunda vinda de Jesus Cristo - e preparar um povo para esse encontro glorioso.</p>
+        </section>
+
+        <!-- SEÇÃO: ESTATÍSTICAS -->
+        <section class="section">
+            <h2><i class="fas fa-chart-bar"></i> A Igreja em Números</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">21M+</div>
+                    <div class="stat-label">Membros</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Países</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">90K+</div>
+                    <div class="stat-label">Igrejas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">9K+</div>
+                    <div class="stat-label">Escolas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">700+</div>
+                    <div class="stat-label">Idiomas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">180+</div>
+                    <div class="stat-label">Hospitais</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: NOSSA MISSÃO -->
+        <section class="section">
+            <h2><i class="fas fa-bullseye"></i> Nossa Missão</h2>
+            
+            <p>A Igreja Adventista do Sétimo Dia existe para proclamar a todos os povos o <strong>evangelho eterno</strong> no contexto da <strong>mensagem dos três anjos</strong> de Apocalipse 14:6-12, convidando-os a aceitar Jesus como Salvador pessoal e Senhor e a unir-se à Sua igreja remanescente.</p>
+            
+            <blockquote class="bible-verse">
+                <p><em>"E vi outro anjo voar pelo meio do céu, e tinha o evangelho eterno, para o proclamar aos que habitam sobre a terra, e a toda nação, e tribo, e língua, e povo, dizendo com grande voz: Temei a Deus e dai-lhe glória, porque vinda é a hora do seu juízo."</em></p>
+                <cite>Apocalipse 14:6-7</cite>
+            </blockquote>
+            
+            <div class="highlight-box">
+                <h3><i class="fas fa-star"></i> Nossa Identidade</h3>
+                <p>Somos uma igreja <strong>protestante</strong> que surge da grande <strong>Reforma Protestante</strong> do século XVI, comprometida com os princípios de <em>Sola Scriptura</em> (somente a Escritura), <em>Sola Fide</em> (somente a fé) e <em>Sola Gratia</em> (somente a graça).</p>
+                <p>O nome "Adventista" vem da palavra <strong>"advento"</strong>, que significa "vinda" - referindo-se à segunda vinda de Jesus Cristo, nossa bendita esperança.</p>
+                <p>O termo "Sétimo Dia" refere-se à nossa observância do <strong>sábado</strong> (o sétimo dia da semana) como dia de repouso e adoração, conforme estabelecido por Deus na criação e reafirmado nos Dez Mandamentos.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: RAÍZES NA REFORMA PROTESTANTE -->
+        <section class="section">
+            <h2><i class="fas fa-bible"></i> Raízes na Reforma Protestante</h2>
+            
+            <p>A Igreja Adventista é herdeira direta da <strong>Reforma Protestante</strong> iniciada no século XVI. Nossa teologia e práticas têm raízes profundas nos princípios estabelecidos pelos grandes reformadores que ousaram desafiar tradições humanas em favor da autoridade da Palavra de Deus.</p>
+
+            <h3><i class="fas fa-scroll"></i> Os Grandes Reformadores</h3>
+            
+            <div class="reformers-grid">
+                <div class="reformer-card">
+                    <div class="reformer-icon">
+                        <i class="fas fa-cross"></i>
+                    </div>
+                    <h4>Martinho Lutero</h4>
+                    <p class="dates">(1483-1546)</p>
+                    <p>Monge agostiniano alemão que iniciou a Reforma Protestante com suas 95 Teses em 1517. Defendeu a justificação pela fé e a autoridade suprema das Escrituras. Sua tradução da Bíblia para o alemão democratizou o acesso à Palavra de Deus.</p>
+                </div>
+                
+                <div class="reformer-card">
+                    <div class="reformer-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>João Calvino</h4>
+                    <p class="dates">(1509-1564)</p>
+                    <p>Teólogo francês que sistematizou a teologia protestante em suas "Institutas da Religião Cristã". Enfatizou a soberania de Deus, a autoridade das Escrituras e a necessidade de uma vida piedosa e disciplinada.</p>
+                </div>
+                
+                <div class="reformer-card">
+                    <div class="reformer-icon">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    <h4>John Wesley</h4>
+                    <p class="dates">(1703-1791)</p>
+                    <p>Fundador do movimento metodista. Enfatizou a santificação, a perfeição cristã e a importância da experiência pessoal com Deus. Seu ênfase na santidade de vida influenciou profundamente o adventismo.</p>
+                </div>
+                
+                <div class="reformer-card">
+                    <div class="reformer-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h4>William Miller</h4>
+                    <p class="dates">(1782-1849)</p>
+                    <p>Pregador batista americano que, através do estudo profundo das profecias de Daniel e Apocalipse, iniciou o grande <strong>Movimento Milerita</strong>, que deu origem à Igreja Adventista. Proclamou a iminência da volta de Jesus.</p>
+                </div>
+                
+                <div class="reformer-card">
+                    <div class="reformer-icon">
+                        <i class="fas fa-dove"></i>
+                    </div>
+                    <h4>Ellen G. White</h4>
+                    <p class="dates">(1827-1915)</p>
+                    <p>Co-fundadora da Igreja Adventista e mensageira do Senhor. Seus escritos, baseados em visões proféticas, guiaram o desenvolvimento doutrinário da igreja e enfatizaram educação, saúde e missão mundial.</p>
+                </div>
+                
+                <div class="reformer-card">
+                    <div class="reformer-icon">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <h4>Tiago White</h4>
+                    <p class="dates">(1821-1881)</p>
+                    <p>Pioneiro adventista, esposo de Ellen White, foi editor, administrador e pregador. Fundamental na organização da igreja e no estabelecimento de suas instituições publicadoras.</p>
+                </div>
+            </div>
+
+            <h3><i class="fas fa-road"></i> O Princípio da Reforma Contínua</h3>
+            <p>Os reformadores proclamaram o lema: <strong>"Ecclesia reformata, semper reformanda"</strong> - "A igreja reformada está sempre se reformando". Este princípio, baseado na contínua descoberta de verdades bíblicas, levou ao surgimento da Igreja Adventista no século XIX como um movimento que buscava restaurar verdades bíblicas negligenciadas ao longo dos séculos.</p>
+        </section>
+
+        <!-- SEÇÃO: HISTÓRIA -->
+        <section class="section">
+            <h2><i class="fas fa-history"></i> Nossa História</h2>
+            
+            <p>A Igreja Adventista do Sétimo Dia tem suas raízes no <strong>Grande Despertar Religioso</strong> do século XIX nos Estados Unidos. Através do estudo fervoroso das profecias bíblicas, especialmente de Daniel e Apocalipse, um grupo de crentes chegou à convicção de que a volta de Jesus estava próxima.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">1831-1844</span>
+                    <h4>Movimento Milerita</h4>
+                    <p>William Miller, após anos de estudo intenso das profecias de Daniel, começou a pregar que Jesus voltaria por volta de 1843-1844. Milhares de pessoas foram alcançadas por esta mensagem de esperança. Após o Grande Desapontamento de 22 de outubro de 1844, um grupo remanescente continuou estudando as Escrituras.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-date">1844-1850</span>
+                    <h4>Período de Reorganização</h4>
+                    <p>Os primeiros adventistas guardadores do sábado começaram a se reunir e estudar a Bíblia. Descobriram verdades sobre o santuário celestial, o sábado bíblico, o estado dos mortos e outras doutrinas fundamentais. Ellen White recebeu suas primeiras visões.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-date">1860</span>
+                    <h4>Escolha do Nome</h4>
+                    <p>Em uma conferência em Battle Creek, Michigan, o grupo escolheu oficialmente o nome <strong>"Igreja Adventista do Sétimo Dia"</strong>, refletindo tanto sua crença na segunda vinda de Cristo quanto sua observância do sábado bíblico.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-date">1863</span>
+                    <h4>Organização Oficial</h4>
+                    <p>Em 21 de maio de 1863, a Igreja Adventista do Sétimo Dia foi oficialmente organizada durante a Assembleia da Associação Geral em Battle Creek, Michigan, com 3.500 membros em 125 igrejas.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-date">1874</span>
+                    <h4>Primeiro Missionário</h4>
+                    <p>J. N. Andrews foi enviado como primeiro missionário oficial da igreja para a Europa, marcando o início da obra missionária mundial adventista.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-date">1888</span>
+                    <h4>Ênfase na Justificação pela Fé</h4>
+                    <p>A Assembleia da Associação Geral em Minneapolis reafirmou a doutrina fundamental da justificação pela fé em Cristo, trazendo equilíbrio e maturidade teológica à igreja.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-date">1894</span>
+                    <h4>Chegada ao Brasil</h4>
+                    <p>A mensagem adventista chega ao Brasil através de publicações em alemão. Em 1895, o pastor Albert B. Stauffer chega ao Brasil, e em 1896 é estabelecida a primeira igreja adventista em Gaspar Alto, Santa Catarina.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-date">Século XX</span>
+                    <h4>Expansão Mundial</h4>
+                    <p>A igreja experimentou crescimento exponencial, estabelecendo escolas, hospitais, editoras e igrejas em todos os continentes. O sistema de educação adventista tornou-se o maior sistema educacional protestante do mundo.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-date">Século XXI</span>
+                    <h4>Igreja Global</h4>
+                    <p>Atualmente, a Igreja Adventista está presente em mais de 200 países, com mais de 21 milhões de membros. A cada dia, aproximadamente 3.000 pessoas são batizadas na igreja ao redor do mundo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: O GRANDE CONFLITO -->
+        <section class="book-section">
+            <h2><i class="fas fa-book"></i> O Grande Conflito: Unificador da Mensagem</h2>
+            
+            <div class="book-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+            
+            <p style="font-size: 1.2em; text-align: center; color: #0d47a1; line-height: 2; max-width: 900px; margin: 0 auto;">O livro <strong>"O Grande Conflito"</strong>, escrito por Ellen G. White em 1858 (edição ampliada em 1888 e 1911), é considerado o livro mais importante do adventismo depois da Bíblia. Ele apresenta o panorama completo da batalha entre Cristo e Satanás desde a origem do pecado até o estabelecimento da Nova Terra.</p>
+            
+            <div class="highlight-box" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left-color: #1976d2; margin-top: 40px;">
+                <h3 style="color: #1976d2;"><i class="fas fa-lightbulb"></i> Por que é um Livro Unificador?</h3>
+                <p><strong>1. Visão Profética Unificada:</strong> O livro apresenta uma compreensão coerente de toda a história humana sob a perspectiva do grande conflito entre o bem e o mal, conectando as profecias de Daniel e Apocalipse em um panorama contínuo.</p>
+                
+                <p><strong>2. Identidade Denominacional:</strong> Consolida as doutrinas distintivas adventistas - o sábado, o santuário celestial, o estado dos mortos, a segunda vinda - mostrando como todas se encaixam no plano profético de Deus.</p>
+                
+                <p><strong>3. Distribuição Mundial:</strong> Traduzido para mais de 70 idiomas, com mais de 40 milhões de cópias distribuídas, o livro tem sido instrumento de evangelismo e unidade doutrinária ao redor do mundo.</p>
+                
+                <p><strong>4. Contexto Histórico:</strong> Traça a história da igreja cristã desde o primeiro século, passando pela Reforma Protestante, até o surgimento do movimento adventista, mostrando a continuidade do plano divino.</p>
+                
+                <p><strong>5. Advertências Proféticas:</strong> Prepara os crentes para os eventos finais, incluindo a crise do sábado, a marca da besta e a perseguição final, unificando a igreja em torno de uma compreensão comum da escatologia bíblica.</p>
+            </div>
+            
+            <blockquote class="bible-verse" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left-color: #1976d2;">
+                <p style="color: #0d47a1;"><em>"Todas as Escrituras foram dadas pela inspiração de Deus e são proveitosas para ensinar, para repreender, para corrigir, para instruir em justiça, para que o homem de Deus seja perfeito e perfeitamente preparado para toda boa obra."</em></p>
+                <cite style="color: #1976d2;">2 Timóteo 3:16-17</cite>
+            </blockquote>
+            
+            <p style="font-size: 1.15em; text-align: center; color: #555; margin-top: 30px;">O Grande Conflito é mais do que um livro de história ou profecia - é um chamado para que cada crente compreenda seu papel na última fase do conflito milenar e se prepare para o retorno glorioso de Jesus Cristo.</p>
+        </section>
+
+        <!-- SEÇÃO: AS 28 CRENÇAS -->
+        <section class="section">
+            <h2><i class="fas fa-list-ol"></i> As 28 Crenças Fundamentais</h2>
+            
+            <p>As crenças fundamentais da Igreja Adventista do Sétimo Dia são expressões da nossa compreensão dos ensinos das Escrituras. Estas crenças não são um "credo" fechado, mas sim um resumo de nossa fé baseada unicamente na Bíblia, aberto a revisões conforme o Espírito Santo nos conduz a uma compreensão mais profunda da Palavra de Deus.</p>
+
+            <div class="highlight-box">
+                <h3><i class="fas fa-info-circle"></i> Princípio Fundamental</h3>
+                <p>Todas as nossas crenças estão fundamentadas na <strong>Bíblia Sagrada</strong>, reconhecida como a única regra de fé e prática. Cremos que a Bíblia é a revelação infalível da vontade de Deus, inspirada pelo Espírito Santo.</p>
+            </div>
+
+            <h3><i class="fas fa-layer-group"></i> Organização das Crenças</h3>
+            <p>As 28 crenças estão organizadas em seis categorias principais:</p>
+
+            <div class="beliefs-grid">
+                <!-- DEUS -->
+                <div class="belief-card">
+                    <span class="belief-number">1</span>
+                    <h4>As Escrituras Sagradas</h4>
+                    <p>A Bíblia é a Palavra de Deus escrita, revelação infalível de Sua vontade, norma de caráter e critério de experiência.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">2</span>
+                    <h4>A Trindade</h4>
+                    <p>Há um só Deus: Pai, Filho e Espírito Santo, uma unidade de três Pessoas co-eternas.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">3</span>
+                    <h4>Deus Pai</h4>
+                    <p>Deus, o Eterno Pai, é o Criador, Originador, Mantenedor e Soberano de toda a criação.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">4</span>
+                    <h4>Deus Filho</h4>
+                    <p>Jesus Cristo é Deus eterno, encarnado, nosso Salvador e Mediador junto ao Pai.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">5</span>
+                    <h4>Deus Espírito Santo</h4>
+                    <p>O Espírito Santo inspirou os escritores das Escrituras e encheu a vida de Cristo com poder. Convence, transforma e santifica.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">6</span>
+                    <h4>A Criação</h4>
+                    <p>Deus é o Criador de todas as coisas e revelou nas Escrituras o relato autêntico de Sua atividade criadora.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">7</span>
+                    <h4>A Natureza da Humanidade</h4>
+                    <p>O homem e a mulher foram criados à imagem de Deus, com individualidade e liberdade de pensar e agir.</p>
+                </div>
+
+                <!-- O GRANDE CONFLITO -->
+                <div class="belief-card">
+                    <span class="belief-number">8</span>
+                    <h4>O Grande Conflito</h4>
+                    <p>A humanidade está envolvida no grande conflito entre Cristo e Satanás quanto ao caráter de Deus e Sua lei.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">9</span>
+                    <h4>Vida, Morte e Ressurreição de Cristo</h4>
+                    <p>Na vida de Cristo, de perfeita obediência à vontade de Deus, Seu sofrimento, morte e ressurreição, Deus proveu o único meio de expiação do pecado humano.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">10</span>
+                    <h4>A Experiência da Salvação</h4>
+                    <p>Pela graça, por meio da fé em Cristo, somos justificados, adotados como filhos, libertados do domínio do pecado e renovados.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">11</span>
+                    <h4>Crescimento em Cristo</h4>
+                    <p>Pela morte de Cristo na cruz, a vitória sobre as forças do mal está assegurada e o poder do Espírito transforma vidas.</p>
+                </div>
+
+                <!-- A IGREJA -->
+                <div class="belief-card">
+                    <span class="belief-number">12</span>
+                    <h4>A Igreja</h4>
+                    <p>A igreja é a comunidade de crentes que confessam Jesus Cristo como Senhor e Salvador.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">13</span>
+                    <h4>O Remanescente e sua Missão</h4>
+                    <p>A igreja universal compõe-se de todos os que verdadeiramente creem em Cristo. Nos últimos dias, um remanescente guarda os mandamentos de Deus e a fé de Jesus.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">14</span>
+                    <h4>Unidade do Corpo de Cristo</h4>
+                    <p>A igreja é um corpo com muitos membros, chamados de toda nação, tribo, língua e povo.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">15</span>
+                    <h4>O Batismo</h4>
+                    <p>Pelo batismo confessamos nossa fé na morte e na ressurreição de Jesus Cristo e testemunhamos nossa morte para o pecado.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">16</span>
+                    <h4>A Ceia do Senhor</h4>
+                    <p>A Ceia do Senhor é participação nos emblemas do corpo e do sangue de Jesus como expressão de fé nEle.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">17</span>
+                    <h4>Dons e Ministérios Espirituais</h4>
+                    <p>Deus concede dons espirituais a todos os membros da igreja para serem empregados no ministério.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">18</span>
+                    <h4>O Dom de Profecia</h4>
+                    <p>Um dos dons do Espírito Santo é o dom de profecia, manifestado no ministério de Ellen G. White.</p>
+                </div>
+
+                <!-- A VIDA CRISTÃ -->
+                <div class="belief-card">
+                    <span class="belief-number">19</span>
+                    <h4>A Lei de Deus</h4>
+                    <p>Os Dez Mandamentos são a expressão do caráter de Deus e da Sua vontade para a humanidade.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">20</span>
+                    <h4>O Sábado</h4>
+                    <p>O sétimo dia da semana é o memorial da criação e um sinal de nossa redenção em Cristo.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">21</span>
+                    <h4>Mordomia</h4>
+                    <p>Somos mordomos de Deus, responsáveis pelo uso apropriado do tempo, talentos e recursos.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">22</span>
+                    <h4>Conduta Cristã</h4>
+                    <p>Somos chamados a ser um povo piedoso, que pensa, sente e age de acordo com os princípios do Céu.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">23</span>
+                    <h4>Matrimônio e Família</h4>
+                    <p>O matrimônio foi instituído no Éden e confirmado por Jesus como união para toda a vida entre um homem e uma mulher.</p>
+                </div>
+
+                <!-- ÚLTIMOS EVENTOS -->
+                <div class="belief-card">
+                    <span class="belief-number">24</span>
+                    <h4>O Ministério de Cristo no Santuário Celestial</h4>
+                    <p>Cristo ministra no santuário celestial em favor da humanidade, aplicando os benefícios de Seu sacrifício expiatório.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">25</span>
+                    <h4>A Segunda Vinda de Cristo</h4>
+                    <p>A segunda vinda de Cristo é a bendita esperança da igreja, o grande clímax do evangelho.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">26</span>
+                    <h4>Morte e Ressurreição</h4>
+                    <p>Os mortos não têm consciência. Quando Cristo voltar, os justos mortos ressuscitarão e, juntamente com os justos vivos, serão glorificados.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">27</span>
+                    <h4>O Milênio e o Fim do Pecado</h4>
+                    <p>O milênio é o reinado de mil anos de Cristo com Seus santos no Céu, entre a primeira e a segunda ressurreição.</p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-number">28</span>
+                    <h4>A Nova Terra</h4>
+                    <p>Na Nova Terra, Deus proverá um lar eterno para os remidos e um ambiente perfeito para vida, amor e alegria eternos.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 50px;">
+                <h3><i class="fas fa-external-link-alt"></i> Estudo Aprofundado</h3>
+                <p>Para um estudo mais detalhado de cada crença, com referências bíblicas completas e explicações teológicas, acesse o site oficial da Igreja Adventista ou consulte o livro <strong>"Nisto Cremos - 28 Ensinos Fundamentais dos Adventistas do Sétimo Dia"</strong>.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: LINKS ÚTEIS -->
+        <section class="links-section">
+            <h2><i class="fas fa-link"></i> Links Oficiais e Recursos</h2>
+            
+            <p style="text-align: center; font-size: 1.2em; color: #555; max-width: 900px; margin: 0 auto 40px;">Explore os recursos oficiais da Igreja Adventista do Sétimo Dia para aprofundar seu conhecimento sobre nossa fé, história e missão:</p>
+            
+            <div class="links-grid">
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Site Oficial Brasil</h3>
+                    <p>Portal principal da Igreja Adventista no Brasil com notícias, recursos e informações institucionais.</p>
+                    <a href="https://www.adventistas.org" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Enciclopédia Adventista</h3>
+                    <p>Enciclopédia digital completa sobre história, doutrinas, biografias e tópicos adventistas.</p>
+                    <a href="https://encyclopedia.adventist.org" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Associação Geral</h3>
+                    <p>Site oficial da sede mundial da Igreja Adventista, com recursos em diversos idiomas.</p>
+                    <a href="https://www.adventist.org" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-bible"></i>
+                    </div>
+                    <h3>Bíblia Online</h3>
+                    <p>Leia a Bíblia online em diferentes versões, com ferramentas de estudo e comentários.</p>
+                    <a href="https://www.bibliaonline.com.br" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Escola Sabatina</h3>
+                    <p>Lições da Escola Sabatina, comentários e recursos para professores.</p>
+                    <a href="https://www.adventistas.org/pt/escolasabatina/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Novo Tempo</h3>
+                    <p>Rede de televisão e rádio adventista com programação cristã 24 horas.</p>
+                    <a href="https://www.novotempo.com" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Casa Publicadora Brasileira</h3>
+                    <p>Editora oficial da igreja no Brasil com livros, Bíblias e materiais adventistas.</p>
+                    <a href="https://www.cpb.com.br" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Ministério da Saúde</h3>
+                    <p>Recursos sobre saúde integral e estilo de vida adventista.</p>
+                    <a href="https://www.adventistas.org/pt/saude/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Ministério Jovem</h3>
+                    <p>Recursos, eventos e atividades para jovens adventistas.</p>
+                    <a href="https://www.adventistas.org/pt/jovens/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>ADRA Brasil</h3>
+                    <p>Agência Adventista de Desenvolvimento e Recursos Assistenciais.</p>
+                    <a href="https://www.adra.org.br" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Espírito de Profecia</h3>
+                    <p>Livros de Ellen G. White disponíveis para leitura online gratuita.</p>
+                    <a href="https://m.egwwritings.org/pt" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-podcast"></i>
+                    </div>
+                    <h3>Podcast Adventista</h3>
+                    <p>Diversos podcasts sobre temas bíblicos, teológicos e práticos.</p>
+                    <a href="https://www.adventistas.org/pt/podcast/" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt"></i> Acessar
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CONVITE FINAL -->
+        <section class="section" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border: 4px solid #c62828;">
+            <h2 style="justify-content: center; text-align: center; border: none;"><i class="fas fa-heart"></i> Venha Fazer Parte!</h2>
+            
+            <blockquote class="bible-verse">
+                <p><em>"Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei. Tomai sobre vós o meu jugo, e aprendei de mim, que sou manso e humilde de coração; e encontrareis descanso para as vossas almas."</em></p>
+                <cite>Mateus 11:28-29</cite>
+            </blockquote>
+            
+            <p style="text-align: center; font-size: 1.3em; color: #c62828; font-weight: 600; line-height: 2; margin-top: 30px;">
+                Se você deseja conhecer mais sobre Jesus e fazer parte desta família mundial de fé e esperança, você é muito bem-vindo! Nossa igreja está de portas abertas para você.
+            </p>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="contato.html" style="display: inline-block; background: linear-gradient(135deg, #c62828, #8e0000); color: white; padding: 20px 50px; font-size: 1.3em; font-weight: 600; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 25px rgba(198, 40, 40, 0.4); transition: all 0.3s ease;">
+                    <i class="fas fa-envelope"></i> Entre em Contato
+                </a>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

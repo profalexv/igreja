@@ -28,9 +28,8 @@
             <button class="tab-btn active" data-tab="evangelismo"><i class="fas fa-bullhorn"></i> Evangelismo</button>
             <button class="tab-btn" data-tab="belavista"><i class="fas fa-home"></i> Bela Vista do Sul</button>
             <button class="tab-btn" data-tab="videira"><i class="fas fa-seedling"></i> Pequena Videira</button>
-            <button class="tab-btn" data-tab="espacont"><i class="fas fa-church"></i> Espaço Novo Tempo</button>
-            <button class="tab-btn" data-tab="novotempo"><i class="fas fa-tv"></i> Rede Novo Tempo</button>
-            <button class="tab-btn" data-tab="teologia"><i class="fas fa-graduation-cap"></i> Estudos Avançados</button>
+            <button class="tab-btn" data-tab="novotempo"><i class="fas fa-tv"></i> Espaço Novo Tempo</button>
+            <button class="tab-btn" data-tab="teologia"><i class="fas fa-graduation-cap"></i> Teologia</button>
         </nav>
 
         <main class="mipes-content">
@@ -435,10 +434,10 @@
 
             </div>
 
-            <!-- ========== ABA 4: ESPAÇO NOVO TEMPO (Centro de Influência) ========== -->
-            <div id="espacont" class="tab-content">
-                <div class="tab-header" style="background: linear-gradient(135deg, #27ae60 0%, #229954 100%);">
-                    <h1><i class="fas fa-church"></i> Espaço Novo Tempo</h1>
+            <!-- ========== ABA 4: ESPAÇO NOVO TEMPO ========== -->
+            <div id="novotempo" class="tab-content">
+                <div class="tab-header" style="background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);">
+                    <h1><i class="fas fa-hands-helping"></i> Espaço Novo Tempo</h1>
                     <p>Centro de Influência • Jardim América • Mafra - SC</p>
                     <p style="font-style: italic; margin-top: 10px;">"E conhecereis a verdade, e a verdade vos libertará." - João 8:32</p>
                 </div>
@@ -599,16 +598,6 @@
                         </div>
                     </div>
                 </section>
-
-            </div>
-
-            <!-- ========== ABA 5: REDE NOVO TEMPO ========== -->
-            <div id="novotempo" class="tab-content">
-                <div class="tab-header" style="background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);">
-                    <h1><i class="fas fa-tv"></i> Rede Novo Tempo de Comunicação</h1>
-                    <p>TV • Rádio • Internet • Gravadora</p>
-                    <p style="font-style: italic; margin-top: 10px;">"Pregai o evangelho a toda criatura" - Marcos 16:15</p>
-                </div>
 
                 <section class="evangelismo" style="background: linear-gradient(135deg, #0066cc 0%, #004a99 100%); color: white; padding: 50px 30px; border-radius: 20px; text-align: center;">
                     <h2 style="font-size: 2.5em; margin-bottom: 20px; color: white;">
@@ -864,7 +853,7 @@
 
             </div>
 
-            <!-- ========== ABA 6: TEOLOGIA ========== -->
+            <!-- ========== ABA 5: TEOLOGIA ========== -->
             <div id="teologia" class="tab-content">
                 <div class="tab-header" style="background: linear-gradient(135deg, #5e35b1 0%, #4527a0 100%);">
                     <h1><i class="fas fa-graduation-cap"></i> Estudos Teológicos Avançados</h1>
