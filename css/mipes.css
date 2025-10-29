@@ -514,12 +514,12 @@ html {
 
 /* Conteúdo das Abas */
 .tab-content {
-    display: none;
-    animation: fadeIn 0.5s ease;
+    display: none !important;
 }
 
 .tab-content.active {
-    display: block;
+    display: block !important;
+    animation: fadeIn 0.5s ease;
 }
 
 @keyframes fadeIn {
