@@ -1,0 +1,868 @@
+/* ==================================
+   PROFS.CSS - Escola Sabatina Unificada
+   Styles para es.html, chamada.html e profs.html
+   ================================== */
+
+/* ===== ESTILOS GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== HEADER PRINCIPAL ===== */
+.profs-main-header {
+    background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px 40px;
+    box-shadow: 0 8px 30px rgba(25, 118, 210, 0.4);
+}
+
+.profs-main-header h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profs-main-header .subtitle {
+    font-size: 1.4em;
+    opacity: 0.95;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== SISTEMA DE ABAS ===== */
+.tabs-container {
+    background: white;
+    margin: -20px auto 40px;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    background: #f5f5f5;
+    border-bottom: 3px solid #1976d2;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px 30px;
+    background: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab-button:hover {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.tab-button.active {
+    background: white;
+    color: #1976d2;
+    border-bottom-color: #1976d2;
+}
+
+.tab-button i {
+    font-size: 1.3em;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== SEÇÕES GERAIS ===== */
+.section {
+    background: white;
+    padding: 40px;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 3px solid;
+    padding-bottom: 15px;
+}
+
+.section h3 {
+    font-size: 1.7em;
+    margin: 35px 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section h4 {
+    font-size: 1.3em;
+    margin: 25px 0 15px 0;
+}
+
+.section p {
+    font-size: 1.1em;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* ===== ESTILOS POR ABA ===== */
+
+/* Tab 1: Escola Sabatina (Azul) */
+#tab-es .section h2 { color: #1976d2; border-color: #1976d2; }
+#tab-es .section h3 { color: #0d47a1; }
+#tab-es .section h4 { color: #1976d2; }
+
+/* Tab 2: Chamada (Verde) */
+#tab-chamada .section h2 { color: #00897b; border-color: #00897b; }
+#tab-chamada .section h3 { color: #004d40; }
+#tab-chamada .section h4 { color: #00897b; }
+
+/* Tab 3: Professores (Roxo) */
+#tab-professores .section h2 { color: #6a1b9a; border-color: #6a1b9a; }
+#tab-professores .section h3 { color: #4a148c; }
+#tab-professores .section h4 { color: #7b1fa2; }
+
+/* ===== BOXES E CARDS ===== */
+.highlight-box {
+    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #f57f17;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.highlight-box h3 {
+    color: #f57f17;
+    margin-top: 0;
+}
+
+.info-box {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #1976d2;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.info-box h3 {
+    color: #1976d2;
+    margin-top: 0;
+}
+
+.bible-verse {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-left: 5px solid #2e7d32;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.bible-verse p {
+    color: #1b5e20;
+    font-size: 1.15em;
+    margin-bottom: 10px;
+}
+
+.bible-verse cite {
+    display: block;
+    text-align: right;
+    font-weight: 600;
+    color: #2e7d32;
+    font-style: normal;
+    margin-top: 15px;
+}
+
+.success-box {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #2e7d32;
+    margin: 25px 0;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.15);
+}
+
+.success-box h4 {
+    color: #2e7d32;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.warning-box {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #c62828;
+    margin: 25px 0;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.15);
+}
+
+.warning-box h4 {
+    color: #c62828;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resources-box {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 35px;
+    border-radius: 15px;
+    border: 3px solid #1976d2;
+    margin: 30px 0;
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.2);
+}
+
+.resources-box h3 {
+    color: #1976d2;
+    margin-top: 0;
+}
+
+.resources-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-box li {
+    font-size: 1.1em;
+    line-height: 2;
+    color: #333;
+    padding-left: 35px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.resources-box li::before {
+    content: "📚";
+    position: absolute;
+    left: 0;
+    font-size: 1.3em;
+}
+
+/* ===== ROLE CARDS (Professores) ===== */
+.role-card {
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    padding: 35px;
+    margin: 30px 0;
+    border-radius: 15px;
+    border-left: 6px solid #6a1b9a;
+    box-shadow: 0 6px 20px rgba(106, 27, 154, 0.2);
+}
+
+.role-card h3 {
+    color: #6a1b9a;
+    margin-top: 0;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.role-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #6a1b9a, #4a148c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    box-shadow: 0 6px 20px rgba(106, 27, 154, 0.4);
+    flex-shrink: 0;
+}
+
+/* ===== LISTAS COM CHECK ===== */
+.tips-list {
+    background: white;
+    padding: 25px 25px 25px 45px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.tips-list li {
+    font-size: 1.1em;
+    line-height: 2;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.tips-list li::before {
+    content: "✓";
+    position: absolute;
+    left: -30px;
+    color: #6a1b9a;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.tips-list strong {
+    color: #6a1b9a;
+}
+
+/* ===== GRIDS DE CARDS ===== */
+.pillars-grid,
+.divisions-grid,
+.connection-grid,
+.projects-grid,
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.pillar-card,
+.division-card,
+.connection-card,
+.project-card,
+.resource-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.pillar-card {
+    border-top: 5px solid #1976d2;
+}
+
+.division-card {
+    border: 2px solid #1976d2;
+}
+
+.connection-card {
+    border-top: 5px solid #6a1b9a;
+}
+
+.project-card {
+    border: 2px solid #6a1b9a;
+}
+
+.resource-card {
+    border-top: 5px solid #00897b;
+}
+
+.pillar-card:hover,
+.division-card:hover,
+.connection-card:hover,
+.project-card:hover,
+.resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.pillar-icon,
+.project-icon,
+.resource-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5em;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.pillar-icon {
+    background: linear-gradient(135deg, #1976d2, #0d47a1);
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #6a1b9a, #4a148c);
+    font-size: 1.8em;
+}
+
+.resource-icon {
+    background: linear-gradient(135deg, #00897b, #004d40);
+}
+
+.connection-card i {
+    font-size: 3.5em;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+}
+
+.division-card i {
+    font-size: 3em;
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.pillar-card h3,
+.connection-card h4,
+.project-card h4,
+.resource-card h3 {
+    margin: 15px 0;
+}
+
+.pillar-card h3 { color: #1976d2; font-size: 1.5em; }
+.connection-card h4 { color: #6a1b9a; font-size: 1.4em; }
+.project-card h4 { color: #6a1b9a; font-size: 1.4em; }
+.resource-card h3 { color: #00897b; font-size: 1.6em; }
+.division-card h4 { color: #0d47a1; font-size: 1.3em; }
+
+.pillar-card p,
+.connection-card p,
+.project-card p,
+.resource-card p,
+.division-card p {
+    text-align: center;
+    color: #555;
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+    position: relative;
+    padding-left: 50px;
+    margin: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #1976d2, #0d47a1);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 30px;
+    width: 15px;
+    height: 15px;
+    background: #1976d2;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #1976d2;
+}
+
+.timeline-item h4 {
+    color: #1976d2;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+/* ===== HEART SECTION (ES) ===== */
+.heart-section {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 3px solid #e53935;
+    box-shadow: 0 8px 30px rgba(229, 57, 53, 0.3);
+    margin: 40px 0;
+}
+
+.heart-section h2 {
+    color: #c62828;
+    border: none;
+    justify-content: center;
+}
+
+.heart-section .heart-icon {
+    font-size: 5em;
+    color: #e53935;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+}
+
+/* ===== QRCODE SECTION (Chamada) ===== */
+.qrcode-section {
+    background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+    padding: 50px;
+    border-radius: 20px;
+    margin: 40px 0;
+    border: 3px solid #00897b;
+    box-shadow: 0 8px 30px rgba(0, 137, 123, 0.2);
+    text-align: center;
+}
+
+.qrcode-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    margin: 20px 0;
+}
+
+.qrcode-container img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border: 5px solid #00897b;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.qrcode-container img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== STEPS SECTION ===== */
+.steps-section {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 3px solid #2e7d32;
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.2);
+}
+
+.steps-section h3 {
+    color: #2e7d32;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.step {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
+}
+
+.step-content h4 {
+    color: #2e7d32;
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+}
+
+.step-content p {
+    color: #555;
+    margin: 0;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+/* ===== BOTÕES ===== */
+.button-primary,
+.button-secondary {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 15px 10px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.button-primary {
+    background: linear-gradient(135deg, #00897b, #004d40);
+    color: white;
+}
+
+.button-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 137, 123, 0.5);
+}
+
+.button-secondary {
+    background: linear-gradient(135deg, #1976d2, #0d47a1);
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.15em;
+}
+
+.button-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.5);
+}
+
+.button-primary i,
+.button-secondary i {
+    margin-right: 8px;
+}
+
+.division-card a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    border: 2px solid #1976d2;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.division-card a:hover {
+    background: #1976d2;
+    color: white;
+}
+
+/* ===== TABELAS ===== */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.schedule-table th {
+    background: linear-gradient(135deg, #6a1b9a, #4a148c);
+    color: white;
+    padding: 18px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.schedule-table td {
+    padding: 15px 18px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.05em;
+}
+
+.schedule-table tr:hover {
+    background: #f3e5f5;
+}
+
+.schedule-table td:first-child {
+    font-weight: 600;
+    color: #6a1b9a;
+}
+
+/* ===== MAIN CARD (Chamada) ===== */
+.main-card {
+    background: white;
+    padding: 50px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.main-card h2 {
+    color: #00897b;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.main-card p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .profs-main-header h1 {
+        font-size: 2em;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .profs-main-header .subtitle {
+        font-size: 1.1em;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        min-width: 100%;
+        padding: 15px 20px;
+    }
+    
+    .section {
+        padding: 25px 20px;
+    }
+    
+    .section h2 {
+        font-size: 1.8em;
+    }
+    
+    .section h3 {
+        font-size: 1.4em;
+    }
+    
+    .pillars-grid,
+    .divisions-grid,
+    .connection-grid,
+    .projects-grid,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .qrcode-container img {
+        max-width: 250px;
+    }
+    
+    .button-primary,
+    .button-secondary {
+        display: block;
+        margin: 15px auto;
+        max-width: 300px;
+        padding: 15px 30px;
+    }
+    
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .schedule-table {
+        font-size: 0.9em;
+    }
+    
+    .schedule-table th,
+    .schedule-table td {
+        padding: 12px 10px;
+    }
+    
+    .main-card {
+        padding: 30px 20px;
+    }
+    
+    .qrcode-section {
+        padding: 30px 20px;
+    }
+}
+
+/* ===== BACK TO TOP BUTTON ===== */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #1976d2, #0d47a1);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.5);
+}
