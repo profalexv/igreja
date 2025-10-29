@@ -1,0 +1,503 @@
+/* Estilo específico para Ministério Pastoral */
+:root {
+    --pr-primary: #5e35b1;
+    --pr-secondary: #4527a0;
+    --pr-accent: #7e57c2;
+    --pr-success: #43a047;
+    --pr-info: #1976d2;
+    --pr-light: #f3e5f5;
+    --pr-dark: #4527a0;
+    --pr-gradient: linear-gradient(135deg, #5e35b1 0%, #4527a0 100%);
+}
+
+/* Header Customizado */
+.pr-header {
+    background: var(--pr-gradient);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 8px 30px rgba(94, 53, 177, 0.3);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pr-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 70%);
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(180deg); }
+}
+
+.pr-header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.pr-header h1 i {
+    margin-right: 15px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.pr-header .subtitle {
+    font-size: 1.3em;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.pr-header .mission-verse {
+    font-size: 1.1em;
+    font-style: italic;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 15px auto 0;
+    padding: 15px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================ */
+/* SISTEMA DE ABAS (TABS) */
+/* ============================================ */
+
+/* Navegação por Abas */
+.pr-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    max-width: 800px;
+    padding: 0 20px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    padding: 15px;
+}
+
+.tab-btn {
+    background: transparent;
+    color: #666;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-btn i {
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: rgba(94, 53, 177, 0.1);
+    color: var(--pr-primary);
+    transform: translateY(-2px);
+}
+
+.tab-btn:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.tab-btn.active {
+    background: var(--pr-gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(94, 53, 177, 0.4);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active i {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--pr-accent);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.tab-btn.active::before {
+    width: 80%;
+}
+
+/* Conteúdo das Abas */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cabeçalho da Aba */
+.tab-header {
+    background: var(--pr-gradient);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin: 0 0 40px 0;
+    box-shadow: 0 8px 30px rgba(94, 53, 177, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 15s ease-in-out infinite;
+}
+
+.tab-header h1 {
+    font-size: 2.3em;
+    margin: 0 0 10px 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.tab-header h1 i {
+    margin-right: 15px;
+}
+
+.tab-header p {
+    font-size: 1.1em;
+    margin: 10px 0 0 0;
+    position: relative;
+    z-index: 1;
+    opacity: 0.95;
+}
+
+/* Container Principal */
+.pr-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Seções de Conteúdo */
+.pastoral-section {
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+    margin: 20px 0;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.intro-box {
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    border-left: 5px solid var(--pr-primary);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.intro-text {
+    font-size: 1.2em;
+    color: #4a148c;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.content-box {
+    margin: 30px 0;
+}
+
+.content-box h2 {
+    color: var(--pr-primary);
+    font-size: 2em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.content-box h2 i {
+    color: var(--pr-accent);
+}
+
+.content-box > p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Grid de Funções */
+.functions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.function-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.function-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--pr-gradient);
+}
+
+.function-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(94, 53, 177, 0.3);
+    border-color: var(--pr-primary);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--pr-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 2em;
+    box-shadow: 0 8px 20px rgba(94, 53, 177, 0.3);
+    transition: all 0.3s ease;
+}
+
+.function-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.function-card h3 {
+    color: var(--pr-primary);
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.function-card p {
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0;
+}
+
+/* Versículos Bíblicos */
+.bible-verse {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e9 100%);
+    border-left: 5px solid var(--pr-success);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    font-style: italic;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.bible-verse p {
+    font-size: 1.1em;
+    color: #2e7d32;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.bible-verse cite {
+    display: block;
+    text-align: right;
+    font-weight: 600;
+    color: var(--pr-success);
+    font-style: normal;
+    margin-top: 15px;
+}
+
+/* Caixa de Destaque */
+.highlight-box {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-left: 5px solid var(--pr-accent);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.highlight-box h3 {
+    color: var(--pr-primary);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.highlight-box h3 i {
+    color: var(--pr-accent);
+}
+
+.highlight-box p {
+    color: #4e342e;
+    line-height: 1.9;
+    margin: 0;
+    font-size: 1.05em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .pr-header h1 {
+        font-size: 2em;
+    }
+
+    .pr-tabs {
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .tab-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    .tab-header h1 {
+        font-size: 1.8em;
+    }
+
+    .tab-header p {
+        font-size: 1em;
+    }
+
+    .functions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pastoral-section {
+        padding: 25px 20px;
+    }
+
+    .content-box h2 {
+        font-size: 1.6em;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pr-header {
+        padding: 30px 15px;
+    }
+
+    .pr-header h1 {
+        font-size: 1.6em;
+    }
+
+    .pr-header .mission-verse {
+        font-size: 0.95em;
+        padding: 12px;
+    }
+
+    .tab-btn {
+        font-size: 0.9em;
+        padding: 12px 15px;
+    }
+
+    .tab-header h1 {
+        font-size: 1.5em;
+    }
+
+    .tab-header p {
+        font-size: 0.95em;
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5em;
+    }
+
+    .intro-text {
+        font-size: 1.05em;
+    }
+
+    .content-box h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* Efeito de Scroll Suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Destaque ao navegar com hash */
+:target {
+    animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: rgba(94, 53, 177, 0.1); }
+}

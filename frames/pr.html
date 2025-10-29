@@ -7,61 +7,281 @@
     <meta name="author" content="Alexandre Vieira" />
     <meta name="description"
         content="Ministério Pastoral da Igreja Adventista de Mafra - Liderança espiritual e cuidado pastoral." />
-    <meta name="keywords" content="igreja, adventista, mafra, pastor, ministério pastoral, liderança" />
+    <meta name="keywords" content="igreja, adventista, mafra, pastor, ministério pastoral, liderança, anciãos, diáconos" />
     <meta name="copyright" content="© 2025 ProfAlexV" />
     <title>Ministério Pastoral</title>
-    <link rel="stylesheet" href="../css/frames.css">
+    <link rel="stylesheet" href="../css/pr.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/pr.js" defer></script>
 </head>
 
 <body>
-    <section id="pastor">
-        <h2>Pastor</h2>
-        <p>O pastor é o líder espiritual da Igreja Adventista de Mafra, responsável por cuidar do bem-estar espiritual
-            dos membros da igreja.</p>
-        <p>Na Igreja Adventista de Mafra, o pastor desempenha diversas funções, como:</p>
-        <ul>
-            <li>Prestar aconselhamento espiritual e apoio aos membros da igreja;</li>
-            <li>Visitar os membros enfermos e necessitados;</li>
-            <li>Oficiar cerimônias religiosas, como cultos, batismos, casamentos e funerais;</li>
-            <li>Participar de reuniões de liderança e planejamento da igreja;</li>
-            <li>Colaborar com os anciãos e diáconos na administração da igreja;</li>
-            <li>Promover a unidade e o amor fraternal entre os membros da igreja.</li>
-        </ul>
-        <p>O pastor é escolhido pela congregação e é valorizado por sua dedicação e serviço à comunidade.</p>
+    <div class="content">
+        <header class="pr-header">
+            <h1><i class="fas fa-cross"></i> Ministério Pastoral</h1>
+            <p class="subtitle">Igreja Adventista de Mafra</p>
+            <p class="mission-verse">"Apascenta as minhas ovelhas" - João 21:17</p>
+        </header>
 
-    </section>
-    <section id="anciaos">
-        <h2>Anciãos</h2>
-        <p>Os anciãos são líderes espirituais na Igreja Adventista de Mafra, responsáveis por cuidar do bem-estar
-            espiritual dos membros da igreja.</p>
-        <p>Na Igreja Adventista de Mafra, os anciãos desempenham diversas funções, como:</p>
-        <ul>
-            <li>Prestar aconselhamento espiritual e apoio aos membros da igreja;</li>
-            <li>Visitar os membros enfermos e necessitados;</li>
-            <li>Participar de reuniões de liderança e planejamento da igreja;</li>
-            <li>Colaborar com os pastores na administração da igreja;</li>
-            <li>Promover a unidade e o amor fraternal entre os membros da igreja.</li>
-        </ul>
-        <p>Os anciãos são escolhidos pela congregação e são valorizados por sua dedicação e serviço à comunidade.</p>
+        <!-- Navegação por Abas -->
+        <nav class="pr-tabs">
+            <button class="tab-btn active" data-tab="pastor">
+                <i class="fas fa-user-tie"></i> Pastor
+            </button>
+            <button class="tab-btn" data-tab="anciaos">
+                <i class="fas fa-users"></i> Anciãos
+            </button>
+            <button class="tab-btn" data-tab="diaconato">
+                <i class="fas fa-hands-helping"></i> Diaconato
+            </button>
+        </nav>
 
-    </section>
-    <section id="diaconato">
-        <h2>Diaconato</h2>
-        <p>O diaconato é um ministério de serviço, onde os diáconos são chamados para ajudar nas necessidades da igreja
-            e da comunidade.</p>
-        <p>Na Igreja Adventista de Mafra, o diaconato é composto por membros dedicados que desempenham diversas funções,
-            como:</p>
-        <ul>
-            <li>Auxiliar na organização dos cultos e eventos da igreja;</li>
-            <li>Prestar assistência aos membros da igreja, especialmente aos necessitados;</li>
-            <li>Colaborar com os pastores e anciãos na administração da igreja;</li>
-            <li>Participar de atividades missionárias e de evangelismo;</li>
-            <li>Promover a unidade e o amor fraternal entre os membros da igreja.</li>
-        </ul>
-        <p>O diaconato é um ministério importante na Igreja Adventista de Mafra, e os diáconos são valorizados por sua
-            dedicação e serviço à comunidade.</p>
-    </section>
+        <main class="pr-content">
+            
+            <!-- ========== ABA 1: PASTOR ========== -->
+            <div id="pastor" class="tab-content active">
+                <div class="tab-header" style="background: linear-gradient(135deg, #5e35b1 0%, #4527a0 100%);">
+                    <h1><i class="fas fa-user-tie"></i> Pastor</h1>
+                    <p>Liderança Espiritual e Cuidado Pastoral</p>
+                </div>
+
+                <section class="pastoral-section">
+                    <div class="intro-box">
+                        <p class="intro-text">O pastor é o líder espiritual da Igreja Adventista de Mafra, responsável por cuidar do bem-estar espiritual dos membros da igreja.</p>
+                    </div>
+
+                    <div class="content-box">
+                        <h2><i class="fas fa-tasks"></i> Funções do Pastor</h2>
+                        <p>Na Igreja Adventista de Mafra, o pastor desempenha diversas funções essenciais:</p>
+                        
+                        <div class="functions-grid">
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #5e35b1, #4527a0);">
+                                    <i class="fas fa-praying-hands"></i>
+                                </div>
+                                <h3>Aconselhamento Espiritual</h3>
+                                <p>Prestar aconselhamento espiritual e apoio aos membros da igreja em suas necessidades</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #7e57c2, #6a1b9a);">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                </div>
+                                <h3>Visitação</h3>
+                                <p>Visitar os membros enfermos e necessitados, levando conforto e esperança</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #9575cd, #7b1fa2);">
+                                    <i class="fas fa-church"></i>
+                                </div>
+                                <h3>Cerimônias Religiosas</h3>
+                                <p>Oficiar cultos, batismos, casamentos e funerais com reverência e amor</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #b39ddb, #8e24aa);">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <h3>Liderança Administrativa</h3>
+                                <p>Participar de reuniões de liderança e planejamento estratégico da igreja</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #ce93d8, #9c27b0);">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h3>Colaboração</h3>
+                                <p>Colaborar com os anciãos e diáconos na administração eficaz da igreja</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #ab47bc, #7b1fa2);">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3>Unidade e Amor</h3>
+                                <p>Promover a unidade e o amor fraternal entre todos os membros da comunidade</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <blockquote class="bible-verse">
+                        <p><em>"Apascentai o rebanho de Deus, que está entre vós, tendo cuidado dele, não por força, mas voluntariamente; nem por torpe ganância, mas de ânimo pronto."</em></p>
+                        <cite>1 Pedro 5:2</cite>
+                    </blockquote>
+
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-star"></i> Chamado e Dedicação</h3>
+                        <p>O pastor é escolhido pela congregação e é valorizado por sua dedicação e serviço à comunidade. Seu ministério é uma expressão do amor de Deus e do compromisso com o cuidado espiritual das ovelhas do Senhor.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ========== ABA 2: ANCIÃOS ========== -->
+            <div id="anciaos" class="tab-content">
+                <div class="tab-header" style="background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);">
+                    <h1><i class="fas fa-users"></i> Anciãos</h1>
+                    <p>Liderança Espiritual e Cuidado da Congregação</p>
+                </div>
+
+                <section class="pastoral-section">
+                    <div class="intro-box">
+                        <p class="intro-text">Os anciãos são líderes espirituais na Igreja Adventista de Mafra, responsáveis por cuidar do bem-estar espiritual dos membros da igreja em parceria com o pastor.</p>
+                    </div>
+
+                    <div class="content-box">
+                        <h2><i class="fas fa-clipboard-list"></i> Funções dos Anciãos</h2>
+                        <p>Na Igreja Adventista de Mafra, os anciãos desempenham diversas funções vitais:</p>
+                        
+                        <div class="functions-grid">
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #1976d2, #0d47a1);">
+                                    <i class="fas fa-hands-praying"></i>
+                                </div>
+                                <h3>Aconselhamento</h3>
+                                <p>Prestar aconselhamento espiritual e apoio aos membros em suas jornadas de fé</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #1e88e5, #1565c0);">
+                                    <i class="fas fa-hospital"></i>
+                                </div>
+                                <h3>Visitação Pastoral</h3>
+                                <p>Visitar os membros enfermos e necessitados, levando conforto e oração</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #42a5f5, #1976d2);">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h3>Reuniões de Liderança</h3>
+                                <p>Participar ativamente de reuniões de liderança e planejamento da igreja</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #64b5f6, #2196f3);">
+                                    <i class="fas fa-user-friends"></i>
+                                </div>
+                                <h3>Apoio ao Pastor</h3>
+                                <p>Colaborar estreitamente com o pastor na administração da igreja</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #90caf9, #42a5f5);">
+                                    <i class="fas fa-dove"></i>
+                                </div>
+                                <h3>Unidade Fraternal</h3>
+                                <p>Promover a unidade e o amor fraternal entre todos os membros da congregação</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #bbdefb, #64b5f6);">
+                                    <i class="fas fa-book-bible"></i>
+                                </div>
+                                <h3>Ensino e Pregação</h3>
+                                <p>Ministrar estudos bíblicos e pregar quando necessário, edificando a igreja</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <blockquote class="bible-verse">
+                        <p><em>"Obedecei a vossos pastores, e sujeitai-vos a eles; porque velam por vossas almas, como aqueles que hão de dar conta delas; para que o façam com alegria e não gemendo, porque isso não vos seria útil."</em></p>
+                        <cite>Hebreus 13:17</cite>
+                    </blockquote>
+
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-award"></i> Reconhecimento e Serviço</h3>
+                        <p>Os anciãos são escolhidos pela congregação e são valorizados por sua dedicação e serviço à comunidade. Eles trabalham em harmonia com o pastor, formando uma liderança espiritual forte e comprometida com o crescimento da igreja.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ========== ABA 3: DIACONATO ========== -->
+            <div id="diaconato" class="tab-content">
+                <div class="tab-header" style="background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);">
+                    <h1><i class="fas fa-hands-helping"></i> Diaconato</h1>
+                    <p>Ministério de Serviço e Amor Prático</p>
+                </div>
+
+                <section class="pastoral-section">
+                    <div class="intro-box">
+                        <p class="intro-text">O diaconato é um ministério de serviço, onde os diáconos são chamados para ajudar nas necessidades práticas da igreja e da comunidade, demonstrando o amor de Cristo através de ações concretas.</p>
+                    </div>
+
+                    <div class="content-box">
+                        <h2><i class="fas fa-hands"></i> Funções do Diaconato</h2>
+                        <p>Na Igreja Adventista de Mafra, o diaconato é composto por membros dedicados que desempenham diversas funções práticas:</p>
+                        
+                        <div class="functions-grid">
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #43a047, #2e7d32);">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <h3>Organização de Eventos</h3>
+                                <p>Auxiliar na organização dos cultos, eventos e programações especiais da igreja</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #66bb6a, #43a047);">
+                                    <i class="fas fa-hand-holding-medical"></i>
+                                </div>
+                                <h3>Assistência aos Necessitados</h3>
+                                <p>Prestar assistência prática aos membros, especialmente aos que têm necessidades</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #81c784, #66bb6a);">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3>Manutenção da Igreja</h3>
+                                <p>Cuidar da manutenção e limpeza do templo, garantindo um ambiente agradável</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #a5d6a7, #81c784);">
+                                    <i class="fas fa-people-carry"></i>
+                                </div>
+                                <h3>Apoio Administrativo</h3>
+                                <p>Colaborar com pastores e anciãos nas necessidades administrativas da igreja</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #c8e6c9, #a5d6a7);">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <h3>Atividades Missionárias</h3>
+                                <p>Participar ativamente de atividades missionárias e projetos de evangelismo</p>
+                            </div>
+
+                            <div class="function-card">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #4caf50, #43a047);">
+                                    <i class="fas fa-heart-circle"></i>
+                                </div>
+                                <h3>Comunhão e Amor</h3>
+                                <p>Promover a unidade e o amor fraternal através do serviço prático e dedicado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <blockquote class="bible-verse">
+                        <p><em>"Quanto ao mais, irmãos, tudo o que é verdadeiro, tudo o que é honesto, tudo o que é justo, tudo o que é puro, tudo o que é amável, tudo o que é de boa fama, se há alguma virtude, e se há algum louvor, nisso pensai."</em></p>
+                        <cite>Filipenses 4:8</cite>
+                    </blockquote>
+
+                    <blockquote class="bible-verse">
+                        <p><em>"Porque nem ainda o Filho do homem veio para ser servido, mas para servir, e para dar a sua vida em resgate de muitos."</em></p>
+                        <cite>Marcos 10:45</cite>
+                    </blockquote>
+
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-trophy"></i> Importância e Reconhecimento</h3>
+                        <p>O diaconato é um ministério fundamental na Igreja Adventista de Mafra. Os diáconos são valorizados por sua dedicação e serviço prático à comunidade, demonstrando o amor de Cristo através de ações concretas que fazem diferença na vida das pessoas.</p>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+    </div>
 </body>
 
 </html>
