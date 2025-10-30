@@ -515,11 +515,41 @@ html {
 /* Conteúdo das Abas */
 .tab-content {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+    left: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Oculta TODOS os elementos filhos de tabs não ativas */
+.tab-content:not(.active) * {
+    display: none !important;
+    visibility: hidden !important;
 }
 
 .tab-content.active {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    pointer-events: auto !important;
+    z-index: 1 !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
     animation: fadeIn 0.5s ease;
+}
+
+/* Garante que elementos filhos de tabs ativas sejam visíveis */
+.tab-content.active * {
+    display: revert !important;
+    visibility: visible !important;
 }
 
 @keyframes fadeIn {
@@ -615,4 +645,811 @@ html {
     .tab-header p {
         font-size: 0.95em;
     }
+}
+
+/* ========================================
+   ESTILOS ESPECÍFICOS PARA ABA REDE NOVO TEMPO
+   ======================================== */
+
+/* Header com gradiente azul */
+.nt-header {
+    background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+}
+
+.nt-header p.verse {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Seção destaque TV com fundo azul */
+.nt-tv-highlight {
+    background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+    color: white;
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.nt-tv-highlight h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.nt-tv-highlight .channel-intro {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.nt-tv-highlight .channel-number {
+    font-size: 6em;
+    font-weight: bold;
+    color: #ff6b35;
+    margin: 30px 0;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+}
+
+.nt-tv-highlight .signal-badge {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.nt-tv-highlight .signal-badge span {
+    background: rgba(255,255,255,0.2);
+    padding: 10px 25px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.nt-tv-highlight .description {
+    font-size: 1.05em;
+    margin-top: 25px;
+    line-height: 1.8;
+}
+
+/* Grid de serviços */
+.nt-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.nt-service-card {
+    text-align: center;
+}
+
+.nt-service-card .icon {
+    font-size: 4em;
+    color: #0066cc;
+    margin-bottom: 15px;
+}
+
+.nt-service-card h3 {
+    color: #0066cc;
+}
+
+.nt-service-card .highlight-text {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff6b35;
+}
+
+.nt-service-card .secondary-text {
+    margin-top: 15px;
+    font-size: 0.95em;
+    opacity: 0.7;
+}
+
+/* Grid de apps e plataformas */
+.nt-apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.nt-app-link {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.nt-app-link:hover {
+    transform: translateY(-5px);
+}
+
+.nt-app-link .icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.nt-app-link.ntplay {
+    background: linear-gradient(135deg, #0066cc, #004a99);
+}
+
+.nt-app-link.youtube {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+.nt-app-link.radio {
+    background: linear-gradient(135deg, #1db954, #1aa34a);
+}
+
+.nt-app-link.gravadora {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+/* Redes sociais */
+.nt-social-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.nt-social-section h2 {
+    color: #0066cc;
+}
+
+.nt-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.nt-social-btn {
+    padding: 15px 30px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nt-social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.nt-social-btn.youtube {
+    background: #ff0000;
+}
+
+.nt-social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.nt-social-btn.facebook {
+    background: #1877f2;
+}
+
+.nt-social-btn.spotify {
+    background: #1db954;
+}
+
+/* Seção de download de apps */
+.nt-download-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.nt-download-section h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.nt-download-section p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.nt-download-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nt-store-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: white;
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nt-store-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Grid de programas */
+.nt-programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.nt-program-card {
+    border-left-width: 5px;
+    border-left-style: solid;
+}
+
+.nt-program-card.purple { border-left-color: #9b59b6; }
+.nt-program-card.blue { border-left-color: #3498db; }
+.nt-program-card.red { border-left-color: #e74c3c; }
+.nt-program-card.orange { border-left-color: #f39c12; }
+.nt-program-card.green { border-left-color: #27ae60; }
+.nt-program-card.dark-orange { border-left-color: #e67e22; }
+
+.nt-program-card h3 {
+    margin-bottom: 10px;
+}
+
+.nt-program-card.purple h3 { color: #9b59b6; }
+.nt-program-card.blue h3 { color: #3498db; }
+.nt-program-card.red h3 { color: #e74c3c; }
+.nt-program-card.orange h3 { color: #f39c12; }
+.nt-program-card.green h3 { color: #27ae60; }
+.nt-program-card.dark-orange h3 { color: #e67e22; }
+
+/* Seção sobre a Rede Novo Tempo */
+.nt-about-card {
+    border-left-width: 5px;
+    border-left-style: solid;
+}
+
+.nt-about-card.blue { border-left-color: #0066cc; }
+.nt-about-card.green { border-left-color: #27ae60; }
+.nt-about-card.orange { border-left-color: #ff6b35; }
+
+.nt-about-card h3 {
+    margin-bottom: 10px;
+}
+
+.nt-about-card p,
+.nt-about-card ul {
+    font-size: 1.05em;
+    line-height: 1.8;
+}
+
+.nt-about-card ul li {
+    margin: 8px 0;
+}
+
+/* Seção CTA final */
+.nt-cta-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px;
+    background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+    color: white;
+    border-radius: 20px;
+}
+
+.nt-cta-section h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.nt-cta-section p {
+    font-size: 1.15em;
+    margin-bottom: 25px;
+}
+
+.nt-website-btn {
+    display: inline-block;
+    padding: 18px 45px;
+    background: white;
+    color: #0066cc;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.nt-website-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* Seção convite final "Venha Conhecer" */
+.nt-cta-invite {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.nt-cta-invite h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.nt-cta-invite .invite-text {
+    font-size: 1.3em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.nt-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.nt-info-card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.nt-info-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.nt-info-card p {
+    font-size: 1.1em;
+}
+
+.nt-cta-invite .contact-info {
+    font-size: 1.15em;
+    margin-top: 35px;
+    opacity: 0.9;
+}
+
+.channel-highlight {
+    font-size: 1.5em;
+    color: #ff6b35;
+}
+
+/* ========================================
+   CLASSES UTILITÁRIAS GLOBAIS
+   ======================================== */
+
+/* Cores de texto */
+.text-purple { color: #5e35b1; }
+.text-purple-light { color: #7e57c2; }
+.text-purple-lighter { color: #9575cd; }
+.text-blue { color: #1976d2; }
+.text-blue-dark { color: #0066cc; }
+.text-green { color: #388e3c; }
+.text-orange { color: #ff6f00; }
+.text-orange-red { color: #ff6b35; }
+.text-white { color: white; }
+
+/* Alinhamento */
+.text-center { text-align: center; }
+
+/* Margens */
+.m-0 { margin: 0; }
+.mt-10 { margin-top: 10px; }
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-15 { margin-bottom: 15px; }
+.my-30 { margin: 30px 0; }
+
+/* Tipografia */
+.text-sm { font-size: 0.95em; }
+.text-base { font-size: 1em; }
+.text-md { font-size: 1.05em; }
+.text-lg { font-size: 1.1em; }
+.text-xl { font-size: 1.5em; }
+
+/* Line height */
+.lh-relaxed { line-height: 1.8; }
+.lh-loose { line-height: 2; }
+
+/* Opacidade */
+.opacity-90 { opacity: 0.9; }
+
+/* Grids */
+.grid-250 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-280 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.gap-20 { gap: 20px; }
+
+/* Cards e boxes */
+.card-white {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.border-left-blue {
+    border-left: 5px solid #1976d2;
+    margin: 20px 0;
+}
+
+.border-left-green {
+    border-left: 5px solid #388e3c;
+    margin: 20px 0;
+}
+
+.badge-light {
+    background: rgba(255,255,255,0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Seções especiais */
+.section-invite-transparent {
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+}
+
+.section-info-box {
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 2px solid #0066cc;
+}
+
+.section-purple-gradient {
+    text-align: center;
+    background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.section-purple-cta {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 25px;
+    background: linear-gradient(135deg, #8e24aa 0%, #6a1b9a 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(142, 36, 170, 0.3);
+}
+
+.section-purple-box {
+    margin-top: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%);
+    border-radius: 15px;
+    border-left: 6px solid #8e24aa;
+}
+
+.bg-white { background: white; }
+
+.box-green {
+    margin-top: 25px;
+    padding: 20px;
+    background: #e8f5e9;
+    border-radius: 10px;
+    border-left: 5px solid #43a047;
+}
+
+/* Textos especiais */
+.text-center-green-lg {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #2e7d32;
+}
+
+.text-italic { font-style: italic; }
+
+.text-italic-quote {
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.lh-extra-loose { line-height: 2.5; }
+
+/* Notas e alertas */
+.note-purple {
+    margin-top: 20px;
+    font-size: 0.9em;
+    background: rgba(94, 53, 177, 0.1);
+    padding: 15px;
+    border-left: 4px solid #5e35b1;
+}
+
+.note-teal {
+    margin-top: 20px;
+    font-size: 0.9em;
+    background: rgba(0, 137, 123, 0.1);
+    padding: 15px;
+    border-left: 4px solid #00897b;
+}
+
+/* Ícones grandes */
+.icon-3xl { font-size: 3em; }
+
+/* Cores adicionais */
+.text-purple-medium { color: #9b59b6; }
+.text-green-medium { color: #27ae60; }
+
+/* Tamanhos de fonte adicionais */
+.text-xl-sm { font-size: 1.2em; }
+.text-xl-md { font-size: 1.3em; }
+
+/* Font weight */
+.fw-bold { font-weight: bold; }
+
+/* Padding */
+.p-30 { padding: 30px; }
+
+/* ====================================
+   ROUND 4: FINAL CLEANUP CLASSES
+   ==================================== */
+
+/* Borders: Additional Colors */
+.border-left-pink { border-left: 5px solid #e91e63; }
+.border-left-orange-deep { border-left: 5px solid #ff6f00; }
+.border-left-orange-bright { border-left: 5px solid #ff9800; }
+
+/* Boxes: Special Gradient Boxes */
+.box-teal-gradient { 
+    border-left: 6px solid #00897b; 
+    background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%); 
+    min-height: 400px; 
+}
+.box-purple-gradient { 
+    border-left: 6px solid #5e35b1; 
+    background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); 
+    min-height: 400px; 
+}
+
+/* Text Colors: Extended Palette */
+.text-blue-dark { color: #0066cc; }
+.text-green-medium { color: #43a047; }
+.text-green-dark { color: #2e7d32; }
+.text-purple-medium { color: #9b59b6; }
+.text-purple-darker { color: #4527a0; }
+.text-purple-darkest { color: #6a1b9a; }
+.text-purple-lightest { color: #b39ddb; }
+.text-indigo { color: #3f51b5; }
+.text-indigo-dark { color: #303f9f; }
+.text-pink { color: #e91e63; }
+.text-pink-dark { color: #c2185b; }
+.text-orange-red { color: #ff6b35; }
+.text-orange-bright { color: #ff9800; }
+.text-orange-deep { color: #f57c00; }
+.text-teal-dark { color: #00695c; }
+.text-white { color: white; }
+.text-red-strong { color: #d32f2f; }
+
+/* Margins: Additional Spacing */
+.mb-15 { margin-bottom: 15px; }
+.m-15 { margin: 15px 0; }
+.my-25 { margin: 25px 0; }
+.my-30 { margin: 30px 0; }
+.mt-10 { margin-top: 10px; }
+
+/* Typography: Font Sizes */
+.text-xs { font-size: 0.8em; }
+.text-md { font-size: 1.05em; }
+.text-lg-plus { font-size: 1.15em; }
+.text-2xl { font-size: 1.8em; }
+.text-xl-lg { font-size: 1.4em; }
+
+/* Typography: Line Height */
+.lh-relaxed { line-height: 1.8; }
+.lh-extra-relaxed { line-height: 2.2; }
+
+/* Layout: Flexbox */
+.flex-center { display: flex; align-items: center; }
+.gap-10 { gap: 10px; }
+.gap-25 { gap: 25px; }
+
+/* Layout: Display */
+.d-block { display: block; }
+
+/* Layout: Opacity */
+.opacity-95 { opacity: 0.95; }
+
+/* Grid: Extended Grid Systems */
+.grid-250 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.grid-280 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-320 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+/* Buttons: Special CTA Button */
+.btn-white-green {
+    display: inline-block;
+    padding: 15px 40px;
+    background: white;
+    color: #27ae60;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.btn-white-green:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Margens adicionais */
+.my-20 { margin: 20px 0; }
+
+/* Backgrounds com gradientes */
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #5e35b1 0%, #4527a0 100%);
+}
+
+.bg-gradient-purple-dark {
+    background: linear-gradient(135deg, #8e24aa 0%, #6a1b9a 100%);
+}
+
+.bg-gradient-purple-medium {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.bg-gradient-green {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+}
+
+.bg-gradient-green-box {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.bg-gradient-green-box-lg {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.bg-gradient-green-dark {
+    background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
+}
+
+/* Backgrounds simples com caixas */
+.bg-teal-box {
+    background: #26a69a;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bg-purple-light-box {
+    background: #7e57c2;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Cards com backgrounds coloridos claros */
+.card-blue-light {
+    background: #e3f2fd;
+    border-left: 5px solid #1976d2;
+}
+
+.card-green-light {
+    background: #e8f5e9;
+    border-left: 5px solid #43a047;
+}
+
+.card-purple-light {
+    background: #f3e5f5;
+    border-left: 5px solid #5e35b1;
+}
+
+.card-orange-light {
+    background: #fff3e0;
+    border-left: 5px solid #ff6f00;
+}
+
+/* Cards brancos com bordas coloridas */
+.card-white-blue {
+    background: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #0066cc;
+}
+
+.card-white-green {
+    background: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #27ae60;
+}
+
+.card-white-purple {
+    background: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #9b59b6;
+}
+
+.card-white-orange {
+    background: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #ff6b35;
+}
+
+.card-transparent-white {
+    background: rgba(255,255,255,0.2);
+    border-left-color: white;
+    color: white;
+}
+
+/* Bordas laterais */
+.border-left-blue-solid {
+    border-left: 5px solid #1976d2;
+}
+
+.border-left-indigo {
+    border-left: 5px solid #3f51b5;
+}
+
+.border-left-green-solid {
+    border-left: 5px solid #388e3c;
+}
+
+.border-left-green-medium {
+    border-left: 5px solid #43a047;
+}
+
+.border-left-purple-solid {
+    border-left: 5px solid #5e35b1;
+}
+
+.border-left-purple-light-solid {
+    border-left: 5px solid #7e57c2;
+}
+
+.border-left-purple-lighter-solid {
+    border-left: 5px solid #9575cd;
+}
+
+.border-left-purple-lightest {
+    border-left: 5px solid #b39ddb;
 }

@@ -313,6 +313,10 @@ function switchTab(tabName) {
         activeBtn.classList.add('active');
         activeContent.classList.add('active');
         
+        // Debug: verificar quantas tabs estão ativas
+        const activeTabs = document.querySelectorAll('.tab-content.active');
+        console.log(`✓ Aba ativa: ${tabName} (Total de abas ativas: ${activeTabs.length})`);
+        
         // Scroll suave para o topo
         window.scrollTo({
             top: 0,
