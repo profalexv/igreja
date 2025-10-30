@@ -102,6 +102,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // ===== ANALYTICS - CHAMADA LINKS =====
+    // Rastreia cliques nos links específicos de chamada e escola sabatina
+    const trackableLinks = document.querySelectorAll('a[href^="https://es.minhaes.org"], a[href*="adventistas.org"]');
+    trackableLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            console.log('Link acessado:', this.href);
+            // Aqui você pode adicionar integração com Google Analytics se necessário
+        });
+    });
+    
     
     // ===== INTERSECTION OBSERVER (Animações ao scroll) =====
     const observerOptions = {

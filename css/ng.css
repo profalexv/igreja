@@ -461,3 +461,169 @@ body.aventureiros .cta-box {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================ */
+/* CLASSES UTILITÁRIAS - MIGRAÇÃO DE INLINE */
+/* ============================================ */
+
+/* Cores específicas */
+.text-lideres {
+    color: #2d5016;
+}
+
+.text-aventureiros {
+    color: var(--cor-aventureiros);
+}
+
+.text-link-blue {
+    color: #2c5aa0;
+    text-decoration: underline;
+}
+
+.text-link-blue-bold {
+    color: #2c5aa0;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.text-gold-border {
+    color: #ffd700;
+    border-bottom-color: white;
+}
+
+.text-secondary-mt {
+    color: var(--cor-secundaria);
+    margin-top: 35px;
+}
+
+/* Tipografia */
+.text-large-title {
+    font-size: 2em;
+    margin-top: 15px;
+}
+
+.text-subtitle-bold {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.text-medium {
+    font-size: 1.1em;
+}
+
+.text-medium-italic-mt {
+    font-size: 1.1em;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.text-medium-line {
+    font-size: 1.1em;
+    line-height: 1.8em;
+}
+
+.text-center-medium {
+    margin: 0;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Espaçamentos */
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+/* Classes adicionais para estilos complexos */
+.text-medium-line-alt {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.text-medium-padded {
+    font-size: 1.05em;
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+.text-medium-line-small {
+    font-size: 1.05em;
+    line-height: 1.8em;
+}
+
+.text-secondary-mt-25 {
+    color: var(--cor-secundaria);
+    margin-top: 25px;
+}
+
+.text-secondary {
+    color: var(--cor-secundaria);
+}
+
+.text-desbravadores {
+    color: var(--cor-desbravadores);
+}
+
+.text-desbravadores-mb {
+    color: var(--cor-desbravadores);
+    margin-bottom: 10px;
+}
+
+.text-lideres-bold {
+    color: #2d5016;
+    font-weight: bold;
+}
+
+/* Seções com gradientes especiais */
+.section-orange {
+    background: linear-gradient(135deg, #ffa500, #ff8c00);
+}
+
+.section-red {
+    background: linear-gradient(135deg, #991b1b, #b91c1c);
+}
+
+.section-blue {
+    background: linear-gradient(135deg, #1e3a8a, #1e40af);
+}
+
+.section-sky {
+    background: linear-gradient(135deg, #87ceeb, #4682b4);
+}
+
+.section-lideres {
+    background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
+}
+
+.section-aventureiros {
+    background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-left: none;
+    margin-top: 40px;
+}
+
+.section-lideres-alt {
+    background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-left: none;
+    margin-top: 40px;
+}
+
+.section-desbravadores {
+    background: linear-gradient(135deg, #c41e3a 0%, #8b1329 100%);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-left: none;
+}

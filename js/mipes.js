@@ -355,4 +355,43 @@ document.addEventListener('DOMContentLoaded', function() {
             switchTab(hash);
         }
     });
+    
+    // ============================================
+    // BOTÕES DE ACESSO RÁPIDO
+    // ============================================
+    const quickLinks = document.querySelectorAll('.quick-link');
+    
+    quickLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Pegar a aba alvo e o ID da seção
+            const targetTab = this.getAttribute('data-tab');
+            const targetSection = this.getAttribute('href').substring(1); // Remove o #
+            
+            // Primeiro, ativar a aba
+            switchTab(targetTab);
+            
+            // Depois de um pequeno delay, fazer scroll para a seção
+            setTimeout(() => {
+                const section = document.getElementById(targetSection);
+                if (section) {
+                    section.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Efeito visual de destaque
+                    section.style.transition = 'all 0.5s ease';
+                    section.style.transform = 'scale(1.02)';
+                    section.style.boxShadow = '0 12px 40px rgba(30, 136, 229, 0.3)';
+                    
+                    setTimeout(() => {
+                        section.style.transform = 'scale(1)';
+                        section.style.boxShadow = '';
+                    }, 800);
+                }
+            }, 300); // Aguarda a animação da aba
+        });
+    });
 });

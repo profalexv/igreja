@@ -37,3 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, 1000);
 });
+
+// Retransmitir mensagens do carrossel para o parent (index)
+// Útil quando boletim.html está sendo carregado como iframe dentro de index.html
+window.addEventListener('message', function(event) {
+    // Filtrar apenas mensagens do carrossel
+    if (event.data && event.data.source === 'carrossel' && window.parent && window.parent !== window) {
+        window.parent.postMessage(event.data, '*');
+    }
+});

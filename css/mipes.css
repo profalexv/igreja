@@ -220,6 +220,12 @@
     overflow: hidden;
 }
 
+/* Seção Genérica MIPES (usada em todas as abas) */
+.mipes-section {
+    /* Estilo genérico para seções de conteúdo */
+    margin: 20px 0; /* Espaçamento básico entre seções */
+}
+
 .evangelismo-section::before {
     content: '';
     position: absolute;
@@ -512,44 +518,29 @@ html {
     width: 80%;
 }
 
+/* Separador Visual entre Abas e Links Rápidos */
+.tabs-divider {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #ddd, transparent);
+    margin: 0 10px;
+    align-self: center;
+}
+
+/* Links de Acesso Rápido - Mesmo estilo das abas */
+.tab-btn.quick-link {
+    /* Herda todos os estilos de .tab-btn */
+    text-decoration: none;
+}
+
 /* Conteúdo das Abas */
 .tab-content {
     display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    position: absolute !important;
-    pointer-events: none !important;
-    z-index: -1 !important;
-    left: -9999px !important;
-    width: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
-}
-
-/* Oculta TODOS os elementos filhos de tabs não ativas */
-.tab-content:not(.active) * {
-    display: none !important;
-    visibility: hidden !important;
 }
 
 .tab-content.active {
     display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: relative !important;
-    pointer-events: auto !important;
-    z-index: 1 !important;
-    left: auto !important;
-    width: auto !important;
-    height: auto !important;
-    overflow: visible !important;
     animation: fadeIn 0.5s ease;
-}
-
-/* Garante que elementos filhos de tabs ativas sejam visíveis */
-.tab-content.active * {
-    display: revert !important;
-    visibility: visible !important;
 }
 
 @keyframes fadeIn {

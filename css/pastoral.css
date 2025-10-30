@@ -501,3 +501,321 @@ html {
     0%, 100% { background-color: transparent; }
     50% { background-color: rgba(94, 53, 177, 0.1); }
 }
+
+/* ============================================ */
+/* VARIAÇÕES DE TAB-HEADER POR ABA */
+/* ============================================ */
+
+.tab-header-pastor {
+    background: linear-gradient(135deg, #5e35b1 0%, #4527a0 100%);
+}
+
+.tab-header-anciaos {
+    background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+}
+
+.tab-header-diaconato {
+    background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
+}
+
+.tab-header-quemsomos {
+    background: linear-gradient(135deg, #c62828 0%, #8e0000 100%);
+}
+
+/* ============================================ */
+/* VARIAÇÕES DE CARD-ICON (GRADIENTES) */
+/* ============================================ */
+
+/* Pastor - Roxo */
+.card-icon-purple-1 {
+    background: linear-gradient(135deg, #5e35b1, #4527a0);
+}
+
+.card-icon-purple-2 {
+    background: linear-gradient(135deg, #7e57c2, #6a1b9a);
+}
+
+.card-icon-purple-3 {
+    background: linear-gradient(135deg, #9575cd, #7b1fa2);
+}
+
+.card-icon-purple-4 {
+    background: linear-gradient(135deg, #b39ddb, #8e24aa);
+}
+
+.card-icon-purple-5 {
+    background: linear-gradient(135deg, #ce93d8, #9c27b0);
+}
+
+.card-icon-purple-6 {
+    background: linear-gradient(135deg, #ab47bc, #7b1fa2);
+}
+
+/* Anciãos - Azul */
+.card-icon-blue-1 {
+    background: linear-gradient(135deg, #1976d2, #0d47a1);
+}
+
+.card-icon-blue-2 {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+}
+
+.card-icon-blue-3 {
+    background: linear-gradient(135deg, #42a5f5, #1976d2);
+}
+
+.card-icon-blue-4 {
+    background: linear-gradient(135deg, #64b5f6, #2196f3);
+}
+
+.card-icon-blue-5 {
+    background: linear-gradient(135deg, #90caf9, #42a5f5);
+}
+
+.card-icon-blue-6 {
+    background: linear-gradient(135deg, #bbdefb, #64b5f6);
+}
+
+/* Diaconato - Verde */
+.card-icon-green-1 {
+    background: linear-gradient(135deg, #43a047, #2e7d32);
+}
+
+.card-icon-green-2 {
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+}
+
+.card-icon-green-3 {
+    background: linear-gradient(135deg, #81c784, #66bb6a);
+}
+
+.card-icon-green-4 {
+    background: linear-gradient(135deg, #a5d6a7, #81c784);
+}
+
+.card-icon-green-5 {
+    background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+}
+
+.card-icon-green-6 {
+    background: linear-gradient(135deg, #4caf50, #43a047);
+}
+
+/* Quem Somos - Vermelho */
+.card-icon-red {
+    background: linear-gradient(135deg, #c62828, #8e0000);
+}
+
+/* ============================================ */
+/* LINKS DE NAVEGAÇÃO EXTERNA */
+/* ============================================ */
+
+.external-link-nav {
+    margin-top: 15px;
+    background: rgba(94, 53, 177, 0.1);
+}
+
+.external-link {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================================ */
+/* SEÇÃO QUEM SOMOS - ELEMENTOS ESPECIAIS */
+/* ============================================ */
+
+.quemsomos-intro {
+    text-align: center;
+    color: #c62828;
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.quemsomos-intro-text {
+    text-align: center;
+}
+
+.quemsomos-verse {
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+/* Estatísticas */
+.stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #c62828, #8e0000);
+    color: white;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+/* Reformadores */
+.reformer-subtitle {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.reformer-text {
+    text-align: center;
+}
+
+/* Grande Conflito Box */
+.grande-conflito-box {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border: 4px solid #1976d2;
+}
+
+.grande-conflito-title {
+    color: #1976d2;
+    justify-content: center;
+    text-align: center;
+}
+
+.grande-conflito-icon {
+    font-size: 6em;
+    color: #1976d2;
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.grande-conflito-text {
+    font-size: 1.2em;
+    text-align: center;
+    color: #0d47a1;
+}
+
+.grande-conflito-highlight {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    margin-top: 30px;
+}
+
+.grande-conflito-highlight h3 {
+    color: #1976d2;
+}
+
+/* 28 Crenças - Numeração */
+.creed-number {
+    background: linear-gradient(135deg, #c62828, #8e0000);
+}
+
+.creed-text {
+    text-align: center;
+}
+
+.creed-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Links Oficiais */
+.links-section {
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    border: 4px solid #6a1b9a;
+}
+
+.links-title {
+    color: #6a1b9a;
+    text-align: center;
+}
+
+.links-intro {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.links-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.link-card-center {
+    text-align: center;
+}
+
+.link-icon-purple {
+    background: linear-gradient(135deg, #6a1b9a, #4a148c);
+}
+
+.official-link-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #6a1b9a, #4a148c);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* Convite Final */
+.final-invite-box {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border: 4px solid #c62828;
+    text-align: center;
+}
+
+.final-invite-title {
+    color: #c62828;
+    border: none;
+    margin-top: 0;
+}
+
+.final-invite-verse {
+    background: transparent;
+    border: none;
+    padding: 20px 0;
+}
+
+.final-invite-verse p {
+    color: #c62828;
+}
+
+.final-invite-verse cite {
+    color: #8e0000;
+}
+
+.final-invite-text {
+    font-size: 1.2em;
+    color: #c62828;
+    font-weight: 600;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.final-invite-button-wrapper {
+    margin-top: 30px;
+}
+
+.final-invite-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #c62828, #8e0000);
+    color: white;
+    padding: 20px 50px;
+    font-size: 1.3em;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(198, 40, 40, 0.4);
+}
+
+/* Margem Superior */
+.mt-40 {
+    margin-top: 40px;
+}
