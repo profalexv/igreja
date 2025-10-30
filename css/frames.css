@@ -1,0 +1,632 @@
+/* ═══════════════════════════════════════════════════════════════
+   FRAMES.CSS - Estilos Comuns para Todos os Frames
+   Criado em: 30/OUT/2025
+   Objetivo: Consolidar classes CSS reutilizáveis entre frames
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════
+   RESET E BASE
+   ═══════════════════════════════════════════════════════════════ */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LAYOUT E CONTAINERS
+   ═══════════════════════════════════════════════════════════════ */
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.max-width-700 {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.max-width-900 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.max-width-1000 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SISTEMA DE ESPAÇAMENTO (MARGENS)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Margin: 0 */
+.m-0 {
+    margin: 0;
+}
+
+/* Margin Top */
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+/* Margin Bottom */
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+/* Margin Left */
+.ml-0 {
+    margin-left: 0;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.ml-30 {
+    margin-left: 30px;
+}
+
+/* Margin Right */
+.mr-0 {
+    margin-right: 0;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mr-30 {
+    margin-right: 30px;
+}
+
+/* Margin Vertical */
+.my-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.my-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Margin Horizontal */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SISTEMA DE ESPAÇAMENTO (PADDING)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Padding: 0 */
+.p-0 {
+    padding: 0;
+}
+
+/* Padding All */
+.p-10 {
+    padding: 10px;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.p-25 {
+    padding: 25px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.p-35 {
+    padding: 35px;
+}
+
+/* Padding Top */
+.pt-0 {
+    padding-top: 0;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+/* Padding Bottom */
+.pb-0 {
+    padding-bottom: 0;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+/* Padding Left */
+.pl-0 {
+    padding-left: 0;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+.pl-30 {
+    padding-left: 30px;
+}
+
+/* Padding Right */
+.pr-0 {
+    padding-right: 0;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+.pr-30 {
+    padding-right: 30px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TIPOGRAFIA E TEXTO
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Alinhamento */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Peso da Fonte */
+.text-normal {
+    font-weight: normal;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+/* Estilo da Fonte */
+.text-italic {
+    font-style: italic;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+/* Tamanho da Fonte */
+.text-small {
+    font-size: 0.9em;
+}
+
+.text-medium {
+    font-size: 1.1em;
+}
+
+.text-large {
+    font-size: 1.3em;
+}
+
+.text-xlarge {
+    font-size: 1.5em;
+}
+
+/* Line Height */
+.line-height-1 {
+    line-height: 1;
+}
+
+.line-height-15 {
+    line-height: 1.5;
+}
+
+.line-height-16 {
+    line-height: 1.6;
+}
+
+.line-height-18 {
+    line-height: 1.8;
+}
+
+.line-height-2 {
+    line-height: 2;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DISPLAY E VISIBILIDADE
+   ═══════════════════════════════════════════════════════════════ */
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SISTEMA DE ABAS (TABS)
+   ═══════════════════════════════════════════════════════════════ */
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.tab-btn,
+.tab-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+.tab-btn.active,
+.tab-button.active {
+    background: white;
+    color: #333;
+    border-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LISTAS
+   ═══════════════════════════════════════════════════════════════ */
+
+.list-none {
+    list-style: none;
+}
+
+.list-clean {
+    list-style: none;
+    padding: 0;
+}
+
+.list-no-style {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BOTÕES E INTERAÇÃO
+   ═══════════════════════════════════════════════════════════════ */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+}
+
+.btn-primary {
+    background: #1976d2;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(25, 118, 210, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BOTÃO VOLTAR AO TOPO
+   ═══════════════════════════════════════════════════════════════ */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1976d2, #0d47a1);
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.5);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   UTILITÁRIOS GERAIS
+   ═══════════════════════════════════════════════════════════════ */
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
+
+.shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-md {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-lg {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ANIMAÇÕES
+   ═══════════════════════════════════════════════════════════════ */
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVIDADE
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .content,
+    .container {
+        padding: 15px;
+    }
+    
+    .tab-buttons {
+        gap: 10px;
+    }
+    
+    .tab-btn,
+    .tab-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-btn,
+    .tab-button {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+}
