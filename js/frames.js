@@ -85,8 +85,20 @@ const FrameUtils = {
         tabButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const tabId = this.getAttribute(config.dataAttribute);
+                const scrollTo = this.getAttribute('data-scroll');
+                
                 if (tabId) {
                     switchTab(tabId);
+                    
+                    // Se há um elemento para rolar, faz o scroll após trocar a aba
+                    if (scrollTo) {
+                        setTimeout(() => {
+                            const targetElement = document.getElementById(scrollTo);
+                            if (targetElement) {
+                                FrameUtils.smoothScrollTo(targetElement, 100);
+                            }
+                        }, 300); // Delay para aguardar a troca da aba
+                    }
                 }
             });
         });
