@@ -50,15 +50,6 @@ header .subtitle {
     opacity: 0.95;
 }
 
-/* Botões de Navegação (Tabs) */
-.tab-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
-    flex-wrap: wrap;
-}
-
 .tab-btn {
     background: rgba(255, 255, 255, 0.2);
     color: white;
@@ -91,13 +82,6 @@ header .subtitle {
 
 .tab-btn i {
     font-size: 1.2em;
-}
-
-/* Content Container */
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 /* Controle de Visibilidade das Abas */
@@ -573,15 +557,6 @@ section li {
 .list-clean {
     list-style: none;
     padding: 0;
-}
-
-/* Margens e Espaçamentos */
-.m-0 {
-    margin: 0;
-}
-
-.ml-20 {
-    margin-left: 20px;
 }
 
 .mt-10-ml-20 {

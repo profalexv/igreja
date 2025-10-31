@@ -1,9 +1,14 @@
 // JavaScript para Ministério Pastoral - Sistema de Abas
+// NOTA: Sistema de abas e botão "voltar ao topo" agora são fornecidos por frames.js (FrameUtils)
+// Este arquivo foi mantido para funcionalidades específicas (animações, efeitos de hover, etc.)
+
 document.addEventListener('DOMContentLoaded', function() {
     
     // ============================================
     // SISTEMA DE ABAS (TABS)
     // ============================================
+    // SUBSTITUÍDO POR: FrameUtils.initializeTabs() (em frames.js)
+    // Mantido aqui temporariamente para compatibilidade
     
     // Função para trocar de aba
     function switchTab(tabName) {
@@ -111,6 +116,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ========== BOTÃO VOLTAR AO TOPO ==========
+    // SUBSTITUÍDO POR: FrameUtils.createBackToTopButton() (em frames.js)
+    // Comentado pois frames.js já cria o botão automaticamente
+    /*
     const backToTopButton = document.createElement('button');
     backToTopButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
     backToTopButton.className = 'back-to-top';
@@ -160,6 +168,8 @@ document.addEventListener('DOMContentLoaded', function() {
     backToTopButton.addEventListener('mouseleave', function() {
         this.style.transform = 'scale(1) translateY(0)';
     });
+    */
+    // FIM DO CÓDIGO COMENTADO - Agora usa FrameUtils.createBackToTopButton()
     
     // ========== ESTATÍSTICAS DE CARREGAMENTO ==========
     console.log('⛪ Ministério Pastoral carregado com sucesso!');

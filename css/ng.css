@@ -51,15 +51,6 @@ header .subtitle {
     opacity: 0.95;
 }
 
-/* Botões de Navegação (Tabs) */
-.tab-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
-    flex-wrap: wrap;
-}
-
 .tab-btn {
     background: rgba(255, 255, 255, 0.2);
     color: white;
@@ -113,13 +104,6 @@ header .subtitle {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Content Container */
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 /* Sections */
@@ -526,19 +510,6 @@ body.aventureiros .cta-box {
     margin: 0;
     font-size: 1.1em;
     text-align: center;
-}
-
-/* Espaçamentos */
-.mt-10 {
-    margin-top: 10px;
-}
-
-.mt-15 {
-    margin-top: 15px;
-}
-
-.m-0 {
-    margin: 0;
 }
 
 /* Classes adicionais para estilos complexos */

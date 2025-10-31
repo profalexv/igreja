@@ -2,10 +2,14 @@
 // PROFS.JS - Escola Sabatina Unificada
 // JavaScript para sistema de abas
 // ==================================
+// NOTA: Sistema de abas e botão "voltar ao topo" agora são fornecidos por frames.js (FrameUtils)
+// Este arquivo foi mantido para funcionalidades específicas (QRCode, analytics, etc.)
 
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== SISTEMA DE ABAS =====
+    // SUBSTITUÍDO POR: FrameUtils.initializeTabs() (em frames.js)
+    // Mantido aqui temporariamente para compatibilidade
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
     
@@ -66,6 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     // ===== BACK TO TOP BUTTON =====
+    // SUBSTITUÍDO POR: FrameUtils.createBackToTopButton() (em frames.js)
+    // O HTML ainda contém o botão manualmente, mas frames.js pode gerenciá-lo automaticamente
     const backToTopButton = document.getElementById('back-to-top');
     
     if (backToTopButton) {

@@ -16,12 +16,6 @@ body {
     color: #333;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 /* ===== HEADER PRINCIPAL ===== */
 .profs-main-header {
     background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
@@ -912,95 +906,11 @@ body {
     color: #333;
 }
 
-.text-bold {
-    font-weight: bold;
-}
-
-.text-semibold {
-    font-weight: 600;
-}
-
-.text-italic {
-    font-style: italic;
-}
-
-/* Espaçamentos */
-.mt-10 {
-    margin-top: 10px;
-}
-
-.mt-15 {
-    margin-top: 15px;
-}
-
-.mt-20 {
-    margin-top: 20px;
-}
-
-.mt-30 {
-    margin-top: 30px;
-}
-
-.mt-40 {
-    margin-top: 40px;
-}
-
-.mt-50 {
-    margin-top: 50px;
-}
-
-.mb-10 {
-    margin-bottom: 10px;
-}
-
-.mb-40 {
-    margin-bottom: 40px;
-}
-
-.my-30 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.pt-30 {
-    padding-top: 30px;
-}
-
-.p-35 {
-    padding: 35px;
-}
-
-/* Layouts Especiais */
-.max-width-900 {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.max-width-700 {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.line-height-2 {
-    line-height: 2;
-}
-
-.line-height-18 {
-    line-height: 1.8;
-}
-
 /* Listas */
 .list-styled {
     font-size: 1.1em;
     line-height: 2;
     color: #333;
-}
-
-.list-no-style {
-    list-style: none;
-    padding-left: 0;
 }
 
 /* Seções Especiais */
