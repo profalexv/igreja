@@ -39,11 +39,12 @@ body {
 /* Container principal do boletim */
 .container {
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-direction: column;
     gap: 0;
+    align-items: center;
 }
 
 /* Container da agenda */
@@ -55,13 +56,19 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Primeiro iframe (carrossel) - ocupa 100% do espaço disponível do iframe principal */
 .agenda-container:first-of-type {
     min-height: 100vh; /* Ocupa toda a altura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .agenda-container:first-of-type iframe {
@@ -69,7 +76,8 @@ body {
     height: 100vh; /* Altura total da viewport */
     border: none;
     border-radius: 12px;
-    flex: 1;
+    margin: 0 auto;
+    display: block;
 }
 
 /* Segundo iframe (Google Calendar) - acessível via scroll */
